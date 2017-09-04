@@ -26,7 +26,7 @@ class NonprofitController extends Controller
      */
     public function create()
     {
-        return view('nonprofit.register');
+        return view('nonprofit.create');
     }
 
     /**
