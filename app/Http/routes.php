@@ -21,6 +21,8 @@ Route::resource('employee', 'EmployeeController');
 
 Route::resource('employers', 'EmployerController');
 
+Route::resource('event', 'EventController');
+
 Route::get('/register', function () {
 	return view('auth.mainregister');
 });

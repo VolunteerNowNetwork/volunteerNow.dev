@@ -18,10 +18,22 @@
                 Name of Company: <input type="text" class="form-control" id="nameOfCompany" name="nameOfCompany" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Admin Name: <input type="text" class="form-control" id="nonprofitadmin" name="nonprofitadmin" placeholder="" data-required>
+                Admin Name: <input type="text" class="form-control" id="employerAdmin" name="employerAdmin" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Username: <input type="text" class="form-control" id="nonprofitusername" name="nonprofitusername" placeholder="" data-required>
+                Username: <input type="text" class="form-control" id="employerUsername" name="employerUsername" placeholder="" data-required>
+            </div>
+            <div class="form-group">
+                Password: <input type="password" class="form-control" id="employerPassword" name="employerPassword" placeholder="" data-required>
+            </div>
+            <div class="form-group">
+                Confirm Password: <input type="password" class="form-control" id="confirmEmployerPassword" name="confirmEmployerPassword" placeholder="" data-required>
+            </div>
+            <div class="form-group">
+                Email: <input type="email" class="form-control" id="employerEmail" name="employerEmail" placeholder="" data-required>
+            </div>
+            <div class="form-group">
+                Contact Number: <input type="double" class="form-control" id="employerContactNumber" name="employerContactNumber" placeholder="" data-required>
             </div>
             <div class="form-group">
                 Company Website Link: <textarea name="companyWebsiteLink" rows="3" cols="64">{{ old('companyWebsiteLink') }}</textarea>
