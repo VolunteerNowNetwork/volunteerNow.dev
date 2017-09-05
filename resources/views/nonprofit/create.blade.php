@@ -27,6 +27,18 @@
                 Password: <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             </div>
             <div class="form-group">
+                Password: <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm your Password">
+            </div>
+            <div class="form-group">
+                Website Link: <input type="text" class="form-control" id="nonprofitwebsite" name="nonprofitwebsite" placeholder="" data-required>
+            </div>
+            <div class="form-group">
+                Contact Number: <input type="text" class="form-control" id="nonprofitcontactnum" name="nonprofitcontactnum" placeholder="" data-required>
+            </div>
+            <div class="form-group">
+                Contact Email: <input type="text" class="form-control" id="nonprofitemail" name="nonprofitemail" placeholder="" data-required>
+            </div>
+            <div class="form-group">
                 Bio About Your Nonprofit: <textarea name="nonprofitbio" rows="3" cols="64">{{ old('nonprofitbio') }}</textarea>
             </div>
             <div class="form-group">
