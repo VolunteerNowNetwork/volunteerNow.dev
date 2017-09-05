@@ -24,6 +24,9 @@
                 Username: <input type="text" class="form-control" id="nonprofitusername" name="nonprofitusername" placeholder="" data-required>
             </div>
             <div class="form-group">
+                Password: <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
                 Bio About Your Nonprofit: <textarea name="nonprofitbio" rows="3" cols="64">{{ old('nonprofitbio') }}</textarea>
             </div>
             <div class="form-group">
