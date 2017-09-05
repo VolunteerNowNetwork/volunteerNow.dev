@@ -48,7 +48,8 @@
                         <input type="text" class="form-control" id="available_hours" name="available_hours" > Available Hours
                     </div>
                     <div class="form-group">
-                        <input type="image" class="form-control" id="employee_image" name="employee_image" > Upload Image
+                        <label for="image">Upload Image</label>
+                        <input type="file" name="employee_image" id="employee_image">
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
