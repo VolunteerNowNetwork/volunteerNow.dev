@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-<title>Employee Profile</title>
+<title>Employee Dashboard</title>
 @stop
 
 
@@ -23,7 +23,7 @@ h1 {
 
 </style>
     <div class="container">
-        <h1>  EMPLOYEE PROFILE  </h1>
+        <h1>  EMPLOYEE DASHBOARD </h1>
         <br>
         <a href="{{ action('EmployeeController@show') }}">
         <div class="row">
