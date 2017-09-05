@@ -7,9 +7,7 @@
 
 @section('content')
 <style>
-.event-section {
-    margin-left: 10px;
-}
+
 h1 {
     margin-bottom: 40px;
     text-align: center;
@@ -34,7 +32,7 @@ h1 {
                     <button class="btn btn-primary" name="choose" > Choose An Event </button>
                     <br>
                     <div class="calendar" > Calendar Placeholder </div>
-                    <img src="/../septemeber2017.jpg" ></img>
+                    <img src="/resources/assets/img/septemeber2017.jpg" ></img>
                     <br>
                     <button class="btn btn-secondary" name="search-date" > Search By Date </button>
                     <br>
@@ -47,9 +45,9 @@ h1 {
             </div>
             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
-                        <div> Hours Available: </div>
+                        <h4> Hours Available: </h4> <div> [Hours Available Placeholder] </div>
                         <br>
-                        <div> Hours Completed: </div>
+                        <h4> Hours Completed: </h4> <div> [Hours Completed Placeholder]  </div>
                         <br>
                         <button class="btn btn-success" name="feedback" > Submit Feedback </button>
                         <br>
@@ -58,12 +56,12 @@ h1 {
             </div>
             <div class="col-md-6 col-md-3">
                     <div class="scheduled-events-section">
-                        <h3> Your Events </h3>
+                        <h4> Your Events </h4>
                         <br>
                         <div> Event List Placeholder </div>
                         <br>
                         <h4> Participation Data </h4>
-
+                        <img src="/../resources/assets/img/pie-chart.png" alt="Image Placeholder"></img>
                     </div>
             </div>
         </div>
