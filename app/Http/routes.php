@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::resource('nonprofit', 'NonprofitController');
 
+Route::resource('employee', 'EmployeeController');
