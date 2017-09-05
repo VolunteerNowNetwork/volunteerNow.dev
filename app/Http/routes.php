@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::resource('nonprofit', 'NonprofitController');
 
 Route::resource('employee', 'EmployeeController');
+
+Route::resource('employers', 'EmployerController');
+
+Route::get('/register', function () {
+	return view('auth.mainregister');
+});
