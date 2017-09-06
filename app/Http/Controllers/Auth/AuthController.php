@@ -66,7 +66,11 @@ class AuthController extends Controller
             'website_link' => $data['website_link'],
             'employer_id' => $data['employer_id'],
             'employee_id' => $data['employee_id'],
+<<<<<<< HEAD
             'non_profit_id' => $data['non_profit_id'],
+=======
+            'nonprofit_id' => $data['nonprofit_id'],
+>>>>>>> 0b370e5f35031beb18af8c126f678ee5fdd67b16
             'tax_id' => $data['tax_id'],
             'bio' => $data['bio'],
             'available_hours' => $data['available_hours'],
