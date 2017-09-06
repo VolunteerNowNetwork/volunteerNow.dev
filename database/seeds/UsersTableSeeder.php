@@ -25,12 +25,12 @@ class UsersTableSeeder extends Seeder
             $user->username = $faker->name;
             $user->contactnumber = $faker->phoneNumber;
             $user->websiteLink = $faker->url;
-            $user->employerId = $faker->randomDigit;
-            $user->employeeId = $faker->randomDigit;
-            $user->nonProfitId = $faker->randomDigit;
+            $user->employerId = $faker->uuid;
+            $user->employeeId = $faker->uuid;
+            $user->nonProfitId = $faker->uuid;
             $user->taxId = $faker->creditCardNumber;
             $user->bio = $faker->bs;
-            $user->availableHours = $faker->randomNumber;
+            $user->availableHours = $faker->numberBetween($min = 1, $max = 100);
             $user->additionalResources = "stuff";
             $user->benefit = $faker->bs;
             $user->corporateSponsor = "yes";
