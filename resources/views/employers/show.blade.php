@@ -62,7 +62,7 @@ h1 {
                         <button class"btn btn-secondary" name="print"> Print </button>
                         <div> Event Blocker Placeholder </div>
                         <div> Total Employee Participation By Event</div>
-                        <div>Top 5 Events</div>
+                        <div> Top 5 Events</div>
                         <br>
                         <h4> Participation Data </h4>
                         <img src="/../resources/assets/img/pie-chart.png" alt="Image Placeholder"></img>
