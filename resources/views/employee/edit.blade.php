@@ -22,7 +22,7 @@
                     </div>
                    <div class="form-group">
                        <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id"
-                       data-required> 
+                       data-required>
                    </div>
                    <div class="form-group">
                        <input type="text" class="form-control" id="user_name" name="user_name"> User Name
@@ -39,17 +39,17 @@
                         <input type="confirmPassword" class="form-control" id="" name="confirmPassword" placeholder="Password" data-required>
                     </div>
                     <div class="form-group">
-                        <input type="contact_number" class="form-control" id="contact_number" name="contact_number"> Contact Number
+                        <input type="contactNumber" class="form-control" id="contactNumber" name="contactNumber"> Contact Number
                     </div>
                     <div class="form-group">
-                        <textarea type="text" class="form-control" id="" name="employee_bio">  Bio About Yourself - Special Skills </textarea>
+                        <textarea type="text" class="form-control" id="" name="bio">  Bio About Yourself - Special Skills </textarea>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="available_hours" name="available_hours" > Available Hours
+                        <input type="text" class="form-control" id="availableHours" name="availableHours" > Available Hours
                     </div>
                     <div class="form-group">
                         <label for="image"> Upload Image </label>
-                        <input type="file" name="employee_image" id="employee_image">
+                        <input type="file" name="image" id="image">
                     </div>
                     <div class="row">
                         <div class="col-sm-6">

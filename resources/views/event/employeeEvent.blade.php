@@ -33,20 +33,21 @@ h1 {
                         {!! csrf_field() !!}
                          {!! $errors->first('name', '<div class="alert alert-danger">:message</div>') !!}
                         <div class="form-group">
-                            <input type="text" class="form-control" id="event_id" name="event_id" placeholder="Event Id"
+                            <input type="text" class="form-control" id="eventId" name="eventId" placeholder="Event Id"
                             data-required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="nonprofit_id" name="nonprofit_id" placeholder="nonprofit Id"
+                            <input type="text" class="form-control" id="nonProfitID" name="nonProfitID" placeholder="nonProfitID"
                             data-required>
                         </div>
                        <div class="form-group">
-                           <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id"
+                           <input type="text" class="form-control" id="employerID" name="employerID" placeholder="employer id"
                            data-required>
                        </div>
                        <div class="form-group">
-                           <input type="text" class="form-control" id="employee_id" name="employee_id" placeholder="employee id"
+                           <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="employee id"
                            data-required>
                        </div>
+
            </div>
     </div>
