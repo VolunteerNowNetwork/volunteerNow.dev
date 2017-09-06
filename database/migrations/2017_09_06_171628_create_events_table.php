@@ -14,14 +14,14 @@ class CreateEventsTable.php extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('userGroup');
+            $table->string('userGroup');
             $table->string('organizationName');
             $table->integer('eventId');
-            $table->integer('eventTitle');
+            $table->string('eventTitle');
             $table->float('location');
             $table->float('numberOfHours');
-            $table->string('numberOfVolunteers');
-            $table->string('ageRestriction');
+            $table->integer('numberOfVolunteers');
+            $table->integer('ageRestriction');
             $table->string('pointOfContact');
             $table->string('suppliesNeeded');
             $table->string('appropriateAttire');
