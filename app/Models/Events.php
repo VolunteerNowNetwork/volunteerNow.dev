@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\BaseModel;
+use App\Models;
 
 class Events extends Model
 {
