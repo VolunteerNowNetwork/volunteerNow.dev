@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventsTable.php extends Migration
+class CreateEventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -28,6 +28,7 @@ class CreateEventsTable.php extends Migration
             $table->string('catagories');
             $table->rememberToken();
             $table->timestamps();
+        });
     }
 
     /**
@@ -35,8 +36,10 @@ class CreateEventsTable.php extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::drop('events');
-    }
+        public function down()
+        {
+            Schema::drop('events');
+        }
+
+
 }
