@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-<<<<<<< HEAD
 
-
-=======
 use App\User;
->>>>>>> f74b11659d53379d33464586db70862ecd552bd2
+
 
 class UsersTableSeeder extends Seeder
 {
@@ -20,7 +17,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->delete();
 
         $faker = Faker\Factory::create();
-       
+
         for ($i = 1; $i <= 10; $i++) {
             $user = new User();
             $user->name = $faker->company;
@@ -36,4 +33,3 @@ class UsersTableSeeder extends Seeder
 }
 
 }
-
