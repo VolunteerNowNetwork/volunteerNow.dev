@@ -28,7 +28,7 @@
                 </div>
                 {!! $errors->first('confirmPassword', '<div class="alert alert-danger">:message</div>') !!}
                 <div class="form-group">
-                    <input type="confirmPassword" class="form-control" id="" name="confirmPassword" placeholder="Password" data-required>
+                    <input type="password" class="form-control" id="" name="confirmPassword" placeholder="Confirm Password" data-required>
                 </div>
                 <div class="form-group">
                     <input type="contact_number" class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number">

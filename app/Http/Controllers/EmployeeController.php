@@ -36,7 +36,8 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        return view ('employee.show');
     }
 
     /**
@@ -47,7 +48,7 @@ class EmployeeController extends Controller
      */
     public function show()
     {
-        
+
         return view('employee.show');
     }
 

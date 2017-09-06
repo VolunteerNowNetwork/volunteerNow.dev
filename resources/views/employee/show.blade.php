@@ -32,7 +32,7 @@ h1 {
                     <button class="btn btn-primary" name="choose" > Choose An Event </button>
                     <br>
                     <div class="calendar" > Calendar Placeholder </div>
-                    <img src="/img/septemeber2017.jpg" ></img>
+                    	<img src="{{ asset('september2017.jpg') }}">
                     <br>
                     <button class="btn btn-secondary" name="search-date" > Search By Date </button>
                     <br>

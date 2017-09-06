@@ -13,7 +13,7 @@ class CreateAttendanceTable extends Migration
     {
         Schema::create('attendance_tracker', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('nonProfitID')->references('nonProfitID')->on('users');
+            $table->integer('non_profitID')->references('nonProfitID')->on('users');
             $table->integer('eventId')->references('eventId')->on('events');
             $table->integer('employeeID')->references('employeeID')->on('users');
             $table->decimal('hrsToComplete');
