@@ -32,7 +32,7 @@ h1 {
                     <button class="btn btn-primary" name="choose" > Choose An Event </button>
                     <br>
                     <div class="calendar" > Calendar Placeholder </div>
-                    <img src="/resources/assets/img/septemeber2017.jpg" ></img>
+                    <img src="/img/septemeber2017.jpg" ></img>
                     <br>
                     <button class="btn btn-secondary" name="search-date" > Search By Date </button>
                     <br>
@@ -45,7 +45,7 @@ h1 {
             </div>
             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
-                        <h4> Hours Available: </h4> <div> [Hours Available Placeholder] </div>
+                        <h4> Hours Available: </h4> <div> [Hours Available Placeholder]</div>
                         <br>
                         <h4> Hours Completed: </h4> <div> [Hours Completed Placeholder]  </div>
                         <br>
@@ -61,7 +61,7 @@ h1 {
                         <div> Event List Placeholder </div>
                         <br>
                         <h4> Participation Data </h4>
-                        <img src="/../resources/assets/img/pie-chart.png" alt="Image Placeholder"></img>
+                        <img src="/img/pie-chart.png" alt="Image Placeholder"></img>
                     </div>
             </div>
         </div>
