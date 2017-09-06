@@ -15,41 +15,42 @@
 
             <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
-                Name of Company: <input type="text" class="form-control" id="nameOfCompany" name="nameOfCompany" placeholder="" data-required>
+                Name of Company: <input type="text" class="form-control" id="companyName" name="companyName" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Admin Name: <input type="text" class="form-control" id="employerAdmin" name="employerAdmin" placeholder="" data-required>
+                Admin: <input type="text" class="form-control" id="admin" name="admin" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Username: <input type="text" class="form-control" id="employerUsername" name="employerUsername" placeholder="" data-required>
+                Username: <input type="text" class="form-control" id="username" name="username" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Password: <input type="password" class="form-control" id="employerPassword" name="employerPassword" placeholder="" data-required>
+                Password: <input type="password" class="form-control" id="password" name="password" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Confirm Password: <input type="password" class="form-control" id="confirmEmployerPassword" name="confirmEmployerPassword" placeholder="" data-required>
+                Email: <input type="email" class="form-control" id="email" name="email" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Email: <input type="email" class="form-control" id="employerEmail" name="employerEmail" placeholder="" data-required>
+                Contact Number: <input type="double" class="form-control" id="contactNumber" name="contactNumber" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Contact Number: <input type="double" class="form-control" id="employerContactNumber" name="employerContactNumber" placeholder="" data-required>
+                Company Website Link: <textarea name="websiteLink" rows="3" cols="64">{{ old('websiteLink') }}</textarea>
             </div>
             <div class="form-group">
-                Company Website Link: <textarea name="companyWebsiteLink" rows="3" cols="64">{{ old('companyWebsiteLink') }}</textarea>
+                Company Tax I.D.: <textarea name="taxId" rows="3" cols="64">{{ old('TaxId') }}</textarea>
             </div>
             <div class="form-group">
-                Company Tax I.D.: <textarea name="companyTaxId" rows="3" cols="64">{{ old('companyTaxId') }}</textarea>
+                Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
             </div>
             <div class="form-group">
-                Bio About Your Nonprofit: <textarea name="nonprofitbio" rows="3" cols="64">{{ old('nonprofitbio') }}</textarea>
+                Are you currently a corporate sponsor? <textarea name="corporateSponsor" rows="3" cols="64">{{ old('corporateSponsor') }}</textarea>
             </div>
             <div class="form-group">
-                Are you currently a corporate sponsor? <textarea name="currentlyCorporateSpnsor" rows="3" cols="64">{{ old('currentlyCorporateSponsor') }}</textarea>
+                With who? <textarea name="withWho" rows="3" cols="64">{{ old('withWho') }}</textarea>
             </div>
             <div class="form-group">
-                If so, please list who: <textarea name="corporateSponsorWho" rows="3" cols="64">{{ old('corporateSponsorWho') }}</textarea>
+                Place Photo Here: <input type="image" class="form-control" id="image" name="image" placeholder="Add Photo Here" data-required>
             </div>
+            
         <!-- File Photo Input -->
 
 
