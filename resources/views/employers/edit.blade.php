@@ -29,22 +29,22 @@
                         <input type="confirmPassword" class="form-control" id="" name="confirmPassword" placeholder="Password" data-required>
                     </div>
                     <div class="form-group">
-                        <input type="adminName" class="form-control" id="" name="adminName">Admin Name
+                        <input type="admin" class="form-control" id="" name="admin">Admin Name
                     </div>
                     <div class="form-group">
-                        <input type="userName" class="form-control" id="" name="userName">User Name
+                        <input type="username" class="form-control" id="" name="username">Username
                     </div>
                     <div class="form-group">
-                        <input type="companyWebsiteLink" class="form-control" id="" name="companyWebsiteLink">Company Website Link
+                        <input type="websiteLink" class="form-control" id="" name="websiteLink">Company Website Link
                     </div>
                     <div class="form-group">
                         <input type="taxId" class="form-control" id="" name="taxId">Tax I.D.
                     </div>
                     <div class="form-group">
-                        <textarea type="employerBio" class="form-control" id="" name="employerBio">Company Bio</textarea>
+                        <textarea type="bio" class="form-control" id="" name="bio">Company Bio</textarea>
                     </div>
                     <div class="form-group">
-                        <input type="corporateSponsor" class="form-control" id="" name="corporateSponsor">Are you a corporate sponsor
+                        <input type="corporateSponsor" class="form-control" id="corporateSponsor" name="corporateSponsor">Are you a corporate sponsor
                     </div>
                     <div class="form-group">
                         <textarea type="additionalResources" class="form-control" id="" name="additionalResources">Aditional Resources</textarea>
@@ -53,6 +53,9 @@
                         <div class="col-sm-6">
                             <button type="Registar" class="btn btn-primary">Registar</button>
                         </div>
+                    <div class="form-group">
+                        <input type="image" class="form-control" id="image" name="image">Photo
+                    </div>
                         <!-- <div class="col-sm-6 text-right">
                             <a href="/auth/register" class="btn btn-success">Go To Signup</a>
                         </div> -->
