@@ -16,7 +16,7 @@
 
             <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
-                Name of Company: <input type="text" class="form-control" id="companyName" name="companyName" placeholder="" data-required>
+                Name of Company: <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="" data-required>
             </div>
             <div class="form-group">
                 Admin: <input type="text" class="form-control" id="admin" name="admin" placeholder="" data-required>
@@ -31,28 +31,27 @@
                 Email: <input type="email" class="form-control" id="email" name="email" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Contact Number: <input type="double" class="form-control" id="contactNumber" name="contactNumber" placeholder="" data-required>
+                Contact Number: <input type="double" class="form-control" id="contact_number" name="contact_number" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Company Website Link: <textarea name="websiteLink" rows="3" cols="64">{{ old('websiteLink') }}</textarea>
+                Company Website Link: <textarea name="website_link" rows="3" cols="64">{{ old('website_link') }}</textarea>
             </div>
             <div class="form-group">
-                Company Tax I.D.: <textarea name="taxId" rows="3" cols="64">{{ old('TaxId') }}</textarea>
+                Company Tax I.D.: <textarea name="tax_id" rows="3" cols="64">{{ old('tax_id') }}</textarea>
             </div>
             <div class="form-group">
                 Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
             </div>
             <div class="form-group">
-                Are you currently a corporate sponsor? <textarea name="corporateSponsor" rows="3" cols="64">{{ old('corporateSponsor') }}</textarea>
+                Are you currently a corporate sponsor? <textarea name="corporate_sponsor" rows="3" cols="64">{{ old('corporate_sponsor') }}</textarea>
             </div>
             <div class="form-group">
-                With who? <textarea name="withWho" rows="3" cols="64">{{ old('withWho') }}</textarea>
+                With who? <textarea name="with_who" rows="3" cols="64">{{ old('with_who') }}</textarea>
             </div>
-            <div class="form-group">
-                Place Photo Here: <input type="image" class="form-control" id="image" name="image" placeholder="Add Photo Here" data-required>
-            </div>
-            
-        <!-- File Photo Input -->
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+@stop
 
 
 
