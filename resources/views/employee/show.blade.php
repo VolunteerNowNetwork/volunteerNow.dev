@@ -61,7 +61,7 @@ h1 {
                         <div> Event List Placeholder </div>
                         <br>
                         <h4> Participation Data </h4>
-                        <img src="/img/pie-chart.png" alt="Image Placeholder"></img>
+                        <img src="../img/pie-chart.png" alt="Image Placeholder"></img>
                     </div>
             </div>
         </div>
