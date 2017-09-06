@@ -42,7 +42,6 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
@@ -67,7 +66,7 @@ class AuthController extends Controller
             'website_link' => $data['website_link'],
             'employer_id' => $data['employer_id'],
             'employee_id' => $data['employee_id'],
-            'nonprofit_id' => $data['nonprofit_id'],
+            'non_profit_id' => $data['non_profit_id'],
             'tax_id' => $data['tax_id'],
             'bio' => $data['bio'],
             'available_hours' => $data['available_hours'],
