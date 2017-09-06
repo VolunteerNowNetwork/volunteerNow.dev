@@ -12,18 +12,15 @@
             {!! csrf_field() !!}
             <div class="row">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Name"
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Name" value="{{ old('username') }}">
                     data-required>
                 </div>
                <div class="form-group">
-                   <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id"
+                   <input type="text" class="form-control" id=employerID" name="employer_id" placeholder="employer id"
                    data-required placeholder="Employer ID">
                </div>
                <div class="form-group">
-                   <input type="text" class="form-control" id="user_name" name="user_name" placeholder="User Name">
-               </div>
-               <div class="form-group">
-                   <input type="emil" class="form-control" id="email" name="email" placeholder="Email" >
+                   <input type="emil" class="form-control" id="email" name="email" placeholder="Email" value="{{ old('email') }}">>
                </div>
                  {!! $errors->first('password', '<div class="alert alert-danger">:message</div>') !!}
                 <div class="form-group">

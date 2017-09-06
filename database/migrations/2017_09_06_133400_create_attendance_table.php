@@ -16,11 +16,12 @@ class CreateAttendanceTable extends Migration
             $table->integer('nonProfitID')->references('nonProfitID')->on('users');
             $table->integer('eventId');
             $table->integer('employeeID')->references('employeeID')->on('users');
-            $table->float('hrsToComplete');
-            $table->float('actualHrs');
+            $table->decimal('hrsToComplete');
+            $table->decimal('actualHrs');
             $table->string('didAttendYes');
             $table->string('didAttendNo');
             $table->timestamps();
+        });
     }
 
     /**

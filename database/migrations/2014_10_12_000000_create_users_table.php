@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             // $table->increments('user_group');
             $table->string('organizationName');
-            $table->string('userGroup');
+            // $table->string('userGroup');
             $table->string('admin')->nullable();
             $table->string('username');
             $table->string('contactNumber');
@@ -31,10 +31,10 @@ class CreateUsersTable extends Migration
             $table->string('additionalResources')->nullable;
             $table->string('benefit')->nullable();
             $table->string('corporateSponsor')->nullable();
-            $table->string('withWho')->nullable(); 
+            $table->string('withWho')->nullable();
             $table->string('email')->unique();
             $table->string('password', 60);
-            $table->img('image');
+            // $table->img('image');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -50,7 +50,3 @@ class CreateUsersTable extends Migration
         Schema::drop('users');
     }
 }
-
-
-
-
