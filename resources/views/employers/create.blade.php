@@ -10,6 +10,7 @@
         <form method="POST" action="">
             {!! csrf_field() !!}
             <div class="row">
+            <input type=“hidden” name=“user_group” value=“employer”>
 
             <h1 class="section-title text-center">Register Your Company Here</h1>
 
