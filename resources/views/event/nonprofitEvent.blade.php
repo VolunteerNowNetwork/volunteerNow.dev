@@ -15,31 +15,31 @@
 
             <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
-                Title of Event: <input type="text" class="form-control" id="titleOfEvent" name="titleOfEvent" placeholder="" data-required>
+                UserGroup: <input type="text" class="form-control" id="userGroup" name="userGroup" placeholder="" data-required>
             </div>
             <div class="form-group">
                 Organization Name: <input type="text" class="form-control" id="organizationName" name="organizationName" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Location: <input type="varchar" class="form-control" id="location" name="location" placeholder="" data-required>
+                Event I.D.: <input type="text" class="form-control" id="eventId" name="eventId" placeholder="" data-required>
             </div>
             <div class="form-group">
-                TimeBlock: <input type="varchar" class="form-control" id="timeblock" name="timeblock" placeholder="">
+                Event Title: <input type="text" class="form-control" id="eventTitle" name="eventTitle" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Number of Actual Hours: <input type="double" class="form-control" id="numberOfActualHours" name="numberOfActualHours" placeholder="">
+                Location: <input type="text" class="form-control" id="location" name="location" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Number of Volunteers Needed: <input type="varchar" class="form-control" id="numberOfVolunteers" name="numberOfVolunteers" placeholder="">
+                Number of Hours: <input type="integer" class="form-control" id="numberOfHours" name="numberOfHours" placeholder="">
             </div>
             <div class="form-group">
-                Age Restrictions: <input type="varchar" class="form-control" id="ageRestrictions" name="ageRestrictions" placeholder="">
+                Number of Volunteers Needed: <input type="text" class="form-control" id="numberOfVolunteers" name="numberOfVolunteers" placeholder="">
             </div>
             <div class="form-group">
-                Point of Contact: <input type="varchar" class="form-control" id="pointOfContact" name="pointOfContact" placeholder="">
+                Age Restrictions: <input type="text" class="form-control" id="ageRestriction" name="ageRestriction" placeholder="">
             </div>
             <div class="form-group">
-                Category: <input type="varchar" class="form-control" id="category" name="category" placeholder="">
+                Point of Contact: <input type="text" class="form-control" id="pointOfContact" name="pointOfContact" placeholder="">
             </div>
             <div class="form-group">
                 Supplies to Bring: <textarea name="suppliesToBring" rows="3" cols="64">{{ old('suppliesToBring') }}</textarea>
@@ -48,6 +48,9 @@
                 Appropriate Attire <textarea name="appropriateAttire" rows="3" cols="64">{{ old('appropriateAttire') }}</textarea>
             </div>
         <!-- File Photo Input -->
+            <div class="form-group">
+                Category: <input type="text" class="form-control" id="category" name="category" placeholder="">
+            </div>
             <div class="form-group">
                 <label for="image">Upload Image</label>
                 <input type="file" name="image" id="image">
