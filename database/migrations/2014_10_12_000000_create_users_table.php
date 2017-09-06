@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('contactnumber');
             $table->string('websitelink')->nullable();
             $table->integer('employerID')->nullable();
+            $table->integer('employeeID')->nullable();
+            $table->integer('nonProfitID')->nullable();
             $table->integer('taxID')->nullable();
             $table->string('bio')->nullable();
             $table->string('availablehours')->nullable();
