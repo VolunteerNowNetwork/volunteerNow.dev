@@ -23,13 +23,14 @@ class UsersTableSeeder extends Seeder
             $user->organization_name = $faker->company;
             $user->user_group = 'non-profit';
             $user->admin = $faker->name;
+            $user->name = $faker->name;
             $user->username = $faker->name;
             $user->contact_number = $faker->phoneNumber;
             $user->website_link = $faker->url;
             $user->employer_id = $faker->uuid;
             $user->employee_id = $faker->uuid;
             $user->non_profit_id = $faker->uuid;
-            $user->taxId = $faker->creditCardNumber;
+            $user->tax_id = $faker->creditCardNumber;
             $user->bio = $faker->bs;
             $user->available_hours = $faker->numberBetween($min = 1, $max = 100);
             $user->additional_resources = "stuff";
