@@ -41,3 +41,6 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 // Route::get('users/{search}', function($search, Request))
 
 Route::resource('/users', 'UsersController');
+
+//route for events search 
+Route::resource('/events', 'EventsController');
