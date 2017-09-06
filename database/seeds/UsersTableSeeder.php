@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\User;
 
-class NonProfitTableSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class NonProfitTableSeeder extends Seeder
      */
     public function run()
     {
-    	DB::table('users')->delete();
+        DB::table('users')->delete();
 
         $faker = Faker\Factory::create();
        
@@ -27,8 +27,8 @@ class NonProfitTableSeeder extends Seeder
             $user->bio = $faker->bs;
             $user->howwillyoubenefit = $faker->bs;
             $user->save();
-
-        }
     }
+}
 
 }
+
