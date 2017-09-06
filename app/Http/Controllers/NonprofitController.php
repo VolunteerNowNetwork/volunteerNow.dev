@@ -6,17 +6,29 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Providers\User;
+
+use Log;
+use DB;
 
 class NonprofitController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show', 'create']]);
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $users= \App\User::all();
+        $data['users'] = $users;
+
+        return view('nonprofit.index', $data);
     }
 
     /**
@@ -37,7 +49,24 @@ class NonprofitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $user = new User();
+        $user->organizationName = $request->organizationName;
+        $user->admin = $request->admin;
+        $user->username = $request->username;
+        $user->password = $request->password;
+        $user->websiteLink = $request->websiteLink;
+        $user->contactNumber = $request->contactNumber;
+        $user->email = $request->email;
+        $user->bio = $request->bio;
+        $user->benefit = $request->benefit;
+        $user->save();
+
+        $request->session()->flash("successMessage", "Your account was created successfully!");
+
+        Log::info($user);
+
+        return \Redirect::action('NonprofitController@index');
     }
 
     /**

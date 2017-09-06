@@ -20,21 +20,22 @@ class UsersTableSeeder extends Seeder
 
         for ($i = 1; $i <= 10; $i++) {
             $user = new User();
-            $user->organizationName = $faker->company;
+            $user->organization_name = $faker->company;
+            $user->user_group = 'non-profit';
             $user->admin = $faker->name;
             $user->username = $faker->name;
-            $user->contactnumber = $faker->phoneNumber;
-            $user->websiteLink = $faker->url;
-            $user->employerId = $faker->randomDigit;
-            $user->employeeId = $faker->randomDigit;
-            $user->nonProfitId = $faker->randomDigit;
+            $user->contact_number = $faker->phoneNumber;
+            $user->website_link = $faker->url;
+            $user->employer_id = $faker->uuid;
+            $user->employee_id = $faker->uuid;
+            $user->non_profit_id = $faker->uuid;
             $user->taxId = $faker->creditCardNumber;
             $user->bio = $faker->bs;
-            $user->availableHours = $faker->randomNumber;
-            $user->additionalResources = "stuff";
+            $user->available_hours = $faker->numberBetween($min = 1, $max = 100);
+            $user->additional_resources = "stuff";
             $user->benefit = $faker->bs;
-            $user->corporateSponsor = "yes";
-            $user->withWho = $faker->bs;
+            $user->corporate_sponsor = "yes";
+            $user->with_who = $faker->bs;
             $user->email = $faker->safeEmail;
             $user->password = Hash::make($faker->password);
             $user->save();

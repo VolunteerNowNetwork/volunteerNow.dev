@@ -59,7 +59,22 @@ class AuthController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => $data['password'],
+            'organizationName' => $data['organizationName'],
+            'admin' => $data['admin'],
+            'username' => $data['username'],
+            'contactNumber' => $data['contactNumber'],
+            'websiteLink' => $data['admin'],
+            'employerId' => $data['employerId'],
+            'employeeId' => $data['employeeId'],
+            'nonProfitId' => $data['nonProfitId'],
+            'taxId' => $data['taxId'],
+            'bio' => $data['bio'],
+            'availableHours' => $data['availableHours'],
+            'additionalResources' => $data['additionalResources'],
+            'benefit' => $data['benefit'],
+            'corporateSponsor' => $data['corporateSponsor'],
+            'withWho' => $data['withWho'],
         ]);
     }
 

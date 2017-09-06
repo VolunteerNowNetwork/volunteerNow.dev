@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="container">
-        <form method="POST" action="">
+        <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
             <div class="row">
 
@@ -15,13 +15,13 @@
 
             <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
-                Name of Nonprofit: <input type="text" class="form-control" id="nonprofitname" name="nonprofitname" placeholder="" data-required>
+                Name of Nonprofit: <input type="text" class="form-control" id="organizationName" name="organizationName" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Admin Name: <input type="text" class="form-control" id="nonprofitadmin" name="nonprofitadmin" placeholder="" data-required>
+                Admin Name: <input type="text" class="form-control" id="admin" name="admin" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Username: <input type="text" class="form-control" id="nonprofitusername" name="nonprofitusername" placeholder="" data-required>
+                Username: <input type="text" class="form-control" id="username" name="username" placeholder="" data-required>
             </div>
             <div class="form-group">
                 Password: <input type="password" class="form-control" id="password" name="password" placeholder="Password">
@@ -30,26 +30,26 @@
                 Password: <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm your Password">
             </div>
             <div class="form-group">
-                Website Link: <input type="text" class="form-control" id="nonprofitwebsite" name="nonprofitwebsite" placeholder="" data-required>
+                Website Link: <input type="text" class="form-control" id="websiteLink" name="websiteLink" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Contact Number: <input type="text" class="form-control" id="nonprofitcontactnum" name="nonprofitcontactnum" placeholder="" data-required>
+                Contact Number: <input type="text" class="form-control" id="contactNumber" name="contactNumber" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Contact Email: <input type="text" class="form-control" id="nonprofitemail" name="nonprofitemail" placeholder="" data-required>
+                Contact Email: <input type="text" class="form-control" id="email" name="email" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Bio About Your Nonprofit: <textarea name="nonprofitbio" rows="3" cols="64">{{ old('nonprofitbio') }}</textarea>
+                Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64"></textarea>
             </div>
             <div class="form-group">
-                How will you benefit from this service? <textarea name="nonprofitbenefit" rows="3" cols="64">{{ old('nonprofitbenefit') }}</textarea>
+                How will you benefit from this service? <textarea name="benefit" rows="3" cols="64"></textarea>
             </div>
         <!-- File Photo Input -->
-            <div class="form-group">
+<!--             <div class="form-group">
                 <label for="image">Upload Image</label>
                 <input type="file" name="image" id="image">
-            </div>
-            <button>Register</button>
+            </div> -->
+            <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
 @stop
