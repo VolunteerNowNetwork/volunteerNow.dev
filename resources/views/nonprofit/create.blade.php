@@ -15,7 +15,7 @@
 
             <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
-                Name of Nonprofit: <input type="text" class="form-control" id="organizationName" name="organizationName" placeholder="" data-required>
+                Name of Nonprofit: <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="" data-required>
             </div>
             <div class="form-group">
                 Admin Name: <input type="text" class="form-control" id="admin" name="admin" placeholder="" data-required>
@@ -30,10 +30,10 @@
                 Password: <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm your Password">
             </div>
             <div class="form-group">
-                Website Link: <input type="text" class="form-control" id="websiteLink" name="websiteLink" placeholder="" data-required>
+                Website Link: <input type="text" class="form-control" id="website_link" name="website_link" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Contact Number: <input type="text" class="form-control" id="contactNumber" name="contactNumber" placeholder="" data-required>
+                Contact Number: <input type="text" class="form-control" id="contact_number" name="contact_number" placeholder="" data-required>
             </div>
             <div class="form-group">
                 Contact Email: <input type="text" class="form-control" id="email" name="email" placeholder="" data-required>
