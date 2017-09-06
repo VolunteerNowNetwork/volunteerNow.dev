@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('admin')->nullable();
             $table->string('username');
             $table->string('contactnumber');
+<<<<<<< HEAD
             $table->string('websitelink');
             $table->integer('employerID')->nullable();
             $table->integer('taxID')->nullable();
@@ -28,6 +29,18 @@ class CreateUsersTable extends Migration
             $table->string('areyouacorporatesponsor')->nullable();
             $table->string('withwho')->nullable();
             // $table->photo();
+=======
+            $table->string('websitelink')->nullable();
+            $table->integer('employerID')->nullable();
+            $table->integer('employeeID')->nullable();
+            $table->integer('nonProfitID')->nullable();
+            $table->integer('taxID')->nullable();
+            $table->string('bio')->nullable();
+            $table->string('availablehours')->nullable();
+            $table->string('howwillyoubenefit')->nullable();
+            $table->string('areyouacorporatesponsor')->nullable();
+            $table->string('withwho')->nullable();
+>>>>>>> f74b11659d53379d33464586db70862ecd552bd2
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->rememberToken();

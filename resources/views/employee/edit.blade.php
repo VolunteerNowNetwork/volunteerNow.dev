@@ -22,7 +22,7 @@
                     </div>
                    <div class="form-group">
                        <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id"
-                       data-required> Employer ID
+                       data-required> 
                    </div>
                    <div class="form-group">
                        <input type="text" class="form-control" id="user_name" name="user_name"> User Name

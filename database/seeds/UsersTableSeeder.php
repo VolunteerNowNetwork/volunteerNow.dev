@@ -1,8 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
+<<<<<<< HEAD
 
 
+=======
+use App\User;
+>>>>>>> f74b11659d53379d33464586db70862ecd552bd2
 
 class UsersTableSeeder extends Seeder
 {
