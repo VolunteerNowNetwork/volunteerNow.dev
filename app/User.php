@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use App\Models\BaseModel;
 
 class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
@@ -37,7 +38,7 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $hidden = ['password', 'remember_token'];
 
-      
+
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = \Hash::make($value);
@@ -45,5 +46,5 @@ class User extends Model implements AuthenticatableContract,
 
 
 
-    
+
 }

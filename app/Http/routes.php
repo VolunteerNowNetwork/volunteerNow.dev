@@ -23,6 +23,8 @@ Route::resource('employers', 'EmployerController');
 
 Route::resource('event', 'EventController');
 
+Route::resource('feedback', 'FeedbackController');
+
 Route::get('/register', function () {
 	return view('auth.mainregister');
 });
