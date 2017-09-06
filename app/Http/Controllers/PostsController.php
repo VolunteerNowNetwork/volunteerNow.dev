@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Post;
+use App\Providers\User;
 
-class EventsController extends Controller
+use Log;
+use DB;
+
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
