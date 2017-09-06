@@ -14,24 +14,23 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            // $table->increments('user_group');
-            $table->string('organizationName');
-            // $table->string('userGroup');
+            $table->string('organization_name');
+            $table->string('user_group');
             $table->string('admin')->nullable();
             $table->string('username');
-            $table->string('contactNumber');
+            $table->string('contact_number');
 
-            $table->string('websiteLink')->nullable();
-            $table->integer('employerId')->nullable();
-            $table->integer('employeeId')->nullable();
-            $table->integer('nonProfitId')->nullable();
+            $table->string('website_link')->nullable();
+            $table->integer('employer_id')->nullable();
+            $table->integer('employee_id')->nullable();
+            $table->integer('non_profit_id')->nullable();
             $table->integer('taxId')->nullable();
             $table->string('bio')->nullable();
-            $table->string('availableHours')->nullable();
-            $table->string('additionalResources')->nullable;
+            $table->string('available_hours')->nullable();
+            $table->string('additional_resources')->nullable();
             $table->string('benefit')->nullable();
-            $table->string('corporateSponsor')->nullable();
-            $table->string('withWho')->nullable();
+            $table->string('corporate_sponsor')->nullable();
+            $table->string('with_who')->nullable();
             $table->string('email')->unique();
             $table->string('password', 60);
             // $table->img('image');
