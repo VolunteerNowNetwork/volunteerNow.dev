@@ -11,7 +11,7 @@
         <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
             <div class="row">
-            <input type=“hidden” name=“user_group” value=“employee”>
+            <input type="hidden" name="user_group" value="employee">
                 <div class="form-group">
                     <input type="text" class="form-control" id="username" name="username" placeholder="Name" value="{{ old('username') }}"
                     data-required>
