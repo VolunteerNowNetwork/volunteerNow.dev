@@ -25,7 +25,7 @@ h1 {
     <div class="container">
         <h1>  EMPLOYEE DASHBOARD </h1>
         <br>
-        <a href="{{ action('EmployeeController@show', $user->id) }}">
+        <a href="{{ action('EmployeeController@show')}}">
         <div class="row">
             <div class="col-md-6 col-md-3">
                 <div class="contact-section">

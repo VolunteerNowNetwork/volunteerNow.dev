@@ -23,8 +23,8 @@ class EmployeeController extends Controller
 
     public function index(Request $request)
     {
-        // $users = User::find($id);
-        // $data['users'] = $users;
+        $users = User::find($id);
+        $data['users'] = $users;
         return view('employee.show', $data);
     }
 
@@ -50,7 +50,7 @@ class EmployeeController extends Controller
         $user->name = $request->name;
         $user->password = $request->password;
         $user->employer_id = $request->employer_id;
-        $user->employee_id = rand()->employee_id;
+        //$user->employee_id = rand()->employee_id;
         $user->contact_number = $request->contact_number;
         $user->email = $request->email;
         $user->bio = $request->bio;
@@ -61,7 +61,7 @@ class EmployeeController extends Controller
 
         Log::info($user);
 
-        return \Redirect::action('EmplpoyeeController@index');
+        return \Redirect::action('NonprofitController@index');
     }
 
     /**
@@ -73,15 +73,9 @@ class EmployeeController extends Controller
     public function show($id)
     {
         $user = \App\User::find($id);
-        // $user->name = $request->name;
-        // $user->password = $request->password;
-        // $user->employer_id = $request->employer_id;
-        // $user->employee_id = $request->employee_id;
-        // $user->contact_number = $request->contact_number;
-        // $user->email = $request->email;
-        // $user->bio = $request->bio;
-        // $user->available_hours = $request->available_hours;;
+
         $data['user'] = $user;
+
         return view('employee.show', $data);
     }
 
@@ -121,7 +115,7 @@ class EmployeeController extends Controller
         $user->save();
          $request->session()->flash("sucessMessage", "Your post was updated sucessfully");
          Log::info('Profile updated');
-        return \Redirect::action('EmployeeController@show', $user->id);
+        return \Redirect::action('EmployeeController@index');
 
     }
 
