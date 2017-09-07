@@ -4,11 +4,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, intitial-scale=1">
     
+    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+    <script src='lib/jquery.min.js'></script>
+    <script src='lib/moment.min.js'></script>
+    <script src='fullcalendar/fullcalendar.js'></script>
+
     @include('layouts.partials._navbar')
 
 <!-- var_dump(Auth::check()) ?> -->
     @yield('title')
     
+
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Bootstrap Core JavaScript -->

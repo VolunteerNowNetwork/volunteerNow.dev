@@ -1,6 +1,23 @@
 @extends('layouts.master')
-
 @section('title')
+<script>
+    $(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+        $('#calendar').fullCalendar({
+                    // put your options and callbacks here
+        })
+    });
+</script>
+<style>
+    #calendar {
+    width:150px;
+    height:150px;
+    margin-left:75px;
+}
+</style>
+
 <title>Nonprofit Dashboard</title>
 @stop
 
@@ -32,7 +49,7 @@ h1 {
                 	<h4 class="section-title">My Events Calendar</h4>
                     <br>
                     <div class="calendar" > Calendar Placeholder </div>
-                    <img src="/img/september2017.jpg" height:"170" width="170">
+<!--                     <img src="/img/september2017.jpg" height:"170" width="170"> -->
                     <br>
                     <button class="btn btn-secondary" name="edit-event" > Edit an Event </button>
                     <br>
@@ -79,7 +96,11 @@ h1 {
                     </div>
             </div>
         </div>
+
     </div>
+        <div class="container">
+            <div id='calendar'></div>
+        </div>
 
 
 @stop
