@@ -9,7 +9,7 @@
 <html>
 
     <body>
-        <div class="container">
+        <div>
             <h1 class="text-center">Master Calendar</h1>
             	 <div class="container">
             <div id='calendar'></div>
