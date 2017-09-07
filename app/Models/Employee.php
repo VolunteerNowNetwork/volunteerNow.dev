@@ -12,7 +12,7 @@ class Employee extends Model
 
     public function user()
   {
-      //
+    
   }
 
 
