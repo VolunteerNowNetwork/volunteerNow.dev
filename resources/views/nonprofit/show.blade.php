@@ -1,22 +1,6 @@
 @extends('layouts.master')
 @section('title')
-<script>
-    $(document).ready(function() {
 
-    // page is now ready, initialize the calendar...
-
-        $('#calendar').fullCalendar({
-                    // put your options and callbacks here
-        })
-    });
-</script>
-<style>
-    #calendar {
-    width:150px;
-    height:150px;
-    margin-left:75px;
-}
-</style>
 
 <title>Nonprofit Dashboard</title>
 @stop
@@ -36,6 +20,7 @@ h1 {
 .btn {
     margin-bottom: 20px;
 }
+
 
 
 </style>
@@ -98,9 +83,7 @@ h1 {
         </div>
 
     </div>
-        <div class="container">
-            <div id='calendar'></div>
-        </div>
+       
 
 
 @stop

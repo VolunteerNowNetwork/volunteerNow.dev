@@ -48,3 +48,8 @@ Route::resource('/users', 'UsersController');
 
 //route for events search
 Route::resource('/posts', 'PostsController');
+
+Route::get('/opportunities', function() 
+{
+	return view('/masterCalendar');
+});
