@@ -49,7 +49,7 @@ Route::resource('/users', 'UsersController');
 //route for events search
 Route::resource('/posts', 'PostsController');
 
-Route::get('/opportunities', function() 
+Route::get('/masterCalendar', function() 
 {
-	return view('/masterCalendar');
+	return view('masterCalendar');
 });
