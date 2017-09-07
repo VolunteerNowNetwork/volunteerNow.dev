@@ -20,20 +20,20 @@
                         data-required>
                     </div>
                    <div class="form-group">
-                    Employer Id   <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id"
+                    Employer Id   <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id" value="{{ $user->employer_id }}"
                        data-required>
                    </div>
                    <div class="form-group">
-                    Email <input type="emil" class="form-control" id="email" name="email" >
+                    Email <input type="emil" class="form-control" id="email" name="email" value="{{ $user->email }}">
                    </div>
                     <div class="form-group">
-                    Contact Number  <input type="contactNumber" class="form-control" id="contact_number" name="contact_number">
+                    Contact Number  <input type="contactNumber" class="form-control" id="contact_number" name="contact_number" value="{{ $user->contact_number }}">
                     </div>
                     <div class="form-group">
-                    Bio About Yourself - Special Skills  <textarea type="text" class="form-control" id="" name="bio">  </textarea>
+                    Bio About Yourself - Special Skills  <textarea type="text" class="form-control" id="" name="bio" value="{{ $user->bio}}">  </textarea>
                     </div>
                     <div class="form-group">
-                    Available Hours  <input type="text" class="form-control" id="available_hours" name="available_hours" >
+                    Available Hours  <input type="text" class="form-control" id="available_hours" name="available_hours"  value="{{ $user->available_hours }}">
                     </div>
                     <div class="form-group">
                         <label for="image"> Upload Image </label>

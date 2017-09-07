@@ -29,6 +29,10 @@ Route::get('/register', function () {
 	return view('auth.mainregister');
 });
 
+Route::get('/events', function(){
+    return view('events.index');
+});
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
@@ -42,5 +46,5 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::resource('/users', 'UsersController');
 
-//route for events search 
+//route for events search
 Route::resource('/posts', 'PostsController');

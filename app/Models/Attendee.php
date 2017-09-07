@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Attendee extends Model
 {
-    protected $table = 'attendance_tracker';
+    protected $table = 'attendance';
 }
