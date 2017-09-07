@@ -23,9 +23,9 @@ h1 {
 
 </style>
     <div class="container">
-        <h1>  EMPLOYEE DASHBOARD </h1>
+        <h1>  VOLUNTEER  DASHBOARD </h1>
         <br>
-        <a href="{{ action('EmployeeController@show')}}">
+        <a href="{{ action ('EmployeeController@show') }}">
         <div class="row">
             <div class="col-md-6 col-md-3">
                 <div class="contact-section">
@@ -36,13 +36,13 @@ h1 {
                         <li class= "list-group-item">Contact Number: {{$user->contact_number}}</li>
                         <li class= "list-group-item">Email {{$user->email}}</li>
                         <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
-                        <a class= "list-group-item btn btn-primary" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
+                        <a class= "list-group-item btn btn-success" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                     </ul>
                 </div>
             </div>
             <div class="col-md-6 col-md-3">
                 <div class="event-section">
-                    <button class="btn btn-primary" name="choose" > Choose An Event </button>
+                    <button class="btn btn-success" name="choose" > Choose An Event </button>
                     <br>
                     <div class="calendar" > Calendar Placeholder </div>
                     	<img src="{{ asset('september2017.jpg') }}" width=300px height=200px>
@@ -59,9 +59,9 @@ h1 {
             </div>
             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
-                        <h4> Hours Available: </h4> <div> value="{{ $user->available_hours }}"</div>
+                        <h4> Hours Available: </h4> <div> {{ $user->available_hours }} </div>
                         <br>
-                        <h4> Hours Completed: </h4> <div> value="0" </div>
+                        <h4> Hours Completed: </h4> <div> 0 </div>
                         <br>
                         <button class="btn btn-success" name="feedback" > Submit Feedback </button>
                         <br>
