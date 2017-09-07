@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     
+    <link rel='stylesheet' href='calendar/fullcalendar.css' />
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
@@ -15,9 +16,32 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#calendar').fullCalendar({
-                  
+                default: 'standard',
+                selectable: true,
+                editable: false,
+
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,basicWeek,basicDay'
+                },
+                events: [
+        {
+            title: 'My Event',
+            start: '2010-01-01',
+            description: 'This is a cool event'
+        }
+        // more events here
+    ],
+    eventRender: function(event, element) {
+        element.qtip({
+            content: event.description
+        });
+    } 
+                 
+                 
                        
-            })
+            });
         });
     </script>
 
