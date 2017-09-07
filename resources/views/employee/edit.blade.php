@@ -30,15 +30,15 @@
                     Contact Number  <input type="contactNumber" class="form-control" id="contact_number" name="contact_number" value="{{ $user->contact_number }}">
                     </div>
                     <div class="form-group">
-                    Bio About Yourself - Special Skills  <textarea type="text" class="form-control" id="" name="bio" value="{{ $user->bio}}">  </textarea>
+                    Bio About Yourself - Special Skills  <textarea type="text" class="form-control" id="" name="bio" value="{{ $user->bio }}">  </textarea>
                     </div>
                     <div class="form-group">
                     Available Hours  <input type="text" class="form-control" id="available_hours" name="available_hours"  value="{{ $user->available_hours }}">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="image"> Upload Image </label>
                         <input type="file" name="image" id="image">
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col-sm-6">
                             <button type="submit" class="btn btn-primary"> Update </button>

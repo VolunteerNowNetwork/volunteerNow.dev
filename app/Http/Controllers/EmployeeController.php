@@ -23,7 +23,7 @@ class EmployeeController extends Controller
 
     public function index(Request $request)
     {
-        $users= \App\User::all();
+        $users= \App\User::();
         $data['users'] = $users;
 
         return view('employee.show', $data);
@@ -62,7 +62,7 @@ class EmployeeController extends Controller
 
         Log::info($user);
 
-        return \Redirect::action('NonprofitController@index');
+        return \Redirect::action('EmplpoyeeController@index');
     }
 
     /**
@@ -71,7 +71,7 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
 
         return view('employee.show');
@@ -99,7 +99,7 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, Employee::$rules);
+        // $this->validate($request, Employee::$rules);
         $user = User::find($id);
         $user->name = $request->name;
         $user->password = $request->password;
