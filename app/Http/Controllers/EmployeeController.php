@@ -23,9 +23,8 @@ class EmployeeController extends Controller
 
     public function index(Request $request)
     {
-        $users= \App\User::all();
+        $users = User::find($id);
         $data['users'] = $users;
-
         return view('employee.show', $data);
     }
 
@@ -47,11 +46,11 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, Employee::$rules);
         $user = new User();
         $user->name = $request->name;
         $user->password = $request->password;
         $user->employer_id = $request->employer_id;
+        //$user->employee_id = rand()->employee_id;
         $user->contact_number = $request->contact_number;
         $user->email = $request->email;
         $user->bio = $request->bio;
@@ -71,11 +70,16 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
+        $user = \App\User::find($id);
 
-        return view('employee.show');
+        $data['user'] = $user;
+
+        return view('employee.show', $data);
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -99,7 +103,7 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, Employee::$rules);
+        // $this->validate($request, Employee::$rules);
         $user = User::find($id);
         $user->name = $request->name;
         $user->password = $request->password;
@@ -111,7 +115,7 @@ class EmployeeController extends Controller
         $user->save();
          $request->session()->flash("sucessMessage", "Your post was updated sucessfully");
          Log::info('Profile updated');
-        return \Redirect::action('EmployeeController@show', $user->id);
+        return \Redirect::action('EmployeeController@index');
 
     }
 
