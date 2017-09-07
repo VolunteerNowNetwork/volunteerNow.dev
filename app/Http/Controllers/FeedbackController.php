@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Feedback;
+
+use Log;
+use DB;
 
 class FeedbackController extends Controller
 {
@@ -37,7 +41,19 @@ class FeedbackController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $feedback = new Feedback();
+        $feedback->name = $request->name;
+        $feedback->employee_name = $request->employee_name;
+        $feedback->organization_name = $request->organization_name;
+        $feedback->event_name = $request->event_name;
+        $feedback->event_date = $request->event_date;
+        $feedback->save();
+
+        $request->session()->flash("successMessage", "Your post was saved successfully");
+
+        Log::info($feedback);
+
+        return \Redirect::action('NonprofitController@index');
     }
 
     /**
