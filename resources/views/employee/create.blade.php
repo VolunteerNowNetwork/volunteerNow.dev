@@ -13,34 +13,34 @@
             <div class="row">
             <input type="hidden" name="user_group" value="employee">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Name" value="{{ old('username') }}"
+                Name    <input type="text" class="form-control" id="name" name="name" placeholder="Name"
                     data-required>
                 </div>
                 <div class="form-group">
-                   <input type="text" class="form-control" id="employerID" name="employerID" placeholder="employer id"
+                 Employer ID  <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id"
                     data-required>
                </div>
                <div class="form-group">
-                   <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="{{ old('email') }}">
+                  Email <input type="email" class="form-control" id="email" name="email" placeholder="Email" >
                </div>
-                 {!! $errors->first('password', '<div class="alert alert-danger">:message</div>') !!}
+
                 <div class="form-group">
-                    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required>
+                Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required>
                 </div>
-                {!! $errors->first('confirmPassword', '<div class="alert alert-danger">:message</div>') !!}
+
                 <div class="form-group">
-                    <input type="confirmPassword" class="form-control" id="" name="confirmPassword" placeholder="Password" data-required>
-                </div>
-                <div class="form-group">
-                    <input type="contact_number" class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number">
+                Confirm Password    <input type="password" class="form-control" id="" name="confirmPassword" placeholder="Confirm Password" data-required>
                 </div>
                 <div class="form-group">
-                    <label for="bio" > Tell Us About Yourself - Special Skills </label>
+                Contact Number    <input type="contact_number" class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number">
+                </div>
+                <div class="form-group">
+                Tell Us About Yourself - Special Skills
                     <input type="textarea" class="form-control" id="" name="bio" placeholder="Bio About Yourself - Special Skills">
                 </div>
                 <br>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="available_hours" name="available_hours" placeholder="Available Hours">
+                Available Hours    <input type="text" class="form-control" id="available_hours" name="available_hours" placeholder="Available Hours">
                 </div>
                 <br>
                 <div class="form-group">
@@ -50,7 +50,7 @@
                 <br>
                 <div class="row">
                     <div class="col-sm-6">
-                        <button type="submit" class="btn btn-primary"> Register </button>
+                        <button type="submit" class="btn btn-primary"> REGISTER </button>
                     </div>
                 </div>
         </form>
