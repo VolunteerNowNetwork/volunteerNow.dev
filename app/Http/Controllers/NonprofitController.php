@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Providers\User;
+use App\User;
 
 use Log;
 use DB;
@@ -75,9 +75,17 @@ class NonprofitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        return view('nonprofit.show');
+        $user = \App\User::findOrFail($id);
+
+        if (!$user) {
+            abort(404);
+        }
+
+        $data['user'] = $user;
+
+        return view('nonprofit.show', $data);
     }
 
     /**
@@ -86,9 +94,17 @@ class NonprofitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        return view('nonprofit.edit');
+        $user = \App\User::findOrFail($id);
+
+        if (!$user) {
+            abort(404);
+        }
+
+        $data['user'] = $user;
+
+        return view('nonprofit.edit', $data);
     }
 
     /**
@@ -100,7 +116,19 @@ class NonprofitController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $user->organization_name = $request->organization_name;
+        $user->admin = $request->admin;
+        $user->username = $request->username;
+        $user->bio = $request->bio;
+
+        $user->save();
+
+        $request->session()->flash("successMessage", "Your post was updated successfully");
+
+        return \Redirect::action('NonprofitController@show', $user->id);
+
     }
 
     /**
