@@ -15,7 +15,7 @@
                     <div class="col-md-6 col-md-offset-3">
                     <a class="text-center" href="/nonprofit/create">Nonprofit</a>
                     <br>
-                    <a class ="text-center" href="/employers/create">Employer</a>
+                    <a class ="text-center" href="/employer/create">Employer</a>
                     <br>
                     <a class ="text-center" href="/employee/create">Employee</a>
                     <br>

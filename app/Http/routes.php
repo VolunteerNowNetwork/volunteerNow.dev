@@ -19,9 +19,9 @@ Route::resource('nonprofit', 'NonprofitController');
 
 Route::resource('employee', 'EmployeeController');
 
-Route::resource('employers', 'EmployerController');
+Route::resource('employer', 'EmployerController');
 
-Route::resource('event', 'EventController');
+Route::resource('posts', 'PostsController');
 
 Route::resource('feedback', 'FeedbackController');
 
