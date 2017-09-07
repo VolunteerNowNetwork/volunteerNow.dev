@@ -15,9 +15,10 @@ class CreateFeedbackTable extends Migration
          Schema::create('feedback', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('nonprofitname');
-            $table->string('eventname');
-            $table->date('eventdate');
+            $table->string('employee_name');
+            $table->string('organization_name');
+            $table->string('event_name');
+            $table->date('event_date');
             $table->string('comments');
             $table->rememberToken();
             $table->timestamps();

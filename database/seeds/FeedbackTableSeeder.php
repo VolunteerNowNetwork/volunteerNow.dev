@@ -19,9 +19,10 @@ class FeedbackTableSeeder extends Seeder
         for ($i = 1; $i <= 10; $i++) {
             $feedback = new Feedback();
             $feedback->name = $faker->name;
-            $feedback->nonprofitname = $faker->company;
-            $feedback->eventname = $faker->bs;
-            $feedback->eventdate = $faker->date;
+            $feedback->employee_name = $faker->name;
+            $feedback->organization_name = $faker->company;
+            $feedback->event_name = $faker->bs;
+            $feedback->event_date = $faker->date;
             $feedback->comments = $faker->bs;
             $feedback->save();
     }

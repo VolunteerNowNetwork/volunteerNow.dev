@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="container">
-        <form method="POST" action="">
+        <form method="POST" action="{{ action('FeedbackController@store') }}">
             {!! csrf_field() !!}
             <div class="row">
 
@@ -18,13 +18,16 @@
                 Your Name: <input type="text" class="form-control" id="name" name="name" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Nonprofit Name <input type="text" class="form-control" id="nonprofitname" name="nonprofitname" placeholder="">
+                Volunteer's Name: <input type="text" class="form-control" id="employee_name" name="employee_name" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Event Name: <input type="text" class="form-control" id="eventname" name="eventname" placeholder="" data-required>
+                Nonprofit Name <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="">
             </div>
             <div class="form-group">
-                Event Date: <input type="text" class="form-control" id="eventdate" name="eventdate" placeholder="" data-required>
+                Event Name: <input type="text" class="form-control" id="event_name" name="event_name" placeholder="" data-required>
+            </div>
+            <div class="form-group">
+                Event Date: <input type="text" class="form-control" id="event_date" name="event_date" placeholder="YYYY-MM-DD" data-required>
             </div>
             <div class="form-group">
                 Comments: 

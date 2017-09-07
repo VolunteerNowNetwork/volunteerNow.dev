@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
 @section('title')
-<title>Edit Account</title>
+<title>Edit Your Account Info</title>
 @stop
 
 @section('content')
     <div class="container">
-        <form method="POST" action="">
+        <form method="POST" action="{{ action('NonprofitController@update', $user->id) }}">
             {!! csrf_field() !!}
             <div class="row">
 
@@ -14,23 +14,18 @@
 
             <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
-                Name of Nonprofit: <input type="text" class="form-control" id="nonprofitname" name="nonprofitname" placeholder="" data-required>
+                Name of Nonprofit: <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Admin Name: <input type="text" class="form-control" id="nonprofitadmin" name="nonprofitadmin" placeholder="" data-required>
+                Admin Name: <input type="text" class="form-control" id="admin" name="admin" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Username: <input type="text" class="form-control" id="nonprofitusername" name="nonprofitusername" placeholder="" data-required>
+                Username: <input type="text" class="form-control" id="username" name="username" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Bio About Your Nonprofit: <textarea name="nonprofitbio" rows="3" cols="64">{{ old('nonprofitbio') }}</textarea>
+                Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
             </div>
-        <!-- File Photo Input -->
-            <div class="form-group">
-                <label for="image">Upload Image</label>
-                <input type="file" name="image" id="image">
-            </div>
-            <!-- {{ method_field('PUT') }} -->
+            {{ method_field('PUT') }}
             <button>Update</button>
         </form>
     </div>
