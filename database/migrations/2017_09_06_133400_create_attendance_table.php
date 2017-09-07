@@ -11,7 +11,7 @@ class CreateAttendanceTable extends Migration
 
     public function up()
     {
-        Schema::create('attendance_tracker', function (Blueprint $table) {
+        Schema::create('attendance', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('non_profit_id')->references('non_profit_id')->on('users');
             $table->integer('event_id')->references('event_id')->on('posts');

@@ -13,7 +13,7 @@ class AttendanceTableSeeder extends Seeder
 
     public function run()
     {
-        DB::table('attendance_tracker')->delete();
+        DB::table('attendance')->delete();
 
         $faker = Faker\Factory::create();
         for($i = 1; $i <= 30; $i++)
@@ -25,7 +25,7 @@ class AttendanceTableSeeder extends Seeder
             $attendee->hrs_to_complete = $faker->numberBetween($min = 1, $max = 20);
             $attendee->actual_hours = $faker->numberBetween($min = 1, $max = 20);
             $attendee->did_attend_yes = "yes";
-            $attendee->did_attend_no = "";
+            $attendee->did_attend_no = "n/a";
             $attendee->save();
         }
     }
