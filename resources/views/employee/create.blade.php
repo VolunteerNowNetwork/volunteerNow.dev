@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="form-group">
-                Confirm Password    <input type="password" class="form-control" id="" name="confirmPassword" placeholder="Confirm Password" data-required>
+                Confirm Password    <input type="password" class="form-control" id="" name="password_confirmation" placeholder="password_confirmation"  data-required>
                 </div>
                 <div class="form-group">
                 Contact Number    <input type="contact_number" class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number">
@@ -41,11 +41,6 @@
                 <br>
                 <div class="form-group">
                 Available Hours    <input type="text" class="form-control" id="available_hours" name="available_hours" placeholder="Available Hours">
-                </div>
-                <br>
-                <div class="form-group">
-                    <label for="image"> Upload Image </label>
-                    <input type="file" name="employee_image" id="employee_image">
                 </div>
                 <br>
                 <div class="row">

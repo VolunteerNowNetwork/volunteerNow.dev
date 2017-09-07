@@ -111,7 +111,7 @@ class EmployeeController extends Controller
         $user->save();
          $request->session()->flash("sucessMessage", "Your post was updated sucessfully");
          Log::info('Profile updated');
-        return \Redirect::action('UserController@show', $user->id);
+        return \Redirect::action('EmployeeController@show', $user->id);
 
     }
 
