@@ -25,14 +25,28 @@ h1 {
     <div class="container">
         <h1>  EMPLOYEE DASHBOARD </h1>
         <br>
-        <a href="{{ action('EmployeeController@show') }}">
+        <a href="{{ action('EmployeeController@show')}}">
         <div class="row">
+            <div class="col-md-6 col-md-3">
+                <div class="contact-section">
+                    <h4 class="my-account">My Account</h4>
+                    <br>
+                    <ul class = "list-group">
+                        <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->name}}</li>
+                        <li class= "list-group-item">Contact Number: {{$user->contact_number}}</li>
+                        <li class= "list-group-item">Email {{$user->email}}</li>
+                        <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
+                        <a class= "list-group-item btn btn-primary" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
+                    </ul>
+                </div>
+            </div>
             <div class="col-md-6 col-md-3">
                 <div class="event-section">
                     <button class="btn btn-primary" name="choose" > Choose An Event </button>
                     <br>
                     <div class="calendar" > Calendar Placeholder </div>
-                    	<img src="{{ asset('september2017.jpg') }}">
+                    	<img src="{{ asset('september2017.jpg') }}" width=300px height=200px>
+                    <br>
                     <br>
                     <button class="btn btn-secondary" name="search-date" > Search By Date </button>
                     <br>
@@ -45,9 +59,9 @@ h1 {
             </div>
             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
-                        <h4> Hours Available: </h4> <div> [Hours Available Placeholder]</div>
+                        <h4> Hours Available: </h4> <div> value="{{ $user->available_hours }}"</div>
                         <br>
-                        <h4> Hours Completed: </h4> <div> [Hours Completed Placeholder]  </div>
+                        <h4> Hours Completed: </h4> <div> value="0" </div>
                         <br>
                         <button class="btn btn-success" name="feedback" > Submit Feedback </button>
                         <br>
@@ -58,10 +72,12 @@ h1 {
                     <div class="scheduled-events-section">
                         <h4> Your Events </h4>
                         <br>
+                        <br>
                         <div> Event List Placeholder </div>
                         <br>
+                        <br>
                         <h4> Participation Data </h4>
-                        <img src="../img/pie-chart.png" alt="Image Placeholder"></img>
+                        <img src="../img/pie-chart.png" alt="Image Placeholder" width=300px height=250px ></img>
                     </div>
             </div>
         </div>
