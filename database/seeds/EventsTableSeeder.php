@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
 use App\Models\Events;
-
 
 class EventsTableSeeder extends Seeder
 {
@@ -31,7 +29,7 @@ class EventsTableSeeder extends Seeder
             $event->pointOfContact = $faker->name;
             $event->suppliesNeeded = $faker->text;
             $event->appropriateAttire = $faker->text;
-            $event->catagories = $faker->text;
+            $event->categories = $faker->text;
             $event->save();
         }
     }

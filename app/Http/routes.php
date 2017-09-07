@@ -43,4 +43,4 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::resource('/users', 'UsersController');
 
 //route for events search 
-Route::resource('/events', 'EventsController');
+Route::resource('/posts', 'PostsController');
