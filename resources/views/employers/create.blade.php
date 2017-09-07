@@ -28,13 +28,16 @@
                 Password: <input type="password" class="form-control" id="password" name="password" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Email: <input type="email" class="form-control" id="email" name="email" placeholder="" data-required>
+                Password: <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm your Password">
             </div>
             <div class="form-group">
-                Contact Number: <input type="double" class="form-control" id="contact_number" name="contact_number" placeholder="" data-required>
+                Email: <input type="text" class="form-control" id="email" name="email" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Company Website Link: <textarea name="website_link" rows="3" cols="64">{{ old('website_link') }}</textarea>
+                Contact Number: <input type="text" class="form-control" id="contact_number" name="contact_number" placeholder="" data-required>
+            </div>
+            <div class="form-group">
+                Company Website Link: <input type="text" class="form-control" id="website_link" name="website_link" placeholder="">
             </div>
             <div class="form-group">
                 Company Tax I.D.: <textarea name="tax_id" rows="3" cols="64">{{ old('tax_id') }}</textarea>

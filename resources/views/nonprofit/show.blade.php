@@ -32,12 +32,24 @@ h1 {
                 	<h4 class="section-title">My Events Calendar</h4>
                     <br>
                     <div class="calendar" > Calendar Placeholder </div>
-<!--                     <img src="/img/september2017.jpg" ></img> -->
-					<img src="{{ asset('september2017.jpg') }}">
+                    <img src="/img/september2017.jpg" height:"170" width="170">
                     <br>
                     <button class="btn btn-secondary" name="edit-event" > Edit an Event </button>
                     <br>
                     <button class="btn btn-secondary" name="add-event" > Add an Event</button>
+                    <br>
+                    <br>
+                    <h4 class="my-account">My Account</h4>
+                    <br>
+                    <ul class = "list-group">
+                        <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->organization_name}}</li>
+                        <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
+                        <li class= "list-group-item">Username: {{$user->username}}</li>
+                        <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
+                        <a class= "list-group-item btn btn-primary" href= "{{ action('NonprofitController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
+                    </ul>
+                    <br>
+                    <br>
                 </div>
             </div>
             <div class="col-md-6 col-md-3">
@@ -49,7 +61,6 @@ h1 {
                         <br>
                         <h4 class="section-title ">Signup By Date</h1>
                         <div class="calendar"> Calendar Placeholder </div>
-                    	<img src="/img/september2017.jpg" ></img>
                     	<br>
                     </div>
             </div>
@@ -63,7 +74,8 @@ h1 {
                         <br>
                         <button class="btn btn-success" name="print"> Print</button>
                         <h4> Feedback </h4>
-                        <button class="btn btn-success" name="submitFeedback"> Submit Feedback on an Employee</button>
+                        <br>
+                        <a class= "list-group-item btn btn-primary" href="{{ action('FeedbackController@show') }}"><span class="glyphicon glyphicon-envelope"></span>    Submit Feedback</a>
                     </div>
             </div>
         </div>
