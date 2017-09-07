@@ -16,7 +16,7 @@ class NonprofitController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index', 'show', 'create']]);
+        $this->middleware('auth', ['except' => ['index', 'show', 'create', 'edit']]);
     }
     /**
      * Display a listing of the resource.

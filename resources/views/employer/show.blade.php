@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-<title>Employers Profile</title>
+<title>Employer Profile</title>
 @stop
 
 

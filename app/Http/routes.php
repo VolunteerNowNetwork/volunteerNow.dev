@@ -19,9 +19,9 @@ Route::resource('nonprofit', 'NonprofitController');
 
 Route::resource('employee', 'EmployeeController');
 
-Route::resource('employers', 'EmployerController');
+Route::resource('employer', 'EmployerController');
 
-Route::resource('event', 'EventController');
+Route::resource('posts', 'PostsController');
 
 Route::resource('feedback', 'FeedbackController');
 
@@ -49,7 +49,7 @@ Route::resource('/users', 'UsersController');
 //route for events search
 Route::resource('/posts', 'PostsController');
 
-Route::get('/opportunities', function() 
+Route::get('/masterCalendar', function() 
 {
-	return view('/masterCalendar');
+	return view('masterCalendar');
 });

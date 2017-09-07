@@ -2,7 +2,7 @@
  
          <ul class="nav navbar-nav">
             <li class=""><a href="/about">About Us</a></li>
-            <li class=""><a href="/calendar">Opportunities</a></li>
+            <li class=""><a href="/masterCalendar">Opportunities</a></li>
             <li class=""><a href="/register">Register</a></li>
             <li class=""><a href="/auth/login">Login</a></li>
             <li class=""><a href="/auth/logout">Logout</a></li>

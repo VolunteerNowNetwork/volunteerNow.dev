@@ -6,17 +6,23 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\User;
+
+use Log;
+use DB;
 
 class EmployerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' =>['index', 'show', 'create']]);
+    }
     public function index()
     {
-        //
+        $users =\App\User::all();
+        $data['users'] = $users;
+
+        return view('employer.index', $data);
     }
 
     /**
@@ -26,7 +32,7 @@ class EmployerController extends Controller
      */
     public function create()
     {
-        return view('employers.create');
+        return view('employer.create');
     }
 
     /**
@@ -37,7 +43,25 @@ class EmployerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->organization_name = $request->organization_name;
+        $user->admin = $request->admin;
+        $user->username = $request->username;
+        $user->password = $request->password;
+        $user->email = $request->email;
+        $user->contact_number = $request->contact_number;
+        $user->website_link = $request->website_link;
+        $user->tax_id;
+        $user->bio = $request->bio;
+        $user->corporate_sponsor = $request->corporate_sponsor;
+        $user->with_who = $request->with_who;
+        $user->save();
+
+        $request->session()->flash("successMessage", "Your account was created successfully!");
+
+        Log::info($user);
+
+        return \Redirect::action('EmployerController@index');
     }
 
     /**
@@ -48,7 +72,13 @@ class EmployerController extends Controller
      */
     public function show($id)
     {
-        return view('employers.show');
+        $user = \App\User::findOrFail($id);
+         if(!$user) {
+            abort(404);
+         }
+
+         $data['user'] = $user;
+        return view('employer.show', $data);
     }
 
     /**
@@ -59,7 +89,15 @@ class EmployerController extends Controller
      */
     public function edit($id)
     {
-        return view('employers.edit');
+        $user =\App\User::findOrFail($id);
+
+            if(!$user) {
+                abort(404);
+            }
+
+            $data['user'] = $user;
+
+            return view('employer.edit', $data);
     }
 
     /**
@@ -71,7 +109,19 @@ class EmployerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $user->organization_name = $request->organization_name;
+        $user->admin = $request->admin;
+        $user->username = $request->username;
+        $user->bio = $request->bio;
+
+        $user->save();
+
+        $request->session()->flash("successMessage", "Your post was updated successfully");
+
+        return \Redirect::action('EmployerController@show', $user->id);
+
     }
 
     /**
