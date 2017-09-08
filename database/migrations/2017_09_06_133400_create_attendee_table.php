@@ -30,6 +30,6 @@ class CreateAttendeeTable extends Migration
 
     public function down()
     {
-        Schema::drop('attendance_tracker');
+        Schema::drop('attendee');
     }
 }

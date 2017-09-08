@@ -12,6 +12,7 @@ use App\Providers\User;
 use Log;
 use DB;
 
+
 class PostsController extends Controller
 {
     /**
@@ -19,9 +20,19 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+     {
+         $this->middleware('auth', ['except' => ['index', 'show', 'create', 'store']]);
+     }
+
     public function index()
     {
-        //
+        $posts = \App\Models\Post::get(['title', 'start', 'end', 'color']);
+        
+        $data['posts'] = $posts;
+
+        return Response()->json($posts);
+
     }
 
     /**
@@ -31,7 +42,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.nonprofitPost');
     }
 
     /**
@@ -42,7 +53,29 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+        $post->user_group = $request->user_group;
+        $post->organization_name = $request->organization_name;
+        $post->title = $request->title;
+        $post->start = $request->start;
+        $post->end = $request->end;
+        $post->color = $request->color;
+        $post->location = $request->location;
+        $post->number_of_hours = $request->number_of_hours;
+        $post->number_of_volunteers = $request->number_of_volunteers;
+        $post->age_restriction = $request->age_restriction;
+        $post->point_of_contact = $request->point_of_contact;
+        $post->supplies_needed = $request->supplies_needed;
+        $post->appropriate_attire = $request->appropriate_attire;
+        $post->categories = $request->categories;
+        $post->save();
+        $post->save();
+
+        $request->session()->flash("successMessage", "Your post was saved successfully");
+
+        Log::info($post);
+
+        return view('masterCalendar');
     }
 
     /**
