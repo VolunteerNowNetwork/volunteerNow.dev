@@ -13,38 +13,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.print.css"/>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#calendar').fullCalendar({
-                default: 'standard',
-                selectable: true,
-                editable: false,
-
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month,basicWeek,basicDay'
-                },
-                events: [
-        {
-            title: 'My Event',
-            start: '2010-01-01',
-            description: 'This is a cool event'
-        }
-        // more events here
-    ],
-    eventRender: function(event, element) {
-        element.qtip({
-            content: event.description
-        });
-    }
-
-
-
-            });
-        });
-    </script>
-
     @include('layouts.partials._navbar')
 
 <!-- var_dump(Auth::check()) ?> -->

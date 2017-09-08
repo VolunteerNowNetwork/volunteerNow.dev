@@ -16,9 +16,11 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('user_group');
             $table->string('organization_name');
-            $table->integer('event_id');
-            $table->string('event_title');
+            $table->string('title');
+            $table->datetime('start');
+            $table->datetime('end');
             $table->float('location');
+            $table->string('color', 7);
             $table->float('number_of_hours');
             $table->integer('number_of_volunteers');
             $table->integer('age_restriction');

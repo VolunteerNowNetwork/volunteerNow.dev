@@ -21,8 +21,10 @@ class PostsTableSeeder extends Seeder
             $post = new Post();
             $post->user_group = $faker->text;
             $post->organization_name = $faker->company;
-            $post->event_id = $faker->text;
-            $post->event_title = $faker->text;
+            $post->title = $faker->text;
+            $post->start = $faker->dateTimeThisYear();
+            $post->end = $faker->dateTimeThisMonth();
+            $post->color = $faker->hexcolor;
             $post->location = $faker->address;
             $post->number_of_hours = $faker->uuid;
             $post->number_of_volunteers = $faker->uuid;
