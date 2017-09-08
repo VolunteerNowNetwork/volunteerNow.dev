@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-<title>Update Your Account</title>
+<title>Update Your Account Info</title>
 @stop
 
 
@@ -13,9 +13,8 @@
             <h1 class="section-title">Update Your Profile Here</h1>
             <div class="col-md-6 col-md-offset-3">
                 
-                <form method="POST" action="{{ action('Auth\AuthController@postLogin') }}">
+                <form method="POST" action="{{ action('EmployerController@update', $user->id) }}">
                     {!! csrf_field() !!}
-                     {!! $errors->first('nameOfCompany', '<div class="alert alert-danger">:message</div>') !!}
                     <div class="form-group">
                         <input type="text" class="form-control" id="nameOfCompany" name="nameOfCompany" placeholder="NameOfCompany" 
                         data-required>
@@ -41,8 +40,9 @@
                         <input type="taxId" class="form-control" id="" name="taxId">Tax I.D.
                     </div>
                     <div class="form-group">
-                        <textarea type="bio" class="form-control" id="" name="bio">Company Bio</textarea>
+                        About Your Company<textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
                     </div>
+                    {{ method_field('PUT') }}
                     <div class="form-group">
                         <input type="corporateSponsor" class="form-control" id="corporateSponsor" name="corporateSponsor">Are you a corporate sponsor
                     </div>

@@ -23,9 +23,9 @@ h1 {
 
 </style>
     <div class="container">
-        <h1>  EMPLOYERS PROFILE  </h1>
+        <h1>  EMPLOYER DASHBOARD  </h1>
         <br>
-        <a href="{{ action('EmployersController@show') }}">
+        <a href="{{ action('EmployerController@show') }}">
         <div class="row">
             <div class="col-md-6 col-md-3">
                 <div class="event-section">
@@ -43,6 +43,14 @@ h1 {
                     <button class="btn btn-secondary" name="calendar-synch" > Calendar Synch </button>
                 </div>
             </div>
+                     <ul class = "list-group">
+                        <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->organization_name}}</li>
+                        <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
+                        <li class= "list-group-item">Username: {{$user->username}}</li>
+                        <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
+                        <a class= "list-group-item btn btn-primary" href= "{{ action('NonprofitController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
+                    </ul>
+                    <br>
             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
                         <h4> Total Employee Signups: </h4> <div> [Total Employee Signups Placeholder] </div>
