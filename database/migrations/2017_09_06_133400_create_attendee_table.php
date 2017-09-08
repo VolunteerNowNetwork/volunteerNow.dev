@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAttendanceTable extends Migration
+class CreateAttendeeTable extends Migration
 {
     /**
      * Run the migrations.*
@@ -11,7 +11,7 @@ class CreateAttendanceTable extends Migration
 
     public function up()
     {
-        Schema::create('attendance', function (Blueprint $table) {
+        Schema::create('attendee', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('non_profit_id')->references('non_profit_id')->on('users');
             $table->integer('event_id')->references('event_id')->on('posts');

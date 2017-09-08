@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->integer('tax_id')->nullable();
             $table->string('bio')->nullable();
             $table->string('available_hours')->nullable();
+            $table->string('completed_hours')->nullable();
             $table->string('additional_resources')->nullable();
             $table->string('benefit')->nullable();
             $table->string('corporate_sponsor')->nullable();

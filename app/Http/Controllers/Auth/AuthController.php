@@ -22,6 +22,9 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    protected $redirectPath = "/welcome";
+    protected $loginPath = 'auth/login';
+    protected $redirectAfterLogout = "auth/login";
 
     /**
      * Create a new authentication controller instance.
@@ -54,7 +57,7 @@ class AuthController extends Controller
      * @return User
      */
     protected function create(array $data)
-    {   
+    {
         if($data['user_group'] == 'nonprofit') {
 
             return User::create([
@@ -98,6 +101,7 @@ class AuthController extends Controller
                 'contact_number' => $data['contact_number'],
                 'bio' => $data['bio'],
                 'available_hours' => $data['available_hours'],
+                'completd_hours' => $data['completed_hours'],
             ]);
 
     }
