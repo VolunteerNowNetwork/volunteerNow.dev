@@ -13,7 +13,8 @@ h1 {
     text-align: center;
 }
 .col-md-6  {
-    margin-right: 50px;
+    margin-right: 70px;
+    padding-right: 30px;
 
 }
 .btn {
@@ -45,7 +46,7 @@ h1 {
                     <button class="btn btn-success" name="choose" > Choose An Event </button>
                     <br>
                     <div class="calendar" > Calendar Placeholder </div>
-                    	<img src="{{ asset('september2017.jpg') }}" width=300px height=200px>
+                    	<img src="{{ asset('september2017.jpg') }}" width=200px height=200px>
                     <br>
                     <br>
                     <button class="btn btn-secondary" name="search-date" > Search By Date </button>
@@ -57,6 +58,7 @@ h1 {
                     <button class="btn btn-secondary" name="calendar-synch" > Calendar Synch </button>
                 </div>
             </div>
+            <br>
             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
                         <h4> Hours Available: </h4> <div> {{ $user->available_hours }} </div>
@@ -68,6 +70,7 @@ h1 {
                         <a href="feedback/feedback"  class="btn btn-secondary" name="go-feedback" > View Feedback </a>
                     </div>
             </div>
+            <br>
             <div class="col-md-6 col-md-3">
                     <div class="scheduled-events-section">
                         <h4> Your Events </h4>
