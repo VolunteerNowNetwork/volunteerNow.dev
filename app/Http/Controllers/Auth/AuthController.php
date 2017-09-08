@@ -101,7 +101,6 @@ class AuthController extends Controller
                 'contact_number' => $data['contact_number'],
                 'bio' => $data['bio'],
                 'available_hours' => $data['available_hours'],
-                'completd_hours' => $data['completed_hours'],
             ]);
 
     }
