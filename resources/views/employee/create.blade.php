@@ -12,6 +12,7 @@
             {!! csrf_field() !!}
             <div class="row">
             <input type="hidden" name="user_group" value="employee">
+    
                 <div class="form-group">
                 Name    <input type="text" class="form-control" id="name" name="name" placeholder="Name"
                     data-required>
