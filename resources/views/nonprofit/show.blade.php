@@ -31,17 +31,14 @@ h1 {
         <div class="row">
             <div class="col-md-6 col-md-3">
                 <div class="event-section">
-                	<h4 class="section-title">My Events Calendar</h4>
+                	<h4 class="section-title">My Events</h4>
+                    <a class= "list-group-item btn btn-primary" href= "/posts/create"><span class="glyphicon glyphicon-pencil"></span>  Add An Event</a>
                     <br>
-                    <div class="calendar" > Calendar Placeholder </div>
-<!--                     <img src="/img/september2017.jpg" height:"170" width="170"> -->
-                    <br>
-                    <button class="btn btn-secondary" name="edit-event" > Edit an Event </button>
-                    <br>
-                    <button class="btn btn-secondary" name="add-event" > Add an Event</button>
+                    <a class= "list-group-item btn btn-primary" href= ""><span class="glyphicon glyphicon-pencil"></span>  Edit An Event</a>
                     <br>
                     <br>
-                    <h4 class="my-account">My Account</h4>
+                    <br>
+                    <h4 class="section-title">My Account</h4>
                     <br>
                     <ul class = "list-group">
                         <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->organization_name}}</li>
@@ -68,7 +65,7 @@ h1 {
             </div>
             <div class="col-md-6 col-md-3">
                     <div class="attendance">
-                        <h4> Validate Attendance </h4>
+                        <h4 class="section-title"> Validate Attendance </h4>
                         <br>
                         <div> Attendance List Placeholder </div>
                         <br>
@@ -76,6 +73,8 @@ h1 {
                         <br>
                         <button class="btn btn-success" name="print"> Print</button>
                         <h4> Feedback </h4>
+                        <br>
+                        <a class= "list-group-item btn btn-primary" href="{{ action('FeedbackController@show') }}"><span class="glyphicon glyphicon-envelope"></span>    Submit Feedback</a>
                     </div>
             </div>
         </div>

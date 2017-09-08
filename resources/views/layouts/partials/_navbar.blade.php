@@ -1,11 +1,27 @@
     <div id="navbar" class="collapse navbar-collapse" style="background-color: #c7c5c4; color: white;">
- 
+
          <ul class="nav navbar-nav">
-            <li class=""><a href="/about">About Us</a></li>
-            <li class=""><a href="/masterCalendar">Opportunities</a></li>
+
+            @if (Auth::check())
+                <li class=""><a href="/welcome"> Home </a></li>
+                <li class=""><a href="/masterCalendar">Opportunities</a></li>
+                <li class=""><a href="/auth/logout">Logout</a></li>
+                <li class=""><a href="/welcome">About Us</a></li>
+                <!-- @if('user_group' == 'employee' ) -->
+                <li class=""><a href="/employee/{{Auth::id() }}"> Dashboard </a></li>
+                <!-- @elseif ('user_group' == 'employer') -->
+                <li class=""><a href="/employer/{{Auth::id() }}"> Dashboard </a></li>
+                <!-- @elseif('user-group' == 'nonprofit') -->
+                <li class=""><a href="/employer/{{Auth::id() }}"> Dashboard </a></li>
+                <!-- @endif -->
+            @else
+            <li class=""><a href="/welcome"> HOME </a></li>
             <li class=""><a href="/register">Register</a></li>
+            <li class=""><a href="/masterCalendar">Opportunities</a></li>
             <li class=""><a href="/auth/login">Login</a></li>
-            <li class=""><a href="/auth/logout">Logout</a></li>
+                <li class=""><a href="/welcome">About Us</a></li> -->
+            @endif
+
         </ul>
 
         <form class="navbar-form navbar-left" action="" role="search">
