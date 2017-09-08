@@ -6,8 +6,13 @@
                 <li class=""><a href="/masterCalendar">Opportunities</a></li>
                 <li class=""><a href="/auth/logout">Logout</a></li>
                 <li class=""><a href="/welcome">About Us</a></li>
-                <li class=""><a href="/nonprofit/show"> Profile </a></li>
-
+                @if(user == employee )
+                <li class=""><a href="/employee/{{Auth::id() }}"> Profile </a></li>
+                @elseif (user == employer)
+                <li class=""><a href="/employer/{{Auth::id() }}"> Profile </a></li>
+                @elseif(user == nonprofit)
+                <li class=""><a href="/employer/{{Auth::id() }}"> Profile </a></li>
+                @endif
             @else
             <li class=""><a href="/register">Register</a></li>
             <li class=""><a href="/masterCalendar">Opportunities</a></li>
