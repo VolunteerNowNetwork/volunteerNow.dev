@@ -13,7 +13,7 @@ class AttendanceTableSeeder extends Seeder
 
     public function run()
     {
-        DB::table('attendance')->delete();
+        DB::table('attendee')->delete();
 
         $faker = Faker\Factory::create();
         for($i = 1; $i <= 30; $i++)

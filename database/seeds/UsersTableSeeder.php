@@ -33,6 +33,7 @@ class UsersTableSeeder extends Seeder
             $user->tax_id = $faker->creditCardNumber;
             $user->bio = $faker->bs;
             $user->available_hours = $faker->numberBetween($min = 1, $max = 100);
+            $user->completed_hours = $faker->numberBetween($min = 1, $max = 100);
             $user->additional_resources = "stuff";
             $user->benefit = $faker->bs;
             $user->corporate_sponsor = "yes";
