@@ -61,11 +61,11 @@ h1 {
                     <div class="participation-section">
                         <h4> Hours Available: </h4> <div> {{ $user->available_hours }} </div>
                         <br>
-                        <h4> Hours Completed: </h4> <div> 0 </div>
+                        <h4> Hours Completed: </h4> <div> {{ $user->completed_hours }}</div>
                         <br>
-                        <button class="btn btn-success" name="feedback" > Submit Feedback </button>
+                        <a href="feedback/feedback" class="btn btn-success" name="feedback" > Submit Feedback </a>
                         <br>
-                        <button class="btn btn-secondary" name="go-feedback" > View Feedback </button>
+                        <a href="feedback/feedback"  class="btn btn-secondary" name="go-feedback" > View Feedback </a>
                     </div>
             </div>
             <div class="col-md-6 col-md-3">

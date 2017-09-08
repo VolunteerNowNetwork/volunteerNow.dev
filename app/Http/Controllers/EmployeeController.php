@@ -23,7 +23,7 @@ class EmployeeController extends Controller
 
     public function index(Request $request)
     {
-        $users = User::find($id);
+        $users= \App\User::all();
         $data['users'] = $users;
         return view('employee.show', $data);
     }
@@ -55,13 +55,14 @@ class EmployeeController extends Controller
         $user->email = $request->email;
         $user->bio = $request->bio;
         $user->available_hours = $request->available_hours;
+
         $user->save();
 
         $request->session()->flash("successMessage", "Your account was created successfully!");
 
         Log::info($user);
 
-        return \Redirect::action('NonprofitController@index');
+        return \Redirect::action('EmployeeController@index');
     }
 
     /**
@@ -89,7 +90,7 @@ class EmployeeController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
+        $user = \App\User::find($id);
          $data['user'] = $user;
         return view('employee.edit', $data);
     }
@@ -104,14 +105,16 @@ class EmployeeController extends Controller
     public function update(Request $request, $id)
     {
         // $this->validate($request, Employee::$rules);
-        $user = User::find($id);
+        $user = \App\User::find($id);
+
         $user->name = $request->name;
         $user->password = $request->password;
         $user->employer_id = $request->employer_id;
         $user->contact_number = $request->contact_number;
         $user->email = $request->email;
         $user->bio = $request->bio;
-        $user->available_hours = $request->available_hours;;
+        $user->available_hours = $request->available_hours;
+        $user->completed_hours = $request->completed_hours;
         $user->save();
          $request->session()->flash("sucessMessage", "Your post was updated sucessfully");
          Log::info('Profile updated');

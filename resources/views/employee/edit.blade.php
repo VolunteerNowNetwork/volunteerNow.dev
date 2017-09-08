@@ -35,6 +35,9 @@
                     <div class="form-group">
                     Available Hours  <input type="text" class="form-control" id="available_hours" name="available_hours"  value="{{ $user->available_hours }}">
                     </div>
+                    <div class="form-group">
+                    Completed Hours  <input type="text" class="form-control" id="completed_hours" name="completed_hours"  value="{{ $user->completed_hours }}">
+                    </div>
                     <!-- <div class="form-group">
                         <label for="image"> Upload Image </label>
                         <input type="file" name="image" id="image">

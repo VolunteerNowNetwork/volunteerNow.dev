@@ -22,6 +22,9 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    protected $redirectPath = "/welcome";
+    protected $loginPath = 'auth/login';
+    protected $redirectAfterLogout = "auth/login";
 
     /**
      * Create a new authentication controller instance.
@@ -98,7 +101,6 @@ class AuthController extends Controller
                 'contact_number' => $data['contact_number'],
                 'bio' => $data['bio'],
                 'available_hours' => $data['available_hours'],
-                'completed_hours' => $data['completed_hours'],
             ]);
 
     }
