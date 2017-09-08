@@ -76,8 +76,6 @@ h1 {
                         <br>
                         <button class="btn btn-success" name="print"> Print</button>
                         <h4> Feedback </h4>
-                        <br>
-                        <a class= "list-group-item btn btn-primary" href="{{ action('FeedbackController@show') }}"><span class="glyphicon glyphicon-envelope"></span>    Submit Feedback</a>
                     </div>
             </div>
         </div>
