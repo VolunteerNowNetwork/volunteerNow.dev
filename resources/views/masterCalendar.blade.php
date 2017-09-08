@@ -16,5 +16,33 @@
         </div>
         </div>
     </body>
+    <script type="text/javascript">
+    
+	$(document).ready(function() {
+
+        $('#calendar').fullCalendar({
+            default: 'standard',
+            selectable: true,
+            editable: false,
+
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,basicWeek,basicDay'
+            },
+        	events: '/posts',
+
+			// defaultDate: '2017-09-01',
+			// navLinks: true,
+			// editable: true,
+			// eventLimit: true,
+		 //    events: BASEURL + '/posts'
+	});
+});
+
+    </script>
+
+
+
 </html>
 @stop
