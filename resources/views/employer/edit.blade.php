@@ -12,11 +12,12 @@
         <div class="row">
             <h1 class="section-title">Update Your Profile Here</h1>
             <div class="col-md-6 col-md-offset-3">
-                
+
                 <form method="POST" action="{{ action('EmployerController@update', $user->id) }}">
                     {!! csrf_field() !!}
+                    <input type="hidden" name="user_group" value="employee">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nameOfCompany" name="nameOfCompany" placeholder="NameOfCompany" 
+                        <input type="text" class="form-control" id="nameOfCompany" name="nameOfCompany" placeholder="NameOfCompany"
                         data-required>
                     </div>
                      {!! $errors->first('password', '<div class="alert alert-danger">:message</div>') !!}

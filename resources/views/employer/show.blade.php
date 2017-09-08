@@ -26,6 +26,7 @@ h1 {
         <h1>  EMPLOYER DASHBOARD  </h1>
         <br>
         <a href="{{ action('EmployerController@show') }}">
+        <input type="hidden" name="user_group" value="employee">
         <div class="row">
             <div class="col-md-6 col-md-3">
                 <div class="event-section">
@@ -43,6 +44,7 @@ h1 {
                     <button class="btn btn-secondary" name="calendar-synch" > Calendar Synch </button>
                 </div>
             </div>
+
                      <ul class = "list-group">
                         <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->organization_name}}</li>
                         <li class= "list-group-item">Admin Name: {{$user->admin}}</li>

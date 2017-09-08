@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::resource('nonprofit', 'NonprofitController');
 
 Route::resource('employee', 'EmployeeController');
@@ -44,12 +45,17 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 // Route::get('users/{search}', function($search, Request))
 
-Route::resource('/users', 'UsersController');
+//Route::resource('/users', 'UsersController');
 
 //route for events search
 Route::resource('/posts', 'PostsController');
 
-Route::get('/masterCalendar', function() 
+Route::get('/masterCalendar', function()
 {
 	return view('masterCalendar');
+});
+
+Route::get('/welcome', function()
+{
+    return view('welcome');
 });
