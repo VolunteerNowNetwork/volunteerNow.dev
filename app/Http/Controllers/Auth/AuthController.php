@@ -22,7 +22,7 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-    protected $redirectPath = "welcome";
+    protected $redirectPath = "/welcome";
     protected $loginPath = 'auth/login';
     protected $redirectAfterLogout = "auth/login";
 
@@ -93,7 +93,7 @@ class AuthController extends Controller
         } else {
 
               return User::create([
-                'user_group' => $data['user_group'],
+                'user_group' => $data['user_group'] ,
                 'name' => $data['name'],
                 'employer_id' => $data['employer_id'],
                 'email' => $data['email'],
