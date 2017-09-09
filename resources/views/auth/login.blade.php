@@ -35,10 +35,10 @@
                     </div> -->
                     <div class="row">
                         <div class="col-sm-6">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-primary"> Login </button>
                         </div>
                         <div class="col-sm-6 text-right">
-                            <a href="/register" class="btn btn-success">Go To Register page</a>
+                            <a href="/register" class="btn btn-success"> Register </a>
                         </div>
                     </div>
                 </form>
