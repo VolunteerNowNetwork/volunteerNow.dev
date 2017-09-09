@@ -18,7 +18,6 @@
 <!-- var_dump(Auth::check()) ?> -->
     @yield('title')
 
-
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Bootstrap Core JavaScript -->
@@ -27,7 +26,7 @@
 </head>
 <body>
     {{ (Auth::check()) ? "User is logged in!" : "User is logged out!" }}
-    {{ (Auth::id()) }} -->
+    {{ (Auth::id()) }}
 
     @if (session()->has('successMessage'))
         <div class="alert alert-success">{{ session('successMessage') }}</div>

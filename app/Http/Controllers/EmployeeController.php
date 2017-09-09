@@ -48,7 +48,7 @@ class EmployeeController extends Controller
     {
         $user = new User();
         $user->name = $request->name;
-        $user->user_group = $request->user_group;
+        //$user->user_group = $request->user_group;
         $user->password = $request->password;
         $user->employer_id = $request->employer_id;
         //$user->employee_id = rand()->employee_id;
