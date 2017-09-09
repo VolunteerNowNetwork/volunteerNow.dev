@@ -26,6 +26,8 @@ Route::resource('posts', 'PostsController');
 
 Route::resource('feedback', 'FeedbackController');
 
+Route::resource('attendance', 'AttendanceController');
+
 Route::get('/register', function () {
 	return view('auth.mainregister');
 });
