@@ -9,13 +9,13 @@
                  <li class=""><a href="/welcome">About Us</a></li>
                  <li class=""><a href="/employee/{{Auth::id() }}"> Dashboard </a></li>
 
-        
+
              @else
              <li class=""><a href="/welcome"> HOME </a></li>
              <li class=""><a href="/register">Register</a></li>
              <li class=""><a href="/masterCalendar">Opportunities</a></li>
              <li class=""><a href="/auth/login">Login</a></li>
-                 <li class=""><a href="/welcome">About Us</a></li> -->
+                 <li class=""><a href="/welcome">About Us</a></li>
              @endif
 
         </ul>
