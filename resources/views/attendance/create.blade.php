@@ -12,6 +12,7 @@
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 	            <input type="hidden" name="user_group" value="employee">
+	            <input type="hidden" name="employee_id" value="{{ (Auth::id()) }}">
 				<h1>Event Sign Up</h1>
 				<br>
 					<div class="form-group">
@@ -20,11 +21,11 @@
 					</div>
 
 					<div class="form-group">
-					<select style="width: 150px;">
+					<select name="title" style="width: 150px;">
 					<option>Choose one</option>
 					<?php
 					foreach($posts as $post) { ?>
-					<option name="title" value="<?php echo $post['title'] ?>"><?php echo $post['title'] ?></option>
+					<option value="<?php echo $post['title'] ?>"><?php echo $post['title'] ?></option>
 					<?php
 					} ?>
 					</select>
@@ -33,25 +34,25 @@
 					<div class="form-group">
 	                	How Many People are Attending? 
 	                	<br>
-	                	<select style="width: 150px;">
+	                	<select name="num_of_people" style="width: 150px;">
 							<option>Choose one</option>
-							<option name="num_of_people" value="1">1</option>
-							<option name="num_of_people" value="2">2</option>
-							<option name="num_of_people" value="3">3</option>
-							<option name="num_of_people" value="4">4</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
 						</select>
 					</div>
 					<div class="form-group">
 	                	How many hours do you need to complete?
 	                	<br>
-	                	<select style="width: 150px;">
+	                	<select name="hrs_to_complete" style="width: 150px;">
 							<option>Choose one</option>
-							<option name="hrs_to_complete" value="1">1</option>
-							<option name="hrs_to_complete" value="2">2</option>
-							<option name="hrs_to_complete" value="3">3</option>
-							<option name="hrs_to_complete" value="4">4</option>
-							<option name="hrs_to_complete" value="5">5</option>
-							<option name="hrs_to_complete" value="6">6</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
 						</select>
 					</div>
             		<button type="submit" class="btn btn-primary">Signup</button>
