@@ -38,6 +38,7 @@
                     <div class="form-group">
                     Completed Hours  <input type="text" class="form-control" id="completed_hours" name="completed_hours"  value="{{ $user->completed_hours }}">
                     </div>
+                    {{ method_field('PUT') }}
                     <!-- <div class="form-group">
                         <label for="image"> Upload Image </label>
                         <input type="file" name="image" id="image">
@@ -48,6 +49,11 @@
                         </div>
                     </div>
                 </form>
+                <form method="POST" action="{{ action('EmployeeController@destroy', $user->id) }}">
+                      {!! csrf_field() !!}
+                  <button class="btn btn-danger" value="delete post">DELETE </button>
+                  {{ method_field('DELETE') }}
+              </form>
             </div>
         </div>
     </section>
