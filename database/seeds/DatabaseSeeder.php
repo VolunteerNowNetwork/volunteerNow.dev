@@ -14,12 +14,10 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        DB::table('users')->truncate();
-
         $this->call(UsersTableSeeder::class);
         $this->call(FeedbackTableSeeder::class);
         $this->call(PostsTableSeeder::class);
-        $this->call(AttendeeTableSeeder::class);
+        $this->call(AttendanceTableSeeder::class);
 
 
         Model::reguard();
