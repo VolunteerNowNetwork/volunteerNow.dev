@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use App\Models\Attendance;
 use App\Providers\User;
 
 use Log;
@@ -48,9 +49,18 @@ class AttendanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $attendance = new Attendance();
+        $attendance->title = $request->title;
+        $attendance->hrs_to_complete = $request->hrs_to_complete;
+        $attendance->num_of_people = $request->num_of_people;
+        $attendance->save();
 
+        $request->session()->flash("successMessage", "You have signed up successfully!");
+
+        Log::info($attendance);
+
+        return view('/');
+    }
     /**
      * Display the specified resource.
      *

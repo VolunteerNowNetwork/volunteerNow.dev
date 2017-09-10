@@ -7,8 +7,8 @@
 
 @section('content')
 	<div class="container">
-		<form method="POST" action="">
-			{!! csrf_field() !!}
+		<form method="POST" action="{{ action('AttendanceController@store') }}">
+{!! csrf_field() !!}
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 	            <input type="hidden" name="user_group" value="employee">
@@ -17,25 +17,28 @@
 					<div class="form-group">
 					Select An Event Below:
 					<br>
+					</div>
+
+					<div class="form-group">
 					<select style="width: 150px;">
 					<option>Choose one</option>
 					<?php
 					foreach($posts as $post) { ?>
-					<option value="<?php echo $post['title'] ?>"><?php echo $post['title'] ?></option>
+					<option name="title" value="<?php echo $post['title'] ?>"><?php echo $post['title'] ?></option>
 					<?php
 					} ?>
-					</select> 
-
+					</select>
 					</div>
+
 					<div class="form-group">
 	                	How Many People are Attending? 
 	                	<br>
 	                	<select style="width: 150px;">
 							<option>Choose one</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
+							<option name="num_of_people" value="1">1</option>
+							<option name="num_of_people" value="2">2</option>
+							<option name="num_of_people" value="3">3</option>
+							<option name="num_of_people" value="4">4</option>
 						</select>
 					</div>
 					<div class="form-group">
@@ -43,12 +46,12 @@
 	                	<br>
 	                	<select style="width: 150px;">
 							<option>Choose one</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
+							<option name="hrs_to_complete" value="1">1</option>
+							<option name="hrs_to_complete" value="2">2</option>
+							<option name="hrs_to_complete" value="3">3</option>
+							<option name="hrs_to_complete" value="4">4</option>
+							<option name="hrs_to_complete" value="5">5</option>
+							<option name="hrs_to_complete" value="6">6</option>
 						</select>
 					</div>
             		<button type="submit" class="btn btn-primary">Signup</button>
@@ -60,19 +63,3 @@
 	</div>
 @stop
 
-
-<!-- 					<div class="form-group">
-                	How Many People are Attending? <input type="text" class="form-control" id="" name="" placeholder="" data-required>
-            		</div>
- -->
-<!-- 				    @foreach($posts as $post)
-				    <select>
-					  <option value="">{{$post->title}}</option>
-					@endforeach
-					</select> -->
-
-<!-- 					<a class= "list-group-item btn btn-primary" href= "">{{$post->title}}</a> -->
-
-<!-- 						<ul class = "list-group">
-							<li class= "list-group-item">{{$post->title}}</li>
-						</ul> -->
