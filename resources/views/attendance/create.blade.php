@@ -12,7 +12,6 @@
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 	            <input type="hidden" name="user_group" value="employee">
-	            <input type="hidden" name="employee_id" value="{{ (Auth::id()) }}">
 				<h1>Event Sign Up</h1>
 				<br>
 					<div class="form-group">
