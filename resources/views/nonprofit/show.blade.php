@@ -61,6 +61,7 @@ h1 {
                         <h4 class="section-title ">Signup By Date</h1>
                         <div class="calendar"> Calendar Placeholder </div>
                     	<br>
+                        <a class= "list-group-item btn btn-primary" href="/allevents">Signup For An Event</a>
                     </div>
             </div>
             <div class="col-md-6 col-md-3">

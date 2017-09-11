@@ -35,6 +35,15 @@ class PostsController extends Controller
 
     }
 
+    public function all()
+    {
+        $posts = \App\Models\Post::all();
+
+        $data['posts'] = $posts;
+
+        return view('posts.allPosts', $data);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -84,10 +93,15 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $posts =\App\Models\Post::all();
-        $data['posts'] = $posts;
+        $post = Post::findOrFail($id);
+
+        if (!$post) {
+            abort(404);
+        }
+
+        $data['post'] = $post;
 
         return view('posts.show', $data);
     }
