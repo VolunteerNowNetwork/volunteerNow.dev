@@ -30,6 +30,8 @@
 					</select>
 					</div>
 
+					<input type="hidden" name="event_id" value="{{$post->id}}">
+
 					<div class="form-group">
 	                	How Many People are Attending? 
 	                	<br>
