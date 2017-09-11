@@ -48,17 +48,6 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-// Route after login for appropriate user-group
-Route::get('dashboard', function() {
-    $user = \Auth::user();
-    if($user->user_group == 'employee') {
-        return \Redirect::action('EmployeeController@show', $user->id);
-    } else if($user->user_group == 'non-profit'){
-        return \Redirect::action('NonProfit@show', $user->id);
-    } else {
-        return \Redirect::action('EmployerController@show', $user->id);
-    }
-});
 
 
 
@@ -73,4 +62,17 @@ Route::get('/masterCalendar', function()
 Route::get('/welcome', function()
 {
     return view('welcome');
+});
+
+
+// Route after login for appropriate user-group
+Route::get('dashboard', function() {
+    $user = \Auth::user();
+    if($user->user_group == 'employee') {
+        return \Redirect::action('EmployeeController@show', $user->id);
+    } else if($user->user_group == 'non-profit'){
+        return \Redirect::action('NonProfit@show', $user->id);
+    } else {
+        return \Redirect::action('EmployerController@show', $user->id);
+    }
 });

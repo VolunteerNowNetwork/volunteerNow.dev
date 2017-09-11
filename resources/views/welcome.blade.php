@@ -10,6 +10,7 @@
     <body>
         <div class="container">
             <h1 class="text-center">Welcome to Volunteer Now!</h1>
+            <h2 class="text-center">The power of community connection...you make the difference and we make it easy.
             <img src="/img/mainphoto.png">
         </div>
     </body>
