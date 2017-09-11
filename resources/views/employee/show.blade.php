@@ -13,7 +13,7 @@ h1 {
     text-align: center;
 }
 .col-md-6  {
-    margin-right: 70px;
+    margin-left: 70px;
     padding-right: 30px;
 
 }
@@ -24,7 +24,7 @@ h1 {
 
 </style>
     <div class="container">
-        <h1>  VOLUNTEER  DASHBOARD </h1>
+        <h1>VOLUNTEER  DASHBOARD</h1>
         <br>
         <a href="{{ action ('EmployeeController@show') }}">
         <div class="row">
@@ -44,23 +44,22 @@ h1 {
             </div>
             <div class="col-md-6 col-md-3">
                 <div class="event-section">
-                    <button class="btn btn-success" name="choose" > Choose An Event </button>
+                    <h4> Hours Available: </h4> <div> {{ $user->available_hours }} </div>
                     <br>
-                    <div class="calendar" > Calendar Placeholder </div>
-                    	<img src="{{ asset('september2017.jpg') }}" width=200px height=200px>
+                    <h4> Hours Completed: </h4> <div> {{ $user->completed_hours }}</div>
                     <br>
+                    <h4 class="my-events"> Events </h4>
                     <br>
-                    <button class="btn btn-secondary" name="search-date" > Search By Date </button>
+                    <a class="btn btn-primary" name="seeAll" href= "/allevents"> See All Events </a>
                     <br>
-                    <button class="btn btn-secondary" name="search-nonprofit" > Search by Non-Profit </button>
+                    <a class= "btn btn-primary" href= "/masterCalendar">Search By Date</a>
                     <br>
-                    <button class="btn btn-secondary" name="search-category" > Search by Category </button>
-                    <br>
-                    <button class="btn btn-secondary" name="calendar-synch" > Calendar Synch </button>
+                    <h4> Submit Feedback On a Nonprofit </h4> 
+                    <a href="feedback/feedback" class="btn btn-success" name="feedback" > Submit Feedback </a>
                 </div>
             </div>
             <br>
-            <div class="col-md-6 col-md-3">
+<!--             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
                         <h4> Hours Available: </h4> <div> {{ $user->available_hours }} </div>
                         <br>
@@ -71,14 +70,17 @@ h1 {
                         <a href="feedback/feedback"  class="btn btn-secondary" name="go-feedback" > View Feedback </a>
                     </div>
             </div>
-            <br>
+            <br> -->
             <div class="col-md-6 col-md-3">
                     <div class="scheduled-events-section">
                         <h4> Your Events </h4>
-                        <br>
-                        <br>
-                        <div> Event List Placeholder </div>
-                        <br>
+                        @foreach($events as $event)
+                        <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
+                        <h5>Location: {{$event->location}}</h5>
+                        <h5>Start Time: {{$event->start}}</h5>
+                        <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a>
+                        </ul>
+                        @endforeach
                         <br>
                         <h4> Participation Data </h4>
                         <img src="../img/pie-chart.png" alt="Image Placeholder" width=300px height=250px ></img>
