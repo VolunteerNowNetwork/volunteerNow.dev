@@ -3,6 +3,23 @@
 @section('content')
 	<div class="container">
 		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+        	<h2>Search Here By Nonprofit Name, Category or Title</h2>
+       	    	<form class="navbar-form navbar-left" action="{{ action('PostsController@all') }}" role="search">
+            	<div class="form-group">
+                <input type="q" class="form-control" name="q" id="q" placeholder="Search Events">
+            	</div>
+            	<button type="submit" class="btn btn-default">
+                <i class="glyphicon glyphicon-search"></i>
+            	</button>
+        		</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 		<h1>All Events</h1>
 		@foreach($posts as $post)

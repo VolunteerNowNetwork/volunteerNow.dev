@@ -17,5 +17,15 @@ class Post extends Model
         return $this->hasMany('\App\Models\Attendance', 'event_id');
     }
 
+    public static function search($search)
+    {
+        $posts = Post::where('organization_name', 'LIKE', "%$search%")
+            ->orWhere('categories', 'LIKE', "%$search%")
+            ->orWhere('title', 'LIKE', "%$search%")
+            ->get();
+
+        return $posts;
+    }
+
 
 }
