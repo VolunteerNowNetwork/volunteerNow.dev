@@ -36,6 +36,10 @@ class AttendanceController extends Controller
         $posts =\App\Models\Post::get(['title']);
         $data['posts'] = $posts;
 
+        $post = \App\Models\Post::find('id');
+
+
+
         // $user = \App\User::findOrFail($id);
         // $data['user'] = $user;
 
@@ -52,7 +56,9 @@ class AttendanceController extends Controller
     {
         $attendance = new Attendance();
         $attendance->user_id = Auth::user()->id;
+        $attendance->event_id = $request->event_id;
         $attendance->title = $request->title;
+        $attendance->event_id = $request->event_id;
         $attendance->hrs_to_complete = $request->hrs_to_complete;
         $attendance->num_of_people = $request->num_of_people;
         $attendance->save();
@@ -71,7 +77,15 @@ class AttendanceController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        if (!$post) {
+            abort(404);
+        }
+
+        $data['post'] = $post;
+
+        return view('attendance.show', $data);
     }
 
     /**

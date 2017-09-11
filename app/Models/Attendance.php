@@ -21,6 +21,6 @@ class Attendance extends Model
 
     public function posts()
     {
-    	return $this->belongsTo('\App\Models\Post', 'post_id');
+    	return $this->belongsTo('\App\Models\Post', 'event_id');
     }
 }
