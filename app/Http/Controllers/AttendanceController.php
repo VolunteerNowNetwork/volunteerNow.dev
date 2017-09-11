@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Attendance;
 use Auth;
+use App\Http\Controllers\EmployeeController;
 use App\Providers\User;
 
 use Log;
@@ -67,7 +68,7 @@ class AttendanceController extends Controller
 
         Log::info($attendance);
 
-        return view('/');
+        return \Redirect::action('EmployeeController@show', $attendance->user_id);
     }
     /**
      * Display the specified resource.
