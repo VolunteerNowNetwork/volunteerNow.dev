@@ -4,7 +4,6 @@
 <title>Employer Profile</title>
 @stop
 
-
 @section('content')
 <style>
 
@@ -20,8 +19,8 @@ h1 {
     margin-bottom: 20px;
 }
 
-
 </style>
+
     <div class="container">
         <h1>  EMPLOYER DASHBOARD  </h1>
         <br>
@@ -29,30 +28,27 @@ h1 {
         <input type="hidden" name="user_group" value="employee">
         <div class="row">
             <div class="col-md-6 col-md-3">
+                <div class="account-section">
+                    <ul class = "list-group">
+                       <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->organization_name}}</li>
+                       <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
+                       <li class= "list-group-item">Username: {{$user->username}}</li>
+                       <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
+                       <a class= "list-group-item btn btn-primary" href= "{{ action('NonprofitController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
+                   </ul>
+                </div>
+               <br>
                 <div class="event-section">
-                    <button class="btn btn-primary" name="choose" > Views An Event </button>
-                    <br>
-                    <div class="calendar" > Calendar Placeholder </div>
-                    <img src="/resources/assets/img/septemeber2017.jpg" ></img>
+                    <button class="btn btn-primary" name="choose" > View An Event </button>
                     <br>
                     <button class="btn btn-secondary" name="search-date" > Search By Date </button>
                     <br>
                     <button class="btn btn-secondary" name="search-nonprofit" > Search by Non-Profit </button>
                     <br>
-                    <button class="btn btn-secondary" name="search-employerCode" > Search by Employer Code </button>
-                    <br>
-                    <button class="btn btn-secondary" name="calendar-synch" > Calendar Synch </button>
+                    <button class="btn btn-secondary" name="search-employerCode" > View Employees </button>
                 </div>
             </div>
-
-                     <ul class = "list-group">
-                        <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->organization_name}}</li>
-                        <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
-                        <li class= "list-group-item">Username: {{$user->username}}</li>
-                        <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
-                        <a class= "list-group-item btn btn-primary" href= "{{ action('NonprofitController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
-                    </ul>
-                    <br>
+            <br>
             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
                         <h4> Total Employee Signups: </h4> <div> [Total Employee Signups Placeholder] </div>
@@ -62,7 +58,7 @@ h1 {
                         <textarea class="" name="displayNonprofitFeedback" > Display NonProfit Feedback </textarea>
                         <br>
                         <textarea class="" name="displayEmployeeFeedback" > Display Employee Feedback </textarea>
-                        <
+                        <br>
                     </div>
             </div>
             <div class="col-md-6 col-md-3">

@@ -93,14 +93,14 @@ class AuthController extends Controller
         } else {
 
               return User::create([
+                 'name' => $data['name'],
                 'user_group' => $data['user_group'] ,
-                'name' => $data['name'],
-                'employer_id' => $data['employer_id'],
-                'email' => $data['email'],
-                'password' => $data['password'],
                 'contact_number' => $data['contact_number'],
+                'employer_id' => $data['employer_id'],
                 'bio' => $data['bio'],
                 'available_hours' => $data['available_hours'],
+                'password' => $data['password'],
+                'email' => $data['email'],
             ]);
 
     }
