@@ -35,9 +35,14 @@ class PostsController extends Controller
 
     }
 
-    public function all()
+    public function all(Request $request)
     {
-        $posts = \App\Models\Post::all();
+        $posts = Post::all();
+
+        if($request->has('q')) {
+            $q = $request->q;
+            $posts = Post::search($q);
+        }
 
         $data['posts'] = $posts;
 
