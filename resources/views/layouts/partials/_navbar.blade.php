@@ -11,7 +11,7 @@
 
 
              @else
-             <li class=""><a href="/welcome"> HOME </a></li>
+             <li class=""><a href="/welcome"> Home </a></li>
              <li class=""><a href="/register">Register</a></li>
              <li class=""><a href="/masterCalendar">Opportunities</a></li>
              <li class=""><a href="/auth/login">Login</a></li>

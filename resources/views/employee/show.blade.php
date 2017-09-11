@@ -32,7 +32,6 @@ h1 {
                 <div class="contact-section">
                     <h4 class="my-account">My Account</h4>
                     <br>
-
                     <ul class = "list-group">
                         <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->name}}</li>
                         <li class= "list-group-item"> Contact Number: {{$user->contact_number}}</li>
@@ -40,8 +39,6 @@ h1 {
                         <li class= "list-group-item"> Employer ID: {{$user->employer_id}}</li>
                         <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
                         <a class= "list-group-item btn btn-success"  value=" edit employee" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
-
-
                     </ul>
                 </div>
             </div>
