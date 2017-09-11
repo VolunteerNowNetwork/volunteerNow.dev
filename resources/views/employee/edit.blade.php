@@ -4,8 +4,6 @@
 <title>Update Your Account</title>
 @stop
 
-
-
 @section('content')
 <div class="container">
     <section id="login">
