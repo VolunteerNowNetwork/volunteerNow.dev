@@ -45,7 +45,7 @@
                     </div> -->
                     <div class="row">
                         <div class="col-sm-6">
-                            <button type="submit" class="btn btn-primary"> Update </button>
+                            <button type="submit" class="btn btn-primary" value="edit user"> Update </button>
                         </div>
                     </div>
                 </form>

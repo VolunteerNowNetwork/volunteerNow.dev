@@ -40,8 +40,6 @@ h1 {
                         <li class= "list-group-item"> Employer ID: {{$user->employer_id}}</li>
                         <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
                         <a class= "list-group-item btn btn-success"  value=" edit employee" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
-
-
                     </ul>
                 </div>
             </div>
