@@ -1,14 +1,12 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 use App\User;
 use Log;
 use DB;
-
 class EmployeeController extends Controller
 {
     /**
@@ -20,14 +18,12 @@ class EmployeeController extends Controller
      {
          $this->middleware('auth', ['except' => ['index', 'show', 'create']]);
      }
-
     public function index(Request $request)
     {
-        $users= \App\User::all();
+        $users = Auth::check();
         $data['users'] = $users;
         return view('employee.show', $data);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -37,7 +33,6 @@ class EmployeeController extends Controller
     {
         return view('employee.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -56,16 +51,11 @@ class EmployeeController extends Controller
         $user->email = $request->email;
         $user->bio = $request->bio;
         $user->available_hours = $request->available_hours;
-
         $user->save();
-
         $request->session()->flash("successMessage", "Your account was created successfully!");
-
         Log::info($user);
-
         return \Redirect::action('EmployeeController@index');
     }
-
     /**
      * Display the specified resource.
      *
@@ -75,14 +65,9 @@ class EmployeeController extends Controller
     public function show($id)
     {
         $user = \App\User::find($id);
-
         $data['user'] = $user;
-
         return view('employee.show', $data);
     }
-
-
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -95,7 +80,6 @@ class EmployeeController extends Controller
          $data['user'] = $user;
         return view('employee.edit', $data);
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -107,11 +91,11 @@ class EmployeeController extends Controller
     {
         // $this->validate($request, Employee::$rules);
         $user = \App\User::find($id);
-
         $user->name = $request->name;
         $user->user_group = $request->user_group;
         $user->password = $request->password;
         $user->employer_id = $request->employer_id;
+        $user->employee_id = $request->employee_id;
         $user->contact_number = $request->contact_number;
         $user->email = $request->email;
         $user->bio = $request->bio;
@@ -121,9 +105,7 @@ class EmployeeController extends Controller
          $request->session()->flash("sucessMessage", "Your post was updated sucessfully");
          Log::info('Profile updated');
         return \Redirect::action('EmployeeController@index');
-
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -135,7 +117,6 @@ class EmployeeController extends Controller
         $user = User::find($id);
 		$user->delete();
          $request->session()->flash("sucessMessage", "Your post was deleted sucessfully");
-
         return \Redirect::action('EmployeeController@index');
     }
 }
