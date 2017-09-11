@@ -16,7 +16,7 @@
                  <li class=""><a href="/employer/{{Auth::id()}} "> Dashboard </a></li>
                   <li class=""><a href="/auth/logout">Logout</a></li>
 
-             @elseif (Auth::check() && Auth::user()->user_group == "non-profit")
+             @elseif (Auth::check() && Auth::user()->user_group == "nonprofit")
                  <li class=""><a href="/masterCalendar">Opportunities</a></li>
                  <li class=""><a href="/welcome">About Us</a></li>
                  <li class=""><a href="/nonprofit/{{Auth::id()}}"> Dashboard </a></li>
@@ -35,10 +35,10 @@
     </div>
 
     <!-- <nav class="navbar navbar-default">
-        
+
          <div class="container-fluid">
             <!-/.Brand and toggle get grouped for better mobile display -->
-            
+
             <!-- <div class="navbar-header">
                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                <a class="navbar-brand" href="/welcome">Volunteer Now</a>
@@ -59,6 +59,6 @@
                   <li><a href="/auth/login">Login</a></li>
                   <li><a href="/welcome">About Us</a></li>
                </ul>
-               
+
             </div>
-        <!-<!--> 
+        <!-<!-->
