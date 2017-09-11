@@ -45,7 +45,7 @@ h1 {
                     <br>
                     <button class="btn btn-secondary" name="search-nonprofit" > Search by Non-Profit </button>
                     <br>
-                    <button class="btn btn-secondary" name="search-employerCode"  href= "{{ action('EmployerController@index', $user->employer_id) }}"> View Employees </button>
+                    <button class="btn btn-secondary" name="search-employerCode" > View Employees </button>
                 </div>
             </div>
             <br>
