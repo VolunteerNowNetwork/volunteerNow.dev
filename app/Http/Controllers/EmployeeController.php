@@ -65,7 +65,9 @@ class EmployeeController extends Controller
     public function show($id)
     {
         $user = \App\User::find($id);
+        $events = \App\Models\Attendance::where('user_id', $id)->get();
         $data['user'] = $user;
+        $data['events'] = $events;
         return view('employee.show', $data);
     }
     /**

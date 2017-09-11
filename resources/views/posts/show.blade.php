@@ -18,8 +18,10 @@
 				<li class= "list-group-item">Age Restrictions: {{$post->age_restriction}}</li>
 				<li class= "list-group-item">Category: {{$post->categories}}</li>
 				<br>
+				@if (count($events) >0 || $events='')
 				<a class= "btn btn-primary center-block" href= "{{ action('AttendanceController@show', $post->id) }}">Signup For This Event</a>
-				<br>
+				@else
+				@endif
 				<br>
 				<a class= "btn btn-primary center-block" href= "/allevents">Go Back to All Events</a>
 			</ul>

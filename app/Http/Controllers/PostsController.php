@@ -101,6 +101,9 @@ class PostsController extends Controller
             abort(404);
         }
 
+        $events = \App\Models\Attendance::where('user_id', $id)->get();
+
+        $data['events'] = $events;
         $data['post'] = $post;
 
         return view('posts.show', $data);
