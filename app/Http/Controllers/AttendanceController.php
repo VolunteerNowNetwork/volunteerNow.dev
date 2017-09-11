@@ -59,7 +59,8 @@ class AttendanceController extends Controller
         $attendance->user_id = Auth::user()->id;
         $attendance->event_id = $request->event_id;
         $attendance->title = $request->title;
-        $attendance->event_id = $request->event_id;
+        $attendance->location = $request->location;
+        $attendance->start = $request->start;
         $attendance->hrs_to_complete = $request->hrs_to_complete;
         $attendance->num_of_people = $request->num_of_people;
         $attendance->save();

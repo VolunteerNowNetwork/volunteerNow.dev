@@ -19,6 +19,8 @@ class CreateAttendanceTable extends Migration
             $table->integer('user_id')->unsigned()->nullable;
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title')->nullable();
+            $table->string('location')->nullable();
+            $table->string('start')->nullable();
             $table->decimal('hrs_to_complete')->nullable();;
             $table->integer('num_of_people')->nullable();
             $table->rememberToken();

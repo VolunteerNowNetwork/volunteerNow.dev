@@ -22,6 +22,7 @@
 						<option value="4">4</option>
 					</select>
 					</div>
+					<input type="hidden" id="location" name="location" value="{{$post->location}}">
 					<div class="form-group">
 	                	How many hours do you need to complete?
 	                	<br>
@@ -35,6 +36,7 @@
 							<option value="6">6</option>
 						</select>
 					</div>
+					<input type="hidden" id="start" name="start" value="{{$post->start}}">
             		<button type="submit" class="btn btn-primary">Signup</button>
 					<h6>By clicking 'Signup' you are agreeing to show up at the time/date of this event. Should you not be able to attend, please call the Nonprofit contact and let them know you will not be able to make it.</h6>
             		<h6>After signing up this event will appear on your dashboard!</h6>
