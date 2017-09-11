@@ -32,7 +32,6 @@ h1 {
                 <div class="contact-section">
                     <h4 class="my-account">My Account</h4>
                     <br>
-
                     <ul class = "list-group">
                         <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->name}}</li>
                         <li class= "list-group-item"> Contact Number: {{$user->contact_number}}</li>
