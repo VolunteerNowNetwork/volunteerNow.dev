@@ -24,7 +24,7 @@ h1 {
 
 </style>
     <div class="container">
-        <h1>VOLUNTEER  DASHBOARD</h1>
+        <h1>Volunteer Dashboard</h1>
         <br>
         <a href="{{ action ('EmployeeController@show') }}">
         <div class="row">
@@ -37,6 +37,7 @@ h1 {
                         <li class= "list-group-item"> Contact Number: {{$user->contact_number}}</li>
                         <li class= "list-group-item"> Email: {{$user->email}}</li>
                         <li class= "list-group-item"> Employer ID: {{$user->employer_id}}</li>
+                        <li class= "list-group-item"> Employer Name: {{ $user->organization }}</li>
                         <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
                         <a class= "list-group-item btn btn-success"  value=" edit employee" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                     </ul>
@@ -54,8 +55,8 @@ h1 {
                     <br>
                     <a class= "btn btn-primary" href= "/masterCalendar">Search By Date</a>
                     <br>
-                    <h4> Submit Feedback On a Nonprofit </h4> 
-                    <a href="feedback/feedback" class="btn btn-success" name="feedback" > Submit Feedback </a>
+                    <h4> Submit Feedback On a Nonprofit </h4>
+                    <a href="/feedback/feedback" class="btn btn-success" name="feedback" > Submit Feedback </a>
                 </div>
             </div>
             <br>

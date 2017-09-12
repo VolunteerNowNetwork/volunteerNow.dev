@@ -11,10 +11,9 @@
         <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
             <div class="row">
-            <input type="hidden" name="user_group" value="employee"> 
-
+            <input type="hidden" name="user_group" value="employee">
                 <div class="form-group">
-                Name    <input type="text" class="form-control" id="name" name="name" placeholder="Name"
+                Name   <input type="text" class="form-control" id="name" name="name" placeholder="Name"
                     data-required>
                 </div>
                 <div class="form-group">
@@ -24,7 +23,6 @@
                <div class="form-group">
                   Email <input type="email" class="form-control" id="email" name="email" placeholder="Email" >
                </div>
-
                 <div class="form-group">
                 Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required>
                 </div>
