@@ -62,10 +62,18 @@ class NonprofitController extends Controller
     {
         $user = \App\User::findOrFail($id);
 
-        // $organization_name = \App\User::get(['organization_name']);
         $organization_name = Auth::user()->organization_name;
 
         $events = \App\Models\Post::where('organization_name', $organization_name)->get();
+
+        $organizationEventAttendees = \App\Models\Attendance::select('event_id', DB::raw('COUNT(*) AS attendance'))->where('organization_name', $organization_name)->groupBy('title')->get();
+
+        $attendanceArray = [];
+        foreach($organizationEventAttendees as $event) {
+            $eventId = $event['event_id'];
+            $attendanceArray["$eventId"] = $event['attendance'];
+        }
+        $nonprofitEvents = \App\Models\Post::where('organization_name', $organization_name)->get();
 
         if (!$user) {
             abort(404);
@@ -74,6 +82,8 @@ class NonprofitController extends Controller
         $data['user'] = $user;
         $data['organization_name'] = $organization_name;
         $data['events'] = $events;
+        $data['nonprofitEvents'] = $nonprofitEvents;
+        $data['attendanceArray'] = $attendanceArray;
 
         return view('nonprofit.show', $data);
     }

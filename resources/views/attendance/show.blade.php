@@ -10,7 +10,6 @@
 				<h1> Signup for This Event:</h1>
 				<h4> {{$post->title}}</h4>
 				<h4>Event Id: {{$post->id}}</h4>
-				<input type="hidden" id="location" name="organization_name" value="{{$post->organization_name}}">
 				<div class="form-group">
 				<input type="hidden" id="event_id" name="event_id" value="{{$post->id}}">
 	                How Many People are Attending? 
@@ -25,6 +24,7 @@
 					</div>
 					<input type="hidden" id="location" name="location" value="{{$post->location}}">
 					<div class="form-group">
+				<input type="hidden" id="location" name="organization_name" value="{{$post->organization_name}}">
 	                	How many hours do you need to complete?
 	                	<br>
 	                	<select name="hrs_to_complete" style="width: 150px;">
