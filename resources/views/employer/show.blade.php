@@ -34,7 +34,8 @@ h1 {
                        <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
                        <li class= "list-group-item">Username: {{$user->username}}</li>
                        <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
-                       <a class= "list-group-item btn btn-primary" href= "{{ action('NonprofitController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
+                       <br>
+                       <a class= "list-group-item btn btn-primary" href= "{{ action('EmployerController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                    </ul>
                 </div>
                <br>
@@ -71,6 +72,7 @@ h1 {
                         <div> Top 5 Events</div>
                         <br>
                         <h4> Participation Data </h4>
+                        <br>
                         <img src="/../resources/assets/img/pie-chart.png" alt="Image Placeholder"></img>
                     </div>
             </div>
