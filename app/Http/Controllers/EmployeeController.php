@@ -20,7 +20,7 @@ class EmployeeController extends Controller
      }
     public function index(Request $request)
     {
-        $users = Auth::check();
+        $users =\App\User::all();
         $data['users'] = $users;
         return view('employee.show', $data);
     }
