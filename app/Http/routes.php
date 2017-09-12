@@ -70,7 +70,7 @@ Route::get('dashboard', function() {
     $user = \Auth::user();
     if($user->user_group == 'employee') {
         return redirect()->action('EmployeeController@show', $user->id);
-    } else if($user->user_group == 'non-profit'){
+    } else if($user->user_group == 'nonprofit'){
         return redirect()->action('NonProfitController@show', $user->id);
     } else {
         return redirect()->action('EmployerController@show', $user->id);
