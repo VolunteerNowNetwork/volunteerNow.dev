@@ -7,6 +7,17 @@
 @section('content')
 <!DOCTYPE html>
 <html>
+  <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script>
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded))
+        });
+    }
+</script>
+<input type="button" value="Upload" onclick="showPicker()" />
     <body>
         <div class="container">
             <h1 class="text-center">Welcome to Volunteer Now!</h1>
