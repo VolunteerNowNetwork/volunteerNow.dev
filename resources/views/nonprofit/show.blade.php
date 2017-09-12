@@ -63,8 +63,12 @@ h1 {
             <div class="col-md-6 col-md-3">
                     <div class="signupByEvent">
                     	<h4 class="section-title">Signup By Event</h4>
-                        <h4> Event 1 </h4> <div> [Event 1 Placeholder] </div>
-                        <br>
+                        @foreach($nonprofitEvents as $nonprofitEvent)
+                        <h5> Signup Count: {{ $attendanceArray[$nonprofitEvent->id]}}</h5>
+                        <h5 style="font-weight: bold;">Title: {{$nonprofitEvent->title}}</h5>
+                        <h5>Start Time: {{$nonprofitEvent->start}}</h5>
+                        </ul>
+                        @endforeach
                         <h4> Event 2 </h4> <div> [Event 2 Placeholder]  </div>
                         <br>
                         <h4 class="section-title ">Signup By Date</h1>

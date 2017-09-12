@@ -40,7 +40,11 @@ class UsersTableSeeder extends Seeder
             $user->with_who = $faker->bs;
             $user->email = $faker->safeEmail;
             $user->password = Hash::make($faker->password);
+
             // $user->img = $faker->imageUrl($width = 400, $height = 200, 'people');
+
+           
+
             $user->save();
     }
 }
