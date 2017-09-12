@@ -32,9 +32,18 @@ h1 {
             <div class="col-md-6 col-md-3">
                 <div class="event-section">
                 	<h4 class="section-title">My Events</h4>
-                    <a class= "list-group-item btn btn-primary" href= "/posts/create"><span class="glyphicon glyphicon-pencil"></span>  Add An Event</a>
+                    <a class= "list-group-item btn btn-primary" href= "/posts/create"><span class="glyphicon glyphicon-pencil"></span>  Add A New Event</a>
                     <br>
-                    <a class= "list-group-item btn btn-primary" href= ""><span class="glyphicon glyphicon-pencil"></span>  Edit An Event</a>
+                    <h4> Your Events </h4>
+                    <h5>Events You Have Created Below</h5>
+                        @foreach($events as $event)
+                        <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
+                        <h5>Location: {{$event->location}}</h5>
+                        <h5>Start Time: {{$event->start}}</h5>
+                        <a class= "list-group-item btn btn-primary" href= ""><span class="glyphicon glyphicon-pencil"></span>  Edit This Event</a>
+<!--                         <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a> -->
+                        </ul>
+                        @endforeach
                     <br>
                     <br>
                     <br>

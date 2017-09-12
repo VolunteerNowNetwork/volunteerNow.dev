@@ -32,6 +32,8 @@
 
 					<input type="hidden" name="event_id" value="{{$post->id}}">
 
+					<input type="hidden" name="organization_name" value="{{$post->organization_name}}">
+
 					<div class="form-group">
 	                	How Many People are Attending? 
 	                	<br>
@@ -43,6 +45,7 @@
 							<option value="4">4</option>
 						</select>
 					</div>
+
 					<div class="form-group">
 	                	How many hours do you need to complete?
 	                	<br>
