@@ -97,7 +97,6 @@ class EmployeeController extends Controller
         $user->user_group = $request->user_group;
         $user->password = $request->password;
         $user->employer_id = $request->employer_id;
-        $user->employee_id = $request->employee_id;
         $user->contact_number = $request->contact_number;
         $user->email = $request->email;
         $user->bio = $request->bio;
@@ -106,7 +105,7 @@ class EmployeeController extends Controller
         $user->save();
          $request->session()->flash("sucessMessage", "Your post was updated sucessfully");
          Log::info('Profile updated');
-        return \Redirect::action('EmployeeController@index');
+        return \Redirect::action('EmployeeController@show', $user->id );
     }
     /**
      * Remove the specified resource from storage.

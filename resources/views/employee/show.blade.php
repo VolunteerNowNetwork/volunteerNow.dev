@@ -24,7 +24,7 @@ h1 {
 
 </style>
     <div class="container">
-        <h1>VOLUNTEER  DASHBOARD</h1>
+        <h1>Volunteer Dashboard</h1>
         <br>
         <a href="{{ action ('EmployeeController@show') }}">
         <div class="row">
@@ -54,8 +54,8 @@ h1 {
                     <br>
                     <a class= "btn btn-primary" href= "/masterCalendar">Search By Date</a>
                     <br>
-                    <h4> Submit Feedback On a Nonprofit </h4> 
-                    <a href="feedback/feedback" class="btn btn-success" name="feedback" > Submit Feedback </a>
+                    <h4> Submit Feedback On a Nonprofit </h4>
+                    <a href="/feedback/feedback" class="btn btn-success" name="feedback" > Submit Feedback </a>
                 </div>
             </div>
             <br>
