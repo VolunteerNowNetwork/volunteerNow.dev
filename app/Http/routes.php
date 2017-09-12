@@ -69,10 +69,10 @@ Route::get('/welcome', function()
 Route::get('dashboard', function() {
     $user = \Auth::user();
     if($user->user_group == 'employee') {
-        return \Redirect::action('EmployeeController@show', $user->id);
-    } else if($user->user_group == 'non-profit'){
-        return \Redirect::action('NonProfit@show', $user->id);
+        return redirect()->action('EmployeeController@show', $user->id);
+    } else if($user->user_group == 'nonprofit'){
+        return redirect()->action('NonProfitController@show', $user->id);
     } else {
-        return \Redirect::action('EmployerController@show', $user->id);
+        return redirect()->action('EmployerController@show', $user->id);
     }
 });
