@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Models\Post;
+use App\Models\Attendance;
+use Auth;
 
 use Log;
 use DB;
@@ -59,11 +62,18 @@ class NonprofitController extends Controller
     {
         $user = \App\User::findOrFail($id);
 
+        // $organization_name = \App\User::get(['organization_name']);
+        $organization_name = Auth::user()->organization_name;
+
+        $events = \App\Models\Post::where('organization_name', $organization_name)->get();
+
         if (!$user) {
             abort(404);
         }
 
         $data['user'] = $user;
+        $data['organization_name'] = $organization_name;
+        $data['events'] = $events;
 
         return view('nonprofit.show', $data);
     }
