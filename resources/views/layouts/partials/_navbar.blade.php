@@ -20,7 +20,7 @@
                  <li class=""><a href="/masterCalendar">Opportunities</a></li>
                  <li class=""><a href="/welcome">About Us</a></li>
                  <li class=""><a href="/nonprofit/{{Auth::id()}}"> Dashboard </a></li>
-                 <li class=""><a href="/posts/nonprofitPost"> Create an Event </a></li>
+                 <li class=""><a href="/posts/create"> Create an Event </a></li>
                  <li class=""><a href="/auth/logout">Logout</a></li>
 
              @else
