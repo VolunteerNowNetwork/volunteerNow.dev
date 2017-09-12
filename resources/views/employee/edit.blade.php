@@ -14,6 +14,7 @@
                 <form method="POST" action="{{ action('EmployeeController@update', $user->id) }}">
                     {!! csrf_field() !!}
                     <div class="form-group">
+                    <input type="hidden" name="user_group" value="employee">
                     Name   <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{ $user->name }}"
                         data-required>
                     </div>
@@ -24,6 +25,8 @@
                    <div class="form-group">
                     Email <input type="emil" class="form-control" id="email" name="email" value="{{ $user->email }}">
                    </div>
+                   <div class="form-group">
+                   Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required> {{ old('password') }}
                     <div class="form-group">
                     Contact Number  <input type="contactNumber" class="form-control" id="contact_number" name="contact_number" value="{{ $user->contact_number }}">
                     </div>
@@ -47,6 +50,7 @@
                         </div>
                     </div>
                 </form>
+                <br>
                 <form method="POST" action="{{ action('EmployeeController@destroy', $user->id) }}">
                       {!! csrf_field() !!}
                   <button class="btn btn-danger" value="delete post">DELETE </button>
