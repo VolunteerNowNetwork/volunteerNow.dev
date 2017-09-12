@@ -60,6 +60,8 @@ class AttendanceController extends Controller
         $attendance->event_id = $request->event_id;
         $attendance->title = $request->title;
         $attendance->location = $request->location;
+        $attendance->organization_name = $request->organization_name;
+        $attendance->employer_id = Auth::user()->employer_id;
         $attendance->start = $request->start;
         $attendance->hrs_to_complete = $request->hrs_to_complete;
         $attendance->num_of_people = $request->num_of_people;

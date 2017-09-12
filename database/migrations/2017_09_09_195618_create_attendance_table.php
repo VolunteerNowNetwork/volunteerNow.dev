@@ -20,6 +20,8 @@ class CreateAttendanceTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title')->nullable();
             $table->string('location')->nullable();
+            $table->string('organization_name')->nullable();
+            $table->string('employer_id')->nullable();
             $table->string('start')->nullable();
             $table->decimal('hrs_to_complete')->nullable();;
             $table->integer('num_of_people')->nullable();
