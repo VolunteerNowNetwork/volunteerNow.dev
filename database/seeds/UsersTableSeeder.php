@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
         for ($i = 1; $i <= 10; $i++) {
             $user = new User();
             $user->organization_name = $faker->company;
-            $user->user_group = 'non-profit';
+            $user->user_group = 'nonprofit';
             $user->admin = $faker->name;
             $user->name = $faker->name;
             $user->username = $faker->name;

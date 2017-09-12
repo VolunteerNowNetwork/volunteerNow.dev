@@ -10,7 +10,7 @@
         <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
             <div class="row">
-            <input type="hidden" name="user_group" value="non-profit">
+            <input type="hidden" name="user_group" value="nonprofit">
             <h1 class="section-title text-center">Register As A Nonprofit</h1>
 
             <div class="col-md-6 col-md-offset-3">
