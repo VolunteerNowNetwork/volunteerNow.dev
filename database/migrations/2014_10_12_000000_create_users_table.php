@@ -34,7 +34,7 @@ class CreateUsersTable extends Migration
             $table->string('with_who')->nullable();
             $table->string('email')->unique();
             $table->string('password', 60);
-            // $table->img('image');
+            $table->img('image');
             $table->rememberToken();
             $table->timestamps();
         });
