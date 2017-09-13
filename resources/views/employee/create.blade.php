@@ -6,6 +6,22 @@
 
 
 @section('content')
+<!DOCTYPE html>
+<html>
+  <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script>
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle= result.filesUploaded[0].handle;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+        });
+    }
+</script>
+
     <div class="container">
         <h1 class="section-title text-center"> Register to Volunteer! </h1>
         <form method="POST" action="/auth/register">

@@ -5,6 +5,22 @@
 @stop
 
 @section('content')
+
+<!DOCTYPE html>
+<html>
+  <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script>
+    var client = filestack.init('A0rXTGEEfTomsvdCji8lnz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle= result.filesUploaded[0].handle;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+        });
+    }
+</script>
 <div class="container">
     <section id="login">
         <div class="row">
@@ -39,6 +55,10 @@
                     <div class="form-group">
                     Completed Hours  <input type="text" class="form-control" id="completed_hours" name="completed_hours"  value="{{ $user->completed_hours }}">
                     </div>
+                    <br>
+                    <p>Upload a Photo:</p>
+                    <input type="button" value="Upload" onclick="showPicker()" />
+                    <img id='filestack' src="">
                     {{ method_field('PUT') }}
                     <!-- <div class="form-group">
                         <label for="image"> Upload Image </label>
@@ -53,7 +73,7 @@
                 <br>
                 <form method="POST" action="{{ action('EmployeeController@destroy', $user->id) }}">
                       {!! csrf_field() !!}
-                  <button class="btn btn-danger" value="delete post">DELETE </button>
+                  <button class="btn btn-danger" value="delete user">DELETE </button>
                   {{ method_field('DELETE') }}
               </form>
             </div>
