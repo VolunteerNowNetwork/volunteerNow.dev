@@ -25,15 +25,19 @@ h1 {
         <h1>  EMPLOYER DASHBOARD  </h1>
         <br>
         <a href="{{ action('EmployerController@show') }}">
-        <input type="hidden" name="user_group" value="employee">
+        <input type="hidden" name="user_group" value="employer">
         <div class="row">
             <div class="col-md-6 col-md-3">
                 <div class="account-section">
                     <ul class = "list-group">
-                       <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Name: {{$user->organization_name}}</li>
+                       <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Company Name: {{$user->organization_name}}</li>
                        <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
                        <li class= "list-group-item">Username: {{$user->username}}</li>
+                       <li class= "list-group-item">Email: {{$user->email}}</li>
+                       <li class= "list-group-item">Tax ID: {{$user->tax_id}}</li>
                        <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
+                       <li class= "list-group-item">Resources: {{$user->additional_resources}}</li>
+
                        <br>
                        <a class= "list-group-item btn btn-primary" href= "{{ action('EmployerController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                    </ul>

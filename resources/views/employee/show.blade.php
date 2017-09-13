@@ -27,6 +27,7 @@ h1 {
         <h1>Volunteer Dashboard</h1>
         <br>
         <a href="{{ action ('EmployeeController@show') }}">
+            <input type="hidden" name="user_group" value="employee">
         <div class="row">
             <div class="col-md-6 col-md-3">
                 <div class="contact-section">
