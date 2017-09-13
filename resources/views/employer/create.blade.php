@@ -5,14 +5,14 @@
 @stop
 
 
+ 
+
 @section('content')
     <div class="container">
         <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
             <div class="row">
             <input type="hidden" name="user_group" value="employer">
-            <input id="imageEdit" type='hidden' value='{{$user->image}}' name='image'></input>
-
             <h1 class="section-title text-center">Register Your Company Here</h1>
 
             <div class="col-md-6 col-md-offset-3">
@@ -45,6 +45,9 @@
             </div>
             <div class="form-group">
                 Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
+                <p>Upload a Photo/Logo:</p> 
+                <input type="button" value="Upload" onclick="showPicker()" />
+                 <img id='filestack' src="">
             </div>
             <div class="form-group">
                 Are you currently a corporate sponsor? <textarea name="corporate_sponsor" rows="3" cols="64">{{ old('corporate_sponsor') }}</textarea>

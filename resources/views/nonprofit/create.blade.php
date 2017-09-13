@@ -9,8 +9,7 @@
     <div class="container">
         <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
-            <div class="row">
-            <input id="imageEdit" type='hidden' value='{{$user->image}}' name='image'></input>   
+            <div class="row">  
             <input type="hidden" name="user_group" value="nonprofit">
             <h1 class="section-title text-center">Register As A Nonprofit</h1>
 
@@ -41,6 +40,9 @@
             </div>
             <div class="form-group">
                 Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64"></textarea>
+                <p>Upload a Photo/Logo: 
+                <input type="button" value="Upload" onclick="showPicker()" />
+                 <img id='filestack' src="">
             </div>
             <div class="form-group">
                 How will you benefit from this service? <textarea name="benefit" rows="3" cols="64"></textarea>
