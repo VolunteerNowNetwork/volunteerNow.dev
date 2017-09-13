@@ -1,6 +1,6 @@
 <?php
 
-var client = filestack.init("A4e3fBA8JTkOq2h4hG7NDz");
+var client = filestack.init("AWfpMt9vqSzalYlBfIu2tz");
         document.getElementById("updateIcon").addEventListener("click", updateIcon);
         function updateIcon(){
         	console.log("Updating Icon...");
