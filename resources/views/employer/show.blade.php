@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 @section('title')
@@ -46,8 +47,13 @@ h1 {
             </div>
             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
-                        <h4> Total Employee Signups: </h4> <div> [Total Employee Signups Placeholder] </div>
+                        <h4> Employee Signups </h4>
                         <br>
+                         @foreach($signedUpemployees as $employee)
+                        <h5 style="font-weight: bold;">Name: {{$employee->name}}</h5>
+                        <h5>Title: {{$employee->title}}</h5>
+                        <br>
+                        @endforeach
                         <h4> Total Employee Completion: </h4> <div> [Total Employee Completion Placeholder]  </div>
                         <br>
                         <h4> See Nonprofit Feedback </h4>
@@ -73,6 +79,5 @@ h1 {
             </div>
         </div>
     </div>
-
-
 @stop
+
