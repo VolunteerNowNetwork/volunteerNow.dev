@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
 Route::resource('nonprofit', 'NonprofitController');
 
 Route::resource('employee', 'EmployeeController');
