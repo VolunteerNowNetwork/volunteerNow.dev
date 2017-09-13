@@ -51,6 +51,7 @@ class EmployeeController extends Controller
         $user->email = $request->email;
         $user->bio = $request->bio;
         $user->available_hours = $request->available_hours;
+        $user->image = $request->image;
         $user->save();
         $request->session()->flash("successMessage", "Your account was created successfully!");
         Log::info($user);
@@ -102,6 +103,7 @@ class EmployeeController extends Controller
         $user->bio = $request->bio;
         $user->available_hours = $request->available_hours;
         $user->completed_hours = $request->completed_hours;
+        $user->image = $request->image;
         $user->save();
         $request->session()->flash("successMessage", "Your post was updated successfully");
         return \Redirect::action('EmployeeController@show', $user->id );

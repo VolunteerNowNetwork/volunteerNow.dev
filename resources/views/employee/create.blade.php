@@ -52,8 +52,9 @@
                 <div class="form-group">
                 Tell Us About Yourself - Special Skills
                     <input type="textarea" class="form-control" id="" name="bio" placeholder="Bio About Yourself - Special Skills">
+                    <br>
                     <p>Upload a Photo:</p>
-                    <input type="button" value="Upload" onclick="showPicker()" />
+                        <input type="button" value="Upload" onclick="showPicker()" />
                     <img id='filestack' src="">
                 </div>
                 <br>
