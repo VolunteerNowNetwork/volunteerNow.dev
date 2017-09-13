@@ -70,7 +70,7 @@ class NonprofitController extends Controller
 
         $organizationEventAttendees = \App\Models\Attendance::select('event_id', DB::raw('COUNT(*) AS attendance'))->where('organization_name', $organization_name)->groupBy('title')->get();
 
-        $attendees = \App\Models\Attendance::where('organization_name', $organization_name)->get();
+        $attendees = \App\Models\Attendance::where('organization_name', $organization_name)->whereNull('did_they_attend')->get();
 
 
         $attendanceArray = [];

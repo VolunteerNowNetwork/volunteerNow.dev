@@ -123,14 +123,14 @@ class AttendanceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $attendance = \App\Models\Attendance::findOrFail($id);
+        $attendance = \App\Models\Attendance::findOrFail($id);
 
-        // $attendance->did_they_attend = $request->did_they_attend;
-        // $attendance->hours_completed = $request->hours_completed;
+        $attendance->did_they_attend = $request->did_they_attend;
+        $attendance->hours_completed = $request->hours_completed;
 
-        // $attendance->save();
+        $attendance->save();
 
-        // $request->session()->flash("successMessage", "Your have validated successfully");
+        $request->session()->flash("successMessage", "Your have validated successfully");
 
         return \Redirect::action('NonprofitController@show', Auth::id());
     }

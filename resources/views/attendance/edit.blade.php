@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-        <form method="POST" action="{{ action('AttendanceController@update', $attendance->event_id) }}">
+        <form method="POST" action="{{ action('AttendanceController@update', $attendance->id) }}">
             {!! csrf_field() !!}
             <div class="row">
             <input type="hidden" name="user_group" value="nonprofit">
