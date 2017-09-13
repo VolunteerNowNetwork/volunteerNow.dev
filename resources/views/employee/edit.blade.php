@@ -58,15 +58,13 @@
                     Completed Hours  <input type="text" class="form-control" id="completed_hours" name="completed_hours"  value="{{ $user->completed_hours }}">
                     </div>
                     <br>
-                    <div>
                     <p>Upload a Photo:</p>
                     <br>
-                    <input type="button" value="Upload" onclick="showPicker()" />
-                    <br>
-                        <div class="pic">
-                            <input type="text" id="image" name="image" value="{{ $user->image }}">
-                            <img id='filestack' src="" name="image" width="250" height="300">
-                        </div>
+                    <div>
+                            <input type="button" value="Upload" onclick="showPicker()" ></input>
+                            <input type="text" id="image" name="image" value="{{ $user->image }}"></input>
+                            <img id='filestack' src="" name="image" width="250" height="300"></img>
+                    </div>
                     </div>
                     <br>
                     {{ method_field('PUT') }}
