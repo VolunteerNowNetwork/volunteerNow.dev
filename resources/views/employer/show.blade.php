@@ -31,6 +31,7 @@ h1 {
                 <div class="account-section">
                     <ul class = "list-group">
                        <li class= "list-group-item list-group-item-info" style="font-weight: bold;">Company Name: {{$user->organization_name}}</li>
+                       <li class= "list-group-item">Employer ID: {{$user->employer_id}}</li>
                        <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
                        <li class= "list-group-item">Username: {{$user->username}}</li>
                        <li class= "list-group-item">Email: {{$user->email}}</li>
