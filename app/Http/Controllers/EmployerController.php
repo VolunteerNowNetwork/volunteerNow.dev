@@ -78,9 +78,11 @@ class EmployerController extends Controller
             abort(404);
          }
 
+        $signedUpemployees = \App\Models\Attendance::where('employer_id', Auth::user()->employer_id)->get();
         $attendees = \App\Models\Attendance::where('employer_id', Auth::user()->employer_id)->whereNotNull('did_they_attend')->get();
          $data['user'] = $user;
          $data['attendees'] = $attendees;
+         $data['signedUpemployees'] = $signedUpemployees;
         return view('employer.show', $data);
     }
 
