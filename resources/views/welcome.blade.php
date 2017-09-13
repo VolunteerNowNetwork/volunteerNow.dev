@@ -13,18 +13,23 @@
     function showPicker() {
         client.pick({
         }).then(function(result) {
-            console.log(JSON.stringify(result.filesUploaded))
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle= result.filesUploaded[0].handle;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
         });
     }
 </script>
-<input type="button" value="Upload" onclick="showPicker()" />
+  <input type="button" value="Upload" onclick="showPicker()" />
     <body>
         <div class="container">
             <h1 class="text-center">Welcome to Volunteer Now!</h1>
             <h2 class="text-center">The power of community connection...YOU make the difference and WE make it easy.
               <br>
             <img src="/img/mainphoto.png">
+            <img id='filestack' src="">
         </div>
+
     </body>
 </html>
 @stop
