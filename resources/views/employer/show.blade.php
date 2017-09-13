@@ -43,38 +43,28 @@ h1 {
                        <a class= "list-group-item btn btn-primary" href= "{{ action('EmployerController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                    </ul>
                 </div>
-               <br>
-                <div class="event-section">
-                    <button class="btn btn-primary" name="choose" > View An Event </button>
-                    <br>
-                    <button class="btn btn-secondary" name="search-date" > Search By Date </button>
-                    <br>
-                    <button class="btn btn-secondary" name="search-nonprofit" > Search by Non-Profit </button>
-                    <br>
-                    <button class="btn btn-secondary" name="search-employerCode" > View Employees </button>
-                </div>
             </div>
-            <br>
             <div class="col-md-6 col-md-3">
                     <div class="participation-section">
                         <h4> Total Employee Signups: </h4> <div> [Total Employee Signups Placeholder] </div>
                         <br>
                         <h4> Total Employee Completion: </h4> <div> [Total Employee Completion Placeholder]  </div>
                         <br>
-                        <textarea class="" name="displayNonprofitFeedback" > Display NonProfit Feedback </textarea>
+                        <h4> See Nonprofit Feedback </h4>
                         <br>
-                        <textarea class="" name="displayEmployeeFeedback" > Display Employee Feedback </textarea>
+                        <h4> See Employee Feedback </h4>
                         <br>
                     </div>
             </div>
             <div class="col-md-6 col-md-3">
                     <div class="scheduled-events-section">
                         <h4> Validated Attendance </h4>
-                        <br>
-                        <button class"btn btn-secondary" name="print"> Print </button>
-                        <div> Event Blocker Placeholder </div>
-                        <div> Total Employee Participation By Event</div>
-                        <div> Top 5 Events</div>
+                         @foreach($attendees as $attendee)
+                        <h5 style="font-weight: bold;">Name: {{$attendee->name}}</h5>
+                        <h5>Title: {{$attendee->title}}</h5>
+                        <h5>Did they attend? {{$attendee->did_they_attend}}</h5>
+                        <h5>Hours completed: {{$attendee->hours_completed}}</h5>
+                        @endforeach
                         <br>
                         <h4> Participation Data </h4>
                         <br>
