@@ -83,7 +83,6 @@ class PostsController extends Controller
         $post->appropriate_attire = $request->appropriate_attire;
         $post->categories = $request->categories;
         $post->save();
-        $post->save();
 
         $request->session()->flash("successMessage", "Your post was saved successfully");
 
@@ -122,7 +121,15 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post =\App\Models\Post::findOrFail($id);
+
+            if(!$post) {
+                abort(404);
+            }
+
+            $data['post'] = $post;
+
+            return view('posts.edit', $data);
     }
 
     /**
@@ -134,7 +141,25 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        $post->title = $request->title;
+        $post->start = $request->start;
+        $post->end = $request->end;
+        $post->location = $request->location;
+        $post->number_of_hours = $request->number_of_hours;
+        $post->number_of_volunteers = $request->number_of_volunteers;
+        $post->age_restriction = $request->age_restriction;
+        $post->point_of_contact = $request->point_of_contact;
+        $post->supplies_needed = $request->supplies_needed;
+        $post->appropriate_attire = $request->appropriate_attire;
+        $post->categories = $request->categories;
+
+        $post->save();
+
+        $request->session()->flash("successMessage", "Your event was updated successfully");
+
+        return \Redirect::action('PostsController@show', $post->id);
     }
 
     /**
