@@ -64,6 +64,8 @@ class NonprofitController extends Controller
 
         $organization_name = Auth::user()->organization_name;
 
+        $post = \App\Models\Post::findOrFail($id);
+
         $events = \App\Models\Post::where('organization_name', $organization_name)->get();
 
         $organizationEventAttendees = \App\Models\Attendance::select('event_id', DB::raw('COUNT(*) AS attendance'))->where('organization_name', $organization_name)->groupBy('title')->get();
@@ -80,6 +82,7 @@ class NonprofitController extends Controller
         }
 
         $data['user'] = $user;
+        $data['post'] = $post;
         $data['organization_name'] = $organization_name;
         $data['events'] = $events;
         $data['nonprofitEvents'] = $nonprofitEvents;

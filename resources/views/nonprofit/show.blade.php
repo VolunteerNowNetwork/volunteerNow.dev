@@ -41,7 +41,7 @@ h1 {
                         <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
                         <h5>Location: {{$event->location}}</h5>
                         <h5>Start Time: {{$event->start}}</h5>
-                        <a class= "list-group-item btn btn-primary" href= ""><span class="glyphicon glyphicon-pencil"></span>  Edit This Event</a>
+                        <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@edit', $post->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit This Event</a>
 <!--                         <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a> -->
                         </ul>
                         @endforeach
