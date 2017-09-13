@@ -11,7 +11,6 @@
         <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
             <div class="row">
-            <input id="imageEdit" type='hidden' value='{{$user->image}}' name='image'></input>
             <input type="hidden" name="user_group" value="employee">
                 <div class="form-group">
                 Name   <input type="text" class="form-control" id="name" name="name" placeholder="Name"
@@ -37,6 +36,9 @@
                 <div class="form-group">
                 Tell Us About Yourself - Special Skills
                     <input type="textarea" class="form-control" id="" name="bio" placeholder="Bio About Yourself - Special Skills">
+                    <p>Upload a Photo:</p>
+                    <input type="button" value="Upload" onclick="showPicker()" />
+                    <img id='filestack' src="">
                 </div>
                 <br>
                 <div class="form-group">
