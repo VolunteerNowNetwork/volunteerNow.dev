@@ -22,12 +22,15 @@ class AttendanceTableSeeder extends Seeder
             $attendance->event_id = \App\Models\Post::all()->random()->id;
             $attendance->user_id = \App\User::all()->random()->id;
             $attendance->title = $faker->bs;
+            $attendance->name = $faker->name;
             $attendance->location = $faker->bs;
             $attendance->organization_name = $faker->bs;
             $attendance->employer_id = $faker->numberBetween($min = 1, $max = 4);
             $attendance->start = $faker->bs;
             $attendance->hrs_to_complete = $faker->numberBetween($min = 1, $max = 20);
             $attendance->num_of_people = $faker->numberBetween($min = 1, $max = 4);
+            $attendance->did_they_attend = $faker->bs;
+            $attendance->hours_completed = $faker->numberBetween($min = 1, $max = 6);
             $attendance->save();
         }
     }

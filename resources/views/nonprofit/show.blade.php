@@ -78,10 +78,15 @@ h1 {
                     </ul>
                     <br>
                         <h4 class="section-title"> Validate Attendance </h4>
+                        @foreach($attendees as $attendee)
+                        <h5 style="font-weight: bold;">Name: {{$attendee->name}}</h5>
+                        <h5>Event Id: {{$attendee->event_id}}</h5>
+                        <h5>Title: {{$attendee->title}}</h5>
+                        <a class= "list-group-item btn btn-primary" href= "{{ action('AttendanceController@edit', $attendee->id) }}"><span class="glyphicon glyphicon-pencil"></span> Validate</a>
+<!--                         <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a> -->
+                        @endforeach
                         <br>
-                        <button class="btn btn-success" name="validate"> Validate</button>
                         <br>
-                        <button class="btn btn-success" name="print"> Print</button>
                     </div>
             </div>
         </div>
