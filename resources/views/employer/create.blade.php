@@ -11,6 +11,7 @@
             {!! csrf_field() !!}
             <div class="row">
             <input type="hidden" name="user_group" value="employer">
+            <input id="imageEdit" type='hidden' value='{{$user->image}}' name='image'></input>
 
             <h1 class="section-title text-center">Register Your Company Here</h1>
 
