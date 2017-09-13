@@ -70,6 +70,9 @@ class NonprofitController extends Controller
 
         $organizationEventAttendees = \App\Models\Attendance::select('event_id', DB::raw('COUNT(*) AS attendance'))->where('organization_name', $organization_name)->groupBy('title')->get();
 
+        $attendees = \App\Models\Attendance::where('organization_name', $organization_name)->get();
+
+
         $attendanceArray = [];
         foreach($organizationEventAttendees as $event) {
             $eventId = $event['event_id'];
@@ -87,6 +90,7 @@ class NonprofitController extends Controller
         $data['events'] = $events;
         $data['nonprofitEvents'] = $nonprofitEvents;
         $data['attendanceArray'] = $attendanceArray;
+        $data['attendees'] = $attendees;
 
         return view('nonprofit.show', $data);
     }

@@ -12,7 +12,7 @@ class Attendance extends Model
 {
     protected $table = 'attendance';
 
-    protected $fillable = ['title', 'hrs_to_complete','num_of_people', 'event_id', 'user_id'];
+    protected $fillable = ['title', 'hrs_to_complete','num_of_people', 'event_id', 'user_id', 'hours_completed', 'did_they_attend'];
 
     public function user()
     {
