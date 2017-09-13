@@ -8,16 +8,18 @@
 
 <!DOCTYPE html>
 <html>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
 <script>
-    var client = filestack.init('A0rXTGEEfTomsvdCji8lnz');
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
     function showPicker() {
         client.pick({
         }).then(function(result) {
             console.log(JSON.stringify(result.filesUploaded));
-            var handle= result.filesUploaded[0].handle;
+            var handle = result.filesUploaded[0].handle;
             console.log(handle);
             $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            $("input[id=image]").val(handle);
         });
     }
 </script>
@@ -56,14 +58,19 @@
                     Completed Hours  <input type="text" class="form-control" id="completed_hours" name="completed_hours"  value="{{ $user->completed_hours }}">
                     </div>
                     <br>
+                    <div>
                     <p>Upload a Photo:</p>
+                    <br>
                     <input type="button" value="Upload" onclick="showPicker()" />
-                    <img id='filestack' src="">
+                    <br>
+                        <div class="pic">
+                            <input type="text" id="image" name="image" value="{{ $user->image }}">
+                            <img id='filestack' src="" name="image" width="250" height="300">
+                        </div>
+                    </div>
+                    <br>
                     {{ method_field('PUT') }}
-                    <!-- <div class="form-group">
-                        <label for="image"> Upload Image </label>
-                        <input type="file" name="image" id="image">
-                    </div> -->
+                    <br>
                     <div class="row">
                         <div class="col-sm-6">
                             <button type="submit" class="btn btn-primary" value="edit user"> Update </button>
