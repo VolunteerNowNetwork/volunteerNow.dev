@@ -103,8 +103,7 @@ class EmployeeController extends Controller
         $user->available_hours = $request->available_hours;
         $user->completed_hours = $request->completed_hours;
         $user->save();
-         $request->session()->flash("sucessMessage", "Your post was updated sucessfully");
-         Log::info('Profile updated');
+        $request->session()->flash("successMessage", "Your post was updated successfully");
         return \Redirect::action('EmployeeController@show', $user->id );
     }
     /**
