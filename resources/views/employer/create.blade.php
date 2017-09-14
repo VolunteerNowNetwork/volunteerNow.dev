@@ -5,7 +5,7 @@
 @stop
 
 
- 
+
 
 @section('content')
     <div class="container">
@@ -41,27 +41,24 @@
                 Company Website Link: <input type="text" class="form-control" id="website_link" name="website_link" placeholder="">
             </div>
             <div class="form-group">
-                Company Tax I.D.: <textarea name="tax_id" rows="3" cols="64">{{ old('tax_id') }}</textarea>
+                Company Tax I.D.: <textarea name="tax_id" rows="3" cols="64"></textarea>
             </div>
             <div class="form-group">
-                Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
-                <p>Upload a Photo/Logo:</p> 
+                Bio About Your Company: <textarea name="bio" rows="3" cols="64"></textarea>
+                <p>Upload a Photo/Logo:</p>
                 <input type="button" value="Upload" onclick="showPicker()" />
                  <img id='filestack' src="">
             </div>
             <div class="form-group">
-                Are you currently a corporate sponsor? <textarea name="corporate_sponsor" rows="3" cols="64">{{ old('corporate_sponsor') }}</textarea>
+                Additional Resources<textarea name="additional_resources" rows="3" cols="64"></textarea>
             </div>
             <div class="form-group">
-                With who? <textarea name="with_who" rows="3" cols="64">{{ old('with_who') }}</textarea>
+                Are you currently a corporate sponsor? <input type="text" name="corporate_sponsor" ></input>
+            </div>
+            <div class="form-group">
+                With who? <input type="text" name="with_who" ></input>
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
 @stop
-
-
-
-
-
-
