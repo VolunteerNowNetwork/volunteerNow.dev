@@ -100,6 +100,7 @@ class AuthController extends Controller
                 'user_group' => $data['user_group'] ,
                 'contact_number' => $data['contact_number'],
                 'employer_id' => $data['employer_id'],
+                'organization_name' => $data['organization_name'],
                 'bio' => $data['bio'],
                 'available_hours' => $data['available_hours'],
                 'password' => $data['password'],
