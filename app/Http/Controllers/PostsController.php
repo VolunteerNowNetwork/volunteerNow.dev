@@ -151,7 +151,8 @@ class PostsController extends Controller
         $post->number_of_hours = $request->number_of_hours;
         $post->number_of_volunteers = $request->number_of_volunteers;
         $post->age_restriction = $request->age_restriction;
-        $post->point_of_contact = $request->point_of_contact;
+        $post->point_of_contact_name = $request->point_of_contact_name;
+        $post->point_of_contact_number = $request->point_of_contact_number;
         $post->supplies_needed = $request->supplies_needed;
         $post->appropriate_attire = $request->appropriate_attire;
         $post->categories = $request->categories;
