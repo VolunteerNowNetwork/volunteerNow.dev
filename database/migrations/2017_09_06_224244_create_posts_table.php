@@ -24,7 +24,8 @@ class CreatePostsTable extends Migration
             $table->float('number_of_hours');
             $table->integer('number_of_volunteers');
             $table->integer('age_restriction');
-            $table->string('point_of_contact');
+            $table->string('point_of_contact_name');
+            $table->string('point_of_contact_number');
             $table->string('supplies_needed');
             $table->string('appropriate_attire');
             $table->string('categories');
