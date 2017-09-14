@@ -16,6 +16,7 @@
             console.log(JSON.stringify(result.filesUploaded));
             var handle= result.filesUploaded[0].handle;
             console.log(handle);
+            
             $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
         });
     }

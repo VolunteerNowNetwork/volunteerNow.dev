@@ -2,6 +2,20 @@
 
 @section('title')
 <title>Register Your Nonprofit</title>
+<script>
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle= result.filesUploaded[0].handle;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            var imagePath = 'https://process.filestackapi.com/' + handle;
+            $("#handle").val(image);
+        });
+    }
+ </script>
 @stop
 
 
@@ -41,8 +55,9 @@
             <div class="form-group">
                 Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64"></textarea>
                 <p>Upload a Photo/Logo: 
-                <input type="button" value="Upload" onclick="showPicker()" />
-                 <img id='filestack' src="">
+                    <input type="button" value="Upload" onclick="showPicker()" />
+                        <img id="filestack" name="filestack" src="">
+                            <input type="hidden" name="handle" id="handle">
             </div>
             <div class="form-group">
                 How will you benefit from this service? <textarea name="benefit" rows="3" cols="64"></textarea>

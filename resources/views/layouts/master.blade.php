@@ -12,19 +12,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.print.css"/>
+    </script>
 
-    <script>
-    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
-    function showPicker() {
-        client.pick({
-        }).then(function(result) {
-            console.log(JSON.stringify(result.filesUploaded));
-            var handle= result.filesUploaded[0].handle;
-            console.log(handle);
-            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
-        });
-    }
-</script>
+     <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
     @include('layouts.partials._navbar')
 
 <!-- var_dump(Auth::check()) ?> -->
