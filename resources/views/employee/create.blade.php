@@ -2,6 +2,20 @@
 
 @section('title')
 <title>Employee Registration</title>
+<script>
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle= result.filesUploaded[0].handle;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            var imagePath = 'https://process.filestackapi.com/' + handle;
+            $("#handle").val(image);
+        });
+    }
+ </script>
 @stop
 
 
@@ -42,6 +56,10 @@
                 <div class="form-group">
                     Tell Us About Yourself - Special Skills
                     <input type="textarea" class="form-control" id="" name="bio" placeholder="Bio About Yourself - Special Skills">
+                        <p>Upload a Photo/Logo:</p> 
+                            <input type="button" value="Upload" onclick="showPicker()"/>
+                                <img id="filestack" name="filestack" src="">
+                                    <input type="hidden" name="handle" id="handle">
                 </div>
                 <br>
                 <div class="form-group">
