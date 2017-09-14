@@ -29,7 +29,8 @@ class PostsTableSeeder extends Seeder
             $post->number_of_hours = $faker->uuid;
             $post->number_of_volunteers = $faker->uuid;
             $post->age_restriction = $faker->uuid;
-            $post->point_of_contact = $faker->name;
+            $post->point_of_contact_name = $faker->name;
+            $post->point_of_contact_number = $faker->phoneNumber;
             $post->supplies_needed = $faker->text;
             $post->appropriate_attire = $faker->text;
             $post->categories = $faker->text;
