@@ -31,6 +31,7 @@ class AttendanceTableSeeder extends Seeder
             $attendance->num_of_people = $faker->numberBetween($min = 1, $max = 4);
             $attendance->did_they_attend = $faker->bs;
             $attendance->hours_completed = $faker->numberBetween($min = 1, $max = 6);
+            $attendance->comments = $faker->bs;
             $attendance->save();
         }
     }

@@ -19,6 +19,9 @@
             <div class="form-group">
                 How many hours did they complete? <input type="text" class="form-control" id="hours_completed" name="hours_completed" placeholder="" data-required>
             </div>
+            <div class="form-group">
+                Please provide any feedback or input about this employee's performance here: <input type="text" class="form-control" id="comments" name="comments" placeholder="" data-required>
+            </div>
             {{ method_field('PUT') }}
             <button type="submit" class="btn btn-primary">Submit Validate</button>
         </form>

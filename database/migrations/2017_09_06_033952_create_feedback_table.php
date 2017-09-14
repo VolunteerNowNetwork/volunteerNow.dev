@@ -17,7 +17,8 @@ class CreateFeedbackTable extends Migration
             $table->string('name');
             $table->string('employee_name');
             $table->string('organization_name');
-            $table->string('event_name');
+            $table->string('title');
+            $table->integer('employer_id');
             $table->date('event_date');
             $table->string('comments');
             $table->rememberToken();

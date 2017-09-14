@@ -13,7 +13,7 @@ h1 {
     text-align: center;
 }
 .col-md-6  {
-    margin-right: 50px;
+    margin-left: 50px;
 
 }
 .btn {
@@ -54,12 +54,17 @@ h1 {
                         <h5>Title: {{$employee->title}}</h5>
                         <br>
                         @endforeach
-                        <h4> Total Employee Completion: </h4> <div> [Total Employee Completion Placeholder]  </div>
                         <br>
                         <h4> See Nonprofit Feedback </h4>
                         <br>
-                        <h4> See Employee Feedback </h4>
+                        @foreach($feedback as $employee)
+                        <h5 style="font-weight: bold;">Name: {{$employee->name}}</h5>
+                        <h5>Nonprofit Name: {{$employee->organization_name}}</h5>
+                        <h5>Title {{$employee->title}}</h5>
+                        <h5>Date: {{$employee->event_date}}</h5>
+                        <h5>Comments: {{$employee->comments}}</h5>
                         <br>
+                        @endforeach
                     </div>
             </div>
             <div class="col-md-6 col-md-3">
@@ -70,11 +75,8 @@ h1 {
                         <h5>Title: {{$attendee->title}}</h5>
                         <h5>Did they attend? {{$attendee->did_they_attend}}</h5>
                         <h5>Hours completed: {{$attendee->hours_completed}}</h5>
+                        <h5>Comments: {{$attendee->comments}}</h5>
                         @endforeach
-                        <br>
-                        <h4> Participation Data </h4>
-                        <br>
-                        <img src="/../resources/assets/img/pie-chart.png" alt="Image Placeholder"></img>
                     </div>
             </div>
         </div>

@@ -21,7 +21,8 @@ class FeedbackTableSeeder extends Seeder
             $feedback->name = $faker->name;
             $feedback->employee_name = $faker->name;
             $feedback->organization_name = $faker->company;
-            $feedback->event_name = $faker->bs;
+            $feedback->title = $faker->bs;
+            $feedback->employer_id = $faker->numberBetween($min = 1, $max = 100);
             $feedback->event_date = $faker->date;
             $feedback->comments = $faker->bs;
             $feedback->save();

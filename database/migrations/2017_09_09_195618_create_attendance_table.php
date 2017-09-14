@@ -28,6 +28,7 @@ class CreateAttendanceTable extends Migration
             $table->integer('num_of_people')->nullable();
             $table->string('did_they_attend')->nullable();
             $table->string('hours_completed')->nullable();
+            $table->string('comments')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
