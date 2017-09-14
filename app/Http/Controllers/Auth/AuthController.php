@@ -1,13 +1,10 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
-
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-
 class AuthController extends Controller
 {
     /*
@@ -20,13 +17,11 @@ class AuthController extends Controller
     | a simple trait to add these behaviors. Why don't you explore it?
     |
     */
-
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
     protected $redirectPath = "/dashboard";
     protected $loginPath = 'auth/login';
     // protected $redirectPathAfterLogin = "/dashboard";
     protected $redirectAfterLogout = "auth/login";
-
     /**
      * Create a new authentication controller instance.
      *
@@ -35,9 +30,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
-
     }
-
     /**
      * Get a validator for an incoming registration request.
      *
@@ -51,7 +44,6 @@ class AuthController extends Controller
             'password' => 'required|confirmed|min:6',
         ]);
     }
-
     /**
      * Create a new user instance after a valid registration.
      *
@@ -61,7 +53,6 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         if($data['user_group'] == 'nonprofit') {
-
             return User::create([
                 'user_group' => $data['user_group'],
                 'organization_name' => $data['organization_name'],
@@ -73,9 +64,7 @@ class AuthController extends Controller
                 'email' => $data['email'],
                 'bio' => $data['bio'],
                 'benefit' => $data['benefit'],
-
             ]);
-
         } else if($data['user_group'] == 'employer') {
             return User::create([
                 'user_group' => $data['user_group'],
@@ -92,9 +81,7 @@ class AuthController extends Controller
                 'corporate_sponsor' => $data['corporate_sponsor'],
                 'with_who' => $data['with_who'],
             ]);
-
         } else {
-
               return User::create([
                  'name' => $data['name'],
                 'user_group' => $data['user_group'] ,
@@ -106,11 +93,8 @@ class AuthController extends Controller
                 'password' => $data['password'],
                 'email' => $data['email'],
             ]);
-
     }
-
 }
-
 }
             // return User::create([
             // 'name' => $data['name'],
