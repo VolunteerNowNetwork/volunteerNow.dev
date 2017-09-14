@@ -52,7 +52,10 @@
                 Age Restrictions: <input type="text" class="form-control" id="age_restriction" name="age_restriction" placeholder="">
             </div>
             <div class="form-group">
-                Point of Contact: <input type="text" class="form-control" id="point_of_contact" name="point_of_contact" placeholder="">
+                Point of Contact Name: <input type="text" class="form-control" id="point_of_contact_name" name="point_of_contact_name" placeholder="">
+            </div>
+            <div class="form-group">
+                Point of Contact Number: <input type="text" class="form-control" id="point_of_contact_number" name="point_of_contact_number" placeholder="">
             </div>
             <div class="form-group">
                 Supplies to Bring: <textarea name="supplies_needed" rows="3" cols="64">{{ old('supplies_needed') }}</textarea>

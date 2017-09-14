@@ -41,9 +41,6 @@ class CreateAttendanceTable extends Migration
      */
     public function down()
     {
-            Schema::table('attendance', function($table){
-            $table->dropForeign(['event_id']);
-            $table->dropForeign(['user_id']);
-            });
+           Schema::drop('attendance');
     }
 }
