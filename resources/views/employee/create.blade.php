@@ -6,6 +6,23 @@
 
 
 @section('content')
+<!DOCTYPE html>
+<html>
+  <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script>
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle= result.filesUploaded[0].handle;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            $("input[id=image]").val(handle);
+        });
+    }
+</script>
+
     <div class="container">
         <h1 class="section-title text-center"> Register to Volunteer! </h1>
         <form method="POST" action="/auth/register">
@@ -21,12 +38,15 @@
                     data-required>
                </div>
                <div class="form-group">
+                Employer Name  <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="Employer Name"
+                   data-required>
+              </div>
+               <div class="form-group">
                   Email <input type="email" class="form-control" id="email" name="email" placeholder="Email" >
                </div>
                 <div class="form-group">
                 Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required>
                 </div>
-
                 <div class="form-group">
                 Confirm Password    <input type="password" class="form-control" id="" name="password_confirmation" placeholder="password_confirmation"  data-required>
                 </div>
@@ -34,15 +54,19 @@
                 Contact Number    <input type="contact_number" class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number">
                 </div>
                 <div class="form-group">
-                Tell Us About Yourself - Special Skills
+                    Tell Us About Yourself - Special Skills
                     <input type="textarea" class="form-control" id="" name="bio" placeholder="Bio About Yourself - Special Skills">
+                </div>
+                <br>
+                <div>
                     <p>Upload a Photo:</p>
-                    <input type="button" value="Upload" onclick="showPicker()" />
-                    <img id='filestack' src="">
+                        <input type="button" value="Upload" onclick="showPicker()" ></input>
+                        <input type="text" id="image" name="image" value="{{ $user->image }}"></input>
+                        <img id='filestack' src="" name="image" width="250" height="300"></img>
                 </div>
                 <br>
                 <div class="form-group">
-                Available Hours    <input type="text" class="form-control" id="available_hours" name="available_hours" placeholder="Available Hours">
+                    Available Hours    <input type="text" class="form-control" id="available_hours" name="available_hours" placeholder="Available Hours">
                 </div>
                 <br>
                 <div class="row">

@@ -6,11 +6,32 @@
 
 
 @section('content')
+<!DOCTYPE html>
+<html>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script>
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle = result.filesUploaded[0].handle;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            $("input[id=image]").val(handle);
+        });
+    }
+</script>
 <style>
 
 h1 {
     margin-bottom: 40px;
     text-align: center;
+}
+h6 {
+    margin-bottom: 14px;
+    font-weight: normal;
 }
 .col-md-6  {
     margin-left: 70px;
@@ -20,13 +41,13 @@ h1 {
 .btn {
     margin-bottom: 20px;
 }
-
-
 </style>
+
     <div class="container">
         <h1>Volunteer Dashboard</h1>
         <br>
         <a href="{{ action ('EmployeeController@show') }}">
+            <input type="hidden" name="user_group" value="employee">
         <div class="row">
             <div class="col-md-6 col-md-3">
                 <div class="contact-section">
@@ -39,8 +60,13 @@ h1 {
                         <li class= "list-group-item"> Employer ID: {{$user->employer_id}}</li>
                         <li class= "list-group-item"> Employer Name: {{ $user->organization }}</li>
                         <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
-                        <a class= "list-group-item btn btn-success"  value=" edit employee" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                     </ul>
+                    <br>
+                        <a class= "list-group-item btn btn-success"  value=" edit employee" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
+                        <div>
+                            <img id='filestack' name="image" src="">
+                        </div>
+
                 </div>
             </div>
             <div class="col-md-6 col-md-3">
@@ -77,14 +103,11 @@ h1 {
                         <h4> Your Events </h4>
                         @foreach($events as $event)
                         <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
-                        <h5>Location: {{$event->location}}</h5>
-                        <h5>Start Time: {{$event->start}}</h5>
+                        <h6>Location: {{$event->location}}</h6>
+                        <h6>Start Time: {{$event->start}}</h6>
                         <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a>
-                        </ul>
                         @endforeach
                         <br>
-                        <h4> Participation Data </h4>
-                        <img src="../img/pie-chart.png" alt="Image Placeholder" width=300px height=250px ></img>
                     </div>
             </div>
         </div>

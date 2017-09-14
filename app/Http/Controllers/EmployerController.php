@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 use App\User;
-
 use Log;
 use DB;
 
@@ -51,10 +51,11 @@ class EmployerController extends Controller
         $user->email = $request->email;
         $user->contact_number = $request->contact_number;
         $user->website_link = $request->website_link;
-        $user->tax_id;
+        $user->tax_id = $request->tax_id;
         $user->bio = $request->bio;
         $user->corporate_sponsor = $request->corporate_sponsor;
         $user->with_who = $request->with_who;
+        $user->additional_resources = $request->additional_resources;
         $user->save();
 
         $request->session()->flash("successMessage", "Your account was created successfully!");
@@ -77,7 +78,14 @@ class EmployerController extends Controller
             abort(404);
          }
 
+        $feedback = \App\Models\Feedback::where('employer_id', Auth::user()->employer_id)->get();
+        $signedUpemployees = \App\Models\Attendance::where('employer_id', Auth::user()->employer_id)->get();
+        $attendees = \App\Models\Attendance::where('employer_id', Auth::user()->employer_id)->whereNotNull('did_they_attend')->get();
+         
          $data['user'] = $user;
+         $data['feedback'] = $feedback;
+         $data['attendees'] = $attendees;
+         $data['signedUpemployees'] = $signedUpemployees;
         return view('employer.show', $data);
     }
 
@@ -109,15 +117,22 @@ class EmployerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
-
+        $user = \App\User::findOrFail($id);
         $user->organization_name = $request->organization_name;
+        $user->user_group = $request->user_group;
         $user->admin = $request->admin;
         $user->username = $request->username;
+        $user->contact_number = $request->contact_number;
+        $user->website_link = $request->website_link;
+        //$user->employer_id = $request->employer_id;
+        $user->tax_id = $request->tax_id;
         $user->bio = $request->bio;
-
+        $user->additional_resources = $request->additional_resources;
+        $user->corporate_sponsor = $request->corporate_sponsor;
+        $user->with_who = $request->with_who;
+        $user->email = $request->email;
+        $user->bio = $request->bio;
         $user->save();
-
         $request->session()->flash("successMessage", "Your post was updated successfully");
 
         return \Redirect::action('EmployerController@show', $user->id);

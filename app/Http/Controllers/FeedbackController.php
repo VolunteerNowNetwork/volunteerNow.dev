@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Feedback;
+use Auth;
 
 use Log;
 use DB;
@@ -45,8 +46,10 @@ class FeedbackController extends Controller
         $feedback->name = $request->name;
         $feedback->employee_name = $request->employee_name;
         $feedback->organization_name = $request->organization_name;
-        $feedback->event_name = $request->event_name;
+        $feedback->title = $request->title;
+        $feedback->employer_id = Auth::user()->employer_id;
         $feedback->event_date = $request->event_date;
+        $feedback->comments = $request->comments;
         $feedback->save();
 
         $request->session()->flash("successMessage", "Your post was saved successfully");

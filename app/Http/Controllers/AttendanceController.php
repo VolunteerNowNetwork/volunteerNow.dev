@@ -62,9 +62,13 @@ class AttendanceController extends Controller
         $attendance->location = $request->location;
         $attendance->organization_name = $request->organization_name;
         $attendance->employer_id = Auth::user()->employer_id;
+        $attendance->name =  Auth::user()->name;
         $attendance->start = $request->start;
         $attendance->hrs_to_complete = $request->hrs_to_complete;
         $attendance->num_of_people = $request->num_of_people;
+        $attendance->hours_completed = $request->hours_completed;
+        $attendance->did_they_attend = $request->did_they_attend;
+        $attendance->comments = $request->comments;
         $attendance->save();
 
         $request->session()->flash("successMessage", "You have signed up successfully!");
@@ -100,7 +104,15 @@ class AttendanceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $attendance =\App\Models\Attendance::findOrFail($id);
+
+        if(!$attendance) {
+                abort(404);
+        }
+
+        $data['attendance'] = $attendance;
+
+        return view('attendance.edit', $data);
     }
 
     /**
@@ -112,7 +124,17 @@ class AttendanceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $attendance = \App\Models\Attendance::findOrFail($id);
+
+        $attendance->did_they_attend = $request->did_they_attend;
+        $attendance->hours_completed = $request->hours_completed;
+        $attendance->comments = $request->comments;
+
+        $attendance->save();
+
+        $request->session()->flash("successMessage", "Your have validated successfully");
+
+        return \Redirect::action('NonprofitController@show', Auth::id());
     }
 
     /**
