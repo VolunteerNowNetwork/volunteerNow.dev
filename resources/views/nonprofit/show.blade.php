@@ -52,13 +52,21 @@ h1 {
             <div class="col-md-6 col-md-3">
                     <div class="signupByEvent">
                         <h4 class="section-title">Total Signup By Event</h4>
-                        @foreach($nonprofitEvents as $nonprofitEvent)
-                        <br>
-                        <h4> Signup Count: {{ $attendanceArray[$nonprofitEvent->id]}}</h>
-                        <h5 style="font-weight: bold;">Title: {{$nonprofitEvent->title}}</h5>
-                        <h5>Start Time: {{$nonprofitEvent->start}}</h5>
-                        </ul>
-                        @endforeach
+                        @if (!empty($nonprofitEvents))
+                            @foreach($nonprofitEvents as $nonprofitEvent)
+                                <br>
+                                @if(!empty($attendanceArray))
+                                <h4> Signup Count: {{ $attendanceArray[$nonprofitEvent->id]}}</h4>
+                                @else
+                                <h4> Signup Count: 0</h4>
+                                @endif
+                                <h5 style="font-weight: bold;">Title: {{$nonprofitEvent->title}}</h5>
+                                <h5>Start Time: {{$nonprofitEvent->start}}</h5>
+                                </ul>
+                            @endforeach
+                        @else
+                            <h4> No events have been added.</h4>
+                        @endif
                         <br>
                         <h4> Feedback </h4>
                         <br>
@@ -83,7 +91,6 @@ h1 {
                         <h5>Event Id: {{$attendee->event_id}}</h5>
                         <h5>Title: {{$attendee->title}}</h5>
                         <a class= "list-group-item btn btn-primary" href= "{{ action('AttendanceController@edit', $attendee->id) }}"><span class="glyphicon glyphicon-pencil"></span> Validate</a>
-<!--                         <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a> -->
                         @endforeach
                         <br>
                         <br>
@@ -92,9 +99,6 @@ h1 {
         </div>
 
     </div>
-       
-
-
 @stop
 
 
