@@ -29,6 +29,10 @@ h1 {
     margin-bottom: 40px;
     text-align: center;
 }
+h6 {
+    margin-bottom: 14px;
+    font-weight: normal;
+}
 .col-md-6  {
     margin-left: 70px;
     padding-right: 30px;
@@ -99,12 +103,11 @@ h1 {
                         <h4> Your Events </h4>
                         @foreach($events as $event)
                         <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
-                        <h5>Location: {{$event->location}}</h5>
-                        <h5>Start Time: {{$event->start}}</h5>
+                        <h6>Location: {{$event->location}}</h6>
+                        <h6>Start Time: {{$event->start}}</h6>
                         <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a>
                         @endforeach
                         <br>
-                        <img src="../img/pie-chart.png" alt="Image Placeholder" width=300px height=250px ></img>
                     </div>
             </div>
         </div>
