@@ -88,6 +88,7 @@ class AuthController extends Controller
                 'website_link' => $data['website_link'],
                 'tax_id' => $data['tax_id'],
                 'bio' => $data['bio'],
+                'additional_resources' => $data['additional_resources'],
                 'corporate_sponsor' => $data['corporate_sponsor'],
                 'with_who' => $data['with_who'],
             ]);
