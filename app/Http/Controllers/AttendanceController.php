@@ -68,6 +68,7 @@ class AttendanceController extends Controller
         $attendance->num_of_people = $request->num_of_people;
         $attendance->hours_completed = $request->hours_completed;
         $attendance->did_they_attend = $request->did_they_attend;
+        $attendance->comments = $request->comments;
         $attendance->save();
 
         $request->session()->flash("successMessage", "You have signed up successfully!");
@@ -127,6 +128,7 @@ class AttendanceController extends Controller
 
         $attendance->did_they_attend = $request->did_they_attend;
         $attendance->hours_completed = $request->hours_completed;
+        $attendance->comments = $request->comments;
 
         $attendance->save();
 
