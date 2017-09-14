@@ -31,40 +31,46 @@ h1 {
                     {!! csrf_field() !!}
                     <input type="hidden" name="user_group" value="employer">
                     <div class="form-group">
-                    Company Name    <input type="text" class="form-control" id="nameOfCompany" name="nameOfCompany" placeholder="Company Name"
-                        data-required value="{{ old('organization_name') }}">
+                    Company Name    <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="Company Name"
+                        data-required value="{{ $user->organization_name }}">
                     </div>
                      {!! $errors->first('password', '<div class="alert alert-danger">:message</div>') !!}
                     <div class="form-group">
-                    Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required value="{{ old('password') }}">
+                    Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required value="{{ $user->password }}">
                     </div>
                     {!! $errors->first('confirmPassword', '<div class="alert alert-danger">:message</div>') !!}
                     <div class="form-group">
                     Confirm Password   Password  <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required>
                     </div>
                     <div class="form-group">
-                    Admin Name    <input type="text" class="form-control" id="" name="admin" placeholder="Admin name" value="{{ old('admin') }}">
+                    Admin Name    <input type="text" class="form-control" id="" name="admin" placeholder="Admin name" value="{{ $user->admin }}">
                     </div>
                     <div class="form-group">
-                    Username   <input type="text" class="form-control" id="" name="username" placeholder="Username" value="{{ old('username') }}">
+                    Username   <input type="text" class="form-control" id="" name="username" placeholder="Username" value="{{ $user->username }}">
                     </div>
                     <div class="form-group">
-                    Company Website Link    <input type="text" class="form-control" id="" name="websiteLink" placeholder="website url" value="{{ old('website_link') }}">
+                    Contact Number  <input type="text" class="form-control" id="" name="contact_number" placeholder="Username" value="{{ $user->username }}">
                     </div>
                     <div class="form-group">
-                    Tax I.D.  <input type="text" class="form-control" id="" name="taxId" placeholder="taxid" value="{{ old('tax_id') }}">
+                    Company Website Link    <input type="text" class="form-control" id="website_link" name="website_link" placeholder="website url" value="{{ $user->website_link }}">
                     </div>
                     <div class="form-group">
-                        About Your Company <textarea name="bio" rows="3" cols="64" placeholder="Tell us About Your Company" value="{{ old('bio') }}"></textarea>
+                    Tax I.D.  <input type="text" class="form-control" id="tax_id" name="tax_id" placeholder="taxid" value="{{ $user->tax_id }}">
                     </div>
                     <div class="form-group">
-                        Are you a corporate sponsor?  <input type="text" class="form-control" id="corporateSponsor" name="corporateSponsor" placeholder="Corporate Sponsor?" value="{{ old('corporate_sponsor') }}">
+                        About Your Company <textarea name="bio" id="bio" rows="3" cols="64" placeholder="Tell us About Your Company" value="{{ $user->bio }}"></textarea>
                     </div>
                     <div class="form-group">
-                        If yes, with who?  <input type="text" class="form-control" id="with_who" name="with_who" placeholder="Sponsored Organization Name" value="{{ old('with_who') }}">
+                        Are you a corporate sponsor?  <input type="text" class="form-control" id="corporate_sponsor" name="corporate_sponsor" placeholder="Corporate Sponsor?" value="{{ $user->corporate_sponsor }}">
                     </div>
                     <div class="form-group">
-                        Additional Resources   <textarea type="textarea" class="form-control" id="" name="additionalResources" placeholder="Additional Resources" value="{{ old('additional_resources') }}"></textarea>
+                        If yes, with who?  <input type="text" class="form-control" id="with_who" name="with_who" placeholder="Sponsored Organization Name" value="{{ $user->with_who }}">
+                    </div>
+                    <div class="form-group">
+                        Email:  <input type="email" class="form-control" id="email" name="email" placeholder="email" value="{{ $user->email }}">
+                    </div>
+                    <div class="form-group">
+                        Additional Resources   <textarea type="textarea" class="form-control" id="" name="additional_resources" placeholder="Additional Resources" value="{{ $user->additional_resources }}"></textarea>
                     </div>
                     <br>
                     <div class="row">
