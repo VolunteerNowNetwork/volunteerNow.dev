@@ -2,14 +2,8 @@
 
 @section('title')
 <title>Employee Dashboard</title>
-@stop
+<script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
 
-
-@section('content')
-<!DOCTYPE html>
-<html>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
 <script>
     var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
     function showPicker() {
@@ -23,6 +17,13 @@
         });
     }
 </script>
+@stop
+
+
+@section('content')
+<!DOCTYPE html>
+<html>
+  
 <style>
 
 h1 {

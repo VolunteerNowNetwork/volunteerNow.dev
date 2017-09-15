@@ -1,8 +1,20 @@
 @extends('layouts.master')
+
 @section('title')
-
-
 <title>Nonprofit Dashboard</title>
+<script>
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle = result.filesUploaded[0].handle;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            $("input[id=image]").val(handle);
+        });
+    }
+</script>
 @stop
 
 
@@ -82,6 +94,7 @@ h1 {
                         <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
                         <li class= "list-group-item">Username: {{$user->username}}</li>
                         <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
+                        <img src="{{$user->image}}">
                         <a class= "list-group-item btn btn-primary" href= "{{ action('NonprofitController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                     </ul>
                     <br>

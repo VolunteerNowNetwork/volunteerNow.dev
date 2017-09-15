@@ -3,6 +3,19 @@
 
 @section('title')
 <title>Employer Profile</title>
+<script>
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle = result.filesUploaded[0].handle;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            $("input[id=image]").val(handle);
+        });
+    }
+</script>
 @stop
 
 @section('content')
@@ -38,6 +51,7 @@ h1 {
                        <li class= "list-group-item">Email: {{$user->email}}</li>
                        <li class= "list-group-item">Tax ID: {{$user->tax_id}}</li>
                        <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
+                       <img src="{{$user->image}}">
                        <li class= "list-group-item">Resources: {{$user->additional_resources}}</li>
 
                        <br>
