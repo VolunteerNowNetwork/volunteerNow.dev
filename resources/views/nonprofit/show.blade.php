@@ -6,11 +6,14 @@
     var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
     function showPicker() {
         client.pick({
+            maxFiles: 1,
+            imageMax: [300,300],
         }).then(function(result) {
             console.log(JSON.stringify(result.filesUploaded));
             var handle = result.filesUploaded[0].handle;
             console.log(handle);
             $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            $("#editIcon").attr('src', "https://process.filestackapi.com/resize=w:300,h:300/circle/" + handle);
             $("input[id=image]").val(handle);
         });
     }
@@ -94,9 +97,12 @@ h1 {
                         <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
                         <li class= "list-group-item">Username: {{$user->username}}</li>
                         <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
-                        <img src="{{$user->image}}">
                         <a class= "list-group-item btn btn-primary" href= "{{ action('NonprofitController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                     </ul>
+                    <br>
+                    <div>
+                        <img src="{{$user->image}}">
+                    </div>
                     <br>
                         <h4 class="section-title"> Validate Attendance </h4>
                         @foreach($attendees as $attendee)

@@ -6,11 +6,14 @@
     var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
     function showPicker() {
         client.pick({
+            maxFiles: 1,
+            imageMax: [300,300],
         }).then(function(result) {
             console.log(JSON.stringify(result.filesUploaded));
             var handle= result.filesUploaded[0].url;
             console.log(handle);
             $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            $("#editIcon").attr('src', "https://process.filestackapi.com/resize=w:300,h:300/circle/" + handle);
             var imagePath = 'https://process.filestackapi.com/' + handle;
             $("#image").val(handle);
         });

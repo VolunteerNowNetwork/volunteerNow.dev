@@ -8,11 +8,14 @@
     var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
     function showPicker() {
         client.pick({
+            maxFiles: 1,
+            imageMax: [300,300],
         }).then(function(result) {
             console.log(JSON.stringify(result.filesUploaded));
             var handle = result.filesUploaded[0].handle;
             console.log(handle);
             $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            $("#editIcon").attr('src', "https://process.filestackapi.com/resize=w:300,h:300/circle/" + handle);
             $("input[id=image]").val(handle);
         });
     }
@@ -61,12 +64,11 @@ h6 {
                         <li class= "list-group-item"> Employer ID: {{$user->employer_id}}</li>
                         <li class= "list-group-item"> Employer Name: {{ $user->organization_name }}</li>
                         <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
-                        <img src="{{$user->image}}">
                     </ul>
                     <br>
                         <a class= "list-group-item btn btn-success"  value=" edit employee" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                         <div>
-                            <img id='filestack' name="image" src="">
+                            <img src="{{$user->image}}">
                         </div>
 
                 </div>
