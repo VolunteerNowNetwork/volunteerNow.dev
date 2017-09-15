@@ -8,11 +8,11 @@
         client.pick({
         }).then(function(result) {
             console.log(JSON.stringify(result.filesUploaded));
-            var handle= result.filesUploaded[0].handle;
+            var handle= result.filesUploaded[0].url;
             console.log(handle);
             $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
             var imagePath = 'https://process.filestackapi.com/' + handle;
-            $("#handle").val(image);
+            $("#handle").val(handle);
         });
     }
  </script>
@@ -57,7 +57,7 @@
                 <p>Upload a Photo/Logo: 
                     <input type="button" value="Upload" onclick="showPicker()" />
                         <img id="filestack" name="filestack" src="">
-                            <input type="hidden" name="handle" id="handle">
+                            <input type="hidden" name="image" id="image">
             </div>
             <div class="form-group">
                 How will you benefit from this service? <textarea name="benefit" rows="3" cols="64"></textarea>
