@@ -6,6 +6,8 @@
     var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
     function showPicker() {
         client.pick({
+            maxFiles: 1,
+            imageMax: [300,300],
         }).then(function(result) {
             console.log(JSON.stringify(result.filesUploaded));
             var handle= result.filesUploaded[0].url;
