@@ -2,6 +2,20 @@
 
 @section('title')
 <title>Register Your Company</title>
+<script>
+    var client = filestack.init('AWfpMt9vqSzalYlBfIu2tz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+            var handle= result.filesUploaded[0].url;
+            console.log(handle);
+            $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
+            var imagePath = 'https://process.filestackapi.com/' + handle;
+            $("#image").val(handle);
+        });
+    }
+ </script>
 @stop
 
 
@@ -44,10 +58,15 @@
                 Company Tax I.D.: <input type="text" name="tax_id" ></input>
             </div>
             <div class="form-group">
-                Bio About Your Company: <textarea name="bio" rows="3" cols="64"></textarea>
-                <p>Upload a Photo/Logo:</p>
-                <input type="button" value="Upload" onclick="showPicker()" />
-                 <img id='filestack' src="">
+
+                Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
+                <p>Upload a Photo/Logo:</p> 
+                <input type="button" value="Upload" onclick="showPicker()"/>
+                 <img id="filestack" name="filestack" src="">
+                 <input type="hidden" name="image" id="image">
+
+                
+
             </div>
             <div class="form-group">
                 Additional Resources<textarea name="additional_resources" rows="3" cols="64"></textarea>

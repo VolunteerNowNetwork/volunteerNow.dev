@@ -53,6 +53,7 @@ class EmployerController extends Controller
         $user->website_link = $request->website_link;
         $user->tax_id = $request->tax_id;
         $user->bio = $request->bio;
+        $user->image = $request->image;
         $user->corporate_sponsor = $request->corporate_sponsor;
         $user->with_who = $request->with_who;
         $user->additional_resources = $request->additional_resources;
