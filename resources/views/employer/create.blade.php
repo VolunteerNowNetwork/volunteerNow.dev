@@ -58,15 +58,11 @@
                 Company Tax I.D.: <input type="text" name="tax_id" ></input>
             </div>
             <div class="form-group">
-
                 Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
-                <p>Upload a Photo/Logo:</p> 
-                <input type="button" value="Upload" onclick="showPicker()"/>
-                 <img id="filestack" name="filestack" src="">
-                 <input type="hidden" name="image" id="image">
-
-                
-
+                    <p>Upload a Photo/Logo:</p> 
+                        <input type="button" value="Upload" onclick="showPicker()"/>
+                             <img id="filestack" name="filestack" src="">
+                                <input type="hidden" name="image" id="image">
             </div>
             <div class="form-group">
                 Additional Resources<textarea name="additional_resources" rows="3" cols="64"></textarea>

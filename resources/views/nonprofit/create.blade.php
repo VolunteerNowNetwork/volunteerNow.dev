@@ -12,7 +12,7 @@
             console.log(handle);
             $("#filestack").attr('src', 'https://process.filestackapi.com/' + handle);
             var imagePath = 'https://process.filestackapi.com/' + handle;
-            $("#handle").val(handle);
+            $("#image").val(handle);
         });
     }
  </script>
