@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Providers\User;
+use App\Models;
 
 use Log;
 use DB;

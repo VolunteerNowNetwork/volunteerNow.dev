@@ -5,8 +5,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
 use App\User;
+use App\Models;
 use Log;
 use DB;
+
 class EmployeeController extends Controller
 {
     /**

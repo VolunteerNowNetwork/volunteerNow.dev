@@ -10,6 +10,7 @@ use Auth;
 use App\User;
 use Log;
 use DB;
+use App\Models;
 
 class EmployerController extends Controller
 {
