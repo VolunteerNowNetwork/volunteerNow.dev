@@ -63,6 +63,7 @@ class AuthController extends Controller
                 'contact_number' => $data['contact_number'],
                 'email' => $data['email'],
                 'bio' => $data['bio'],
+                'image' => $data['image'],
                 'benefit' => $data['benefit'],
             ]);
         } else if($data['user_group'] == 'employer') {
@@ -77,6 +78,7 @@ class AuthController extends Controller
                 'website_link' => $data['website_link'],
                 'tax_id' => $data['tax_id'],
                 'bio' => $data['bio'],
+                'image' => $data['image'],
                 'additional_resources' => $data['additional_resources'],
                 'corporate_sponsor' => $data['corporate_sponsor'],
                 'with_who' => $data['with_who'],
@@ -89,6 +91,7 @@ class AuthController extends Controller
                 'employer_id' => $data['employer_id'],
                 'organization_name' => $data['organization_name'],
                 'bio' => $data['bio'],
+                'image' => $data['image'],
                 'available_hours' => $data['available_hours'],
                 'password' => $data['password'],
                 'email' => $data['email'],
