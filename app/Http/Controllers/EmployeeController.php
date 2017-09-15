@@ -46,7 +46,7 @@ class EmployeeController extends Controller
         //$user->user_group = $request->user_group;
         $user->password = $request->password;
         $user->employer_id = $request->employer_id;
-        //$user->employee_id = rand()->employee_id;
+        $user->organization_name= $request->organization_name;
         $user->contact_number = $request->contact_number;
         $user->email = $request->email;
         $user->bio = $request->bio;
@@ -98,6 +98,7 @@ class EmployeeController extends Controller
         $user->user_group = $request->user_group;
         $user->password = $request->password;
         $user->employer_id = $request->employer_id;
+        $user->organization_name= $request->organization_name;
         $user->contact_number = $request->contact_number;
         $user->email = $request->email;
         $user->bio = $request->bio;

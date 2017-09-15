@@ -55,7 +55,7 @@
                 Company Website Link: <input type="text" class="form-control" id="website_link" name="website_link" placeholder="">
             </div>
             <div class="form-group">
-                Company Tax I.D.: <textarea name="tax_id" rows="3" cols="64"></textarea>
+                Company Tax I.D.: <input type="text" name="tax_id" ></input>
             </div>
             <div class="form-group">
 
