@@ -7,15 +7,9 @@ use Carbon\Carbon;
 
 class BaseModel extends Model
 {
-        public function getStartAttribute($value)
-    {
-    	$utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
-    	return $utc->setTimezone('America/Chicago')->toDayDateTimeString();
-    }
+	protected $dates = [
+        'start',
+        'end',
+    ];
 
-    public function getEndAttribute($value)
-    {
-    	$utc = \Carbon\Carbon::createFromFormat($this->getDateFormat(), $value);
-    	return $utc->setTimezone('America/Chicago')->toDayDateTimeString();
-    }
 }

@@ -51,8 +51,8 @@ h1 {
                     <h5>Events You Have Created Below</h5>
                         @foreach($events as $event)
                         <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
-                        <h5>Location: {{$event->location}}</h5>
-                        <h5>Start Time: {{$event->start}}</h5>
+                        <h5>Location: {{ $event->location }}</h5>
+                        <h5>Start Time: {{ $event->start->setTimezone('America/Chicago')->format('l jS \\of F Y h:i A') }}</h5>
                         <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@edit', $event->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit This Event</a>
 <!--                         <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a> -->
                         </ul>
@@ -73,7 +73,7 @@ h1 {
                                 <h4> Signup Count: 0</h4>
                                 @endif
                                 <h5 style="font-weight: bold;">Title: {{$nonprofitEvent->title}}</h5>
-                                <h5>Start Time: {{$nonprofitEvent->start}}</h5>
+                                <h5>Start Time: {{$nonprofitEvent->start->setTimezone('America/Chicago')->format('l jS \\of F Y h:i A')}}</h5>
                                 </ul>
                             @endforeach
                         @else

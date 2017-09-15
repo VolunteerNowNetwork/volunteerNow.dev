@@ -10,7 +10,8 @@ use App\User;
 use App\Models\Post;
 use App\Models\Attendance;
 use Auth;
-use App\Models;
+use App\Models\BaseModel;
+use Carbon\Carbon;
 
 use Log;
 use DB;
