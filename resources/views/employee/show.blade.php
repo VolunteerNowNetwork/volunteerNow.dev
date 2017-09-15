@@ -58,7 +58,7 @@ h6 {
                         <li class= "list-group-item"> Contact Number: {{$user->contact_number}}</li>
                         <li class= "list-group-item"> Email: {{$user->email}}</li>
                         <li class= "list-group-item"> Employer ID: {{$user->employer_id}}</li>
-                        <li class= "list-group-item"> Employer Name: {{ $user->organization }}</li>
+                        <li class= "list-group-item"> Employer Name: {{ $user->organization_name }}</li>
                         <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
                         <img src="{{$user->image}}">
                     </ul>
