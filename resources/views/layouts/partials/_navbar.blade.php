@@ -18,6 +18,7 @@ a .hover {
     background-color: #808080;
     color: #ff0000;
 }
+
 </style>
 
 
@@ -25,33 +26,33 @@ a .hover {
 
          <ul class="nav navbar-nav">
              @if (Auth::check() && Auth::user()->user_group == "employee")
-                 <li class=""><a href="/welcome"> Home </a></li>
-                 <li class=""><a href="/aboutus">About Us</a></li>
-                 <li class=""><a href="/masterCalendar">Opportunities</a></li>
-                 <li class=""><a href="/employee/{{Auth::id() }}"> Dashboard </a></li>
-                 <li class=""><a href="/auth/logout">Logout</a></li>
+                 <li class=""><a href="/welcome"> HOME  </a></li>
+                 <li class=""><a href="/aboutus"> ABOUT US </a></li>
+                 <li class=""><a href="/masterCalendar"> OPPORTUNITIES </a></li>
+                 <li class=""><a href="/employee/{{Auth::id() }}"> DASHBOARD </a></li>
+                 <li class=""><a href="/auth/logout"> LOGOUT </a></li>
 
 
              @elseif (Auth::check() && Auth::user()->user_group == "employer")
-                 <li class=""><a href="/welcome"> Home </a></li>
-                 <li class=""><a href="/aboutus">About Us</a></li>
-                 <li class=""><a href="/masterCalendar">Opportunities</a></li>
-                 <li class=""><a href="/employer/{{Auth::id()}} "> Dashboard </a></li>
-                  <li class=""><a href="/auth/logout">Logout</a></li>
+                 <li class=""><a href="/welcome"> HOME </a></li>
+                 <li class=""><a href="/aboutus"> ABOUT US </a></li>
+                 <li class=""><a href="/masterCalendar"> OPPORTUNITIES </a></li>
+                 <li class=""><a href="/employer/{{Auth::id()}} "> DASHBOARD </a></li>
+                  <li class=""><a href="/auth/logout"> LOGOUT </a></li>
 
              @elseif (Auth::check() && Auth::user()->user_group == "nonprofit")
-                 <li class=""><a href="/masterCalendar">Opportunities</a></li>
-                 <li class=""><a href="/aboutus">About Us</a></li>
-                 <li class=""><a href="/nonprofit/{{Auth::id()}}"> Dashboard </a></li>
-                 <li class=""><a href="/posts/create"> Create an Event </a></li>
-                 <li class=""><a href="/auth/logout">Logout</a></li>
+                 <li class=""><a href="/masterCalendar"> OPPORTUNITIES </a></li>
+                 <li class=""><a href="/aboutus"> ABOUT US </a></li>
+                 <li class=""><a href="/nonprofit/{{Auth::id()}}"> DASHBOARD </a></li>
+                 <li class=""><a href="/posts/create"> CREATE AN EVENT </a></li>
+                 <li class=""><a href="/auth/logout"> LOGOUT </a></li>
 
              @else
-                  <li class=""><a href="/welcome"> Home </a></li>
-                  <li class=""><a href="/aboutus">About Us</a></li>
-                  <li class=""><a href="/masterCalendar">Opportunities</a></li>
-                  <li class=""><a href="/register">Register</a></li>
-                  <li class=""><a href="/auth/login">Login</a></li>
+                  <li class=""><a href="/welcome"> HOME </a></li>
+                  <li class=""><a href="/aboutus"> ABOUT US </a></li>
+                  <li class=""><a href="/masterCalendar"> OPPORTUNITIES </a></li>
+                  <li class=""><a href="/register"> REGISTER </a></li>
+                  <li class=""><a href="/auth/login"> LOGIN </a></li>
 
              @endif
         </ul>

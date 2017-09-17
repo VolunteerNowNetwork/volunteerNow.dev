@@ -19,11 +19,11 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->datetime('start');
             $table->datetime('end');
-            $table->float('location');
+            $table->string('location');
             $table->string('color', 7);
             $table->float('number_of_hours');
             $table->integer('number_of_volunteers');
-            $table->integer('age_restriction');
+            $table->string('age_restriction');
             $table->string('point_of_contact_name');
             $table->string('point_of_contact_number');
             $table->string('supplies_needed');
