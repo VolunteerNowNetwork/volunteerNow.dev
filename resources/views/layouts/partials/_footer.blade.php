@@ -1,15 +1,24 @@
+ <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">  
  <style>
- .container-fluid{
-    background-color: #ff0000;
-    width:100%;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
- }
+ .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #ff0000;
+  font-family: 'Work Sans', sans-serif;
+  text-align:center;
+}
  </style>
 
+<footer class="footer">
+  <div class="container">
+        © 2017 Copyright: Volunteer Now
+        <img src="/img/apple-icon-120x120.png" height:"30" width="30">
+  </div>
+</footer>
 
-<footer class="page-footer blue center-on-small-only text-center">
+<!-- <footer class="page-footer blue center-on-small-only text-center">
     <div class="container-fluid">
       <div class="footer-copyright">
         <div class="container-fluid">
@@ -19,3 +28,13 @@
       </div>
     </div>
 </footer>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <div class="navbar-header">
+            <span class="navbar-brand">Ok Bye</span>
+        </div>
+
+        <p class="navbar-text navbar-right">company &copy; 2017</p>
+    </div>
+</nav> -->
