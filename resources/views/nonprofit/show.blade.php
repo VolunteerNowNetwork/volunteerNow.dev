@@ -53,7 +53,7 @@ h1 {
 }
 .topheader{
     margin-top:13px;
-    margin-left:-20px;
+    margin-left:-30px;
     height:80px;
     width:100%;
     background-color:white;
@@ -136,6 +136,9 @@ h1 {
                     <img class="calendar" src="/img/setting-tool.png" height:"27" width="27" />   
                     <h4 class="section-title header">My Account</h4>
                     <br>
+                    <div>
+                        <img src="{{$user->image}}">
+                    </div>
                     <ul class = "list-group">
                         <li class= "list-group-item" style="font-weight: bold; background-color:#D3D3D3">Name: {{$user->organization_name}}</li>
                         <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
@@ -147,15 +150,6 @@ h1 {
                     <br>
                         <img class="calendar" src="/img/paper-plane.png" height:"27" width="27" />
                         <h4 class="section-title header"> Validate Attendance </h4>
-                        <li class= "list-group-item" style="color: #4a9bd9;">Bio: {{$user->bio}}</li>
-                        <a class= "list-group-item btn btn-primary" href= "{{ action('NonprofitController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
-                    </ul>
-                    <br>
-                    <div>
-                        <img src="{{$user->image}}">
-                    </div>
-                    <br>
-                        <h4 class="section-title"> Validate Attendance </h4>
                         @foreach($attendees as $attendee)
                         <h5 style="font-weight: bold;">Name: {{$attendee->name}}</h5>
                         <h5>Event Id: {{$attendee->event_id}}</h5>
