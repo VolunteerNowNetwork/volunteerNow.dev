@@ -34,6 +34,11 @@ h1 {
 }
 .btn {
     margin-bottom: 20px;
+    display:block; 
+    margin:0 auto;
+    color:black;
+    background-color:orange; 
+}
 }
 
 </style>
