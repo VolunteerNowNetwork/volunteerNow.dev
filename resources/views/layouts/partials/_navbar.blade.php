@@ -1,4 +1,27 @@
-    <div id="navbar" class="collapse navbar-collapse" style="background-color: #c7c5c4; color: white;">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">    
+<style>
+.navbar-nav>li>a {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+a {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+a .hover {
+    background-color: #808080;
+    color: #ff0000;
+}
+.nav>li>a:hover {
+    background-color: #808080;
+    color: #ff0000;
+}
+</style>
+
+
+    <div id="navbar" class="collapse navbar-collapse" style="background-color: #ff0000; color: #660000;">
 
          <ul class="nav navbar-nav">
              @if (Auth::check() && Auth::user()->user_group == "employee")
