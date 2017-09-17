@@ -1,9 +1,10 @@
  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">  
  <style>
- .footer {
+ #footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  padding:0px;
   height: 30px;
   background-color: #ff0000;
   font-family: 'Work Sans', sans-serif;
@@ -11,12 +12,12 @@
 }
  </style>
 
-<footer class="footer">
+<div id="footer">
   <div class="container">
         © 2017 Copyright: Volunteer Now
         <img src="/img/apple-icon-120x120.png" height:"30" width="30">
   </div>
-</footer>
+</div>
 
 <!-- <footer class="page-footer blue center-on-small-only text-center">
     <div class="container-fluid">
