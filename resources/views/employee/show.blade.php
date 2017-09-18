@@ -94,7 +94,7 @@ body{
         </div>
         <br>
         <br>
-        <a href="{{ action ('EmployeeController@show') }}">
+        <a href="{{ action ('EmployeeController@show') }}"></a>
             <input type="hidden" name="user_group" value="employee">
         <div class="row">
             <div class="col-md-4 twocolumns">
