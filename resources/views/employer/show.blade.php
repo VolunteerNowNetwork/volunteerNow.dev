@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 @extends('layouts.master')
 
 @section('title')
@@ -39,10 +39,10 @@ h1 {
 }
 .btn {
     margin-bottom: 20px;
-    display:block; 
+    display:block;
     margin:0 auto;
     color:black;
-    background-color:white; 
+    background-color:white;
 }
 .topheader{
     margin-top:13px;
@@ -55,7 +55,7 @@ h1 {
 }
 .topicon{
     float:left;
-    display:block; 
+    display:block;
     margin:0 auto;
 }
 .dashboard{
@@ -104,7 +104,7 @@ h1 {
             <div class="col-md-4 twocolumns">
                 <div class="account-section">
                     <br>
-                    <img class="calendar" src="/img/setting-tool.png" height:"27" width="27" />  
+                    <img class="calendar" src="/img/setting-tool.png" height:"27" width="27" />
                     <h4 class="header">My Account</h4>
                        <div>
                         <img src="{{$user->image}}">
@@ -152,15 +152,14 @@ h1 {
                         <img class="calendar" src="/img/paper-plane.png" height:"27" width="27" />
                         <h4 class="validate"> Validated Attendance </h4>
                          @foreach($attendees as $attendee)
-                        <h5 style="font-weight: bold; color:black">Name: {{$attendee->name}}</h5>
-                        <h5 style="color:black">Title: {{$attendee->title}}</h5>
-                        <h5 style="color:black">Did they attend? {{$attendee->did_they_attend}}</h5>
-                        <h5 style="color:black">Hours completed: {{$attendee->hours_completed}}</h5>
-                        <h5 style="color:black">Comments: {{$attendee->comments}}</h5>
+                        <h5 style="font-weight: bold; color:white">Name: {{$attendee->name}}</h5>
+                        <h5 style="color:white">Title: {{$attendee->title}}</h5>
+                        <h5 style="color:white">Did they attend? {{$attendee->did_they_attend}}</h5>
+                        <h5 style="color:white">Hours completed: {{$attendee->hours_completed}}</h5>
+                        <h5 style="color:white">Comments: {{$attendee->comments}}</h5>
                         @endforeach
                     </div>
             </div>
         </div>
     </div>
 @stop
-

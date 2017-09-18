@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">   
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 @extends('layouts.master')
 
 @section('title')
@@ -27,7 +27,7 @@
 @section('content')
 <!DOCTYPE html>
 <html>
-  
+
 <style>
 
 body{
@@ -40,7 +40,7 @@ body{
 }
 .topicon{
     float:left;
-    display:block; 
+    display:block;
     margin:0 auto;
 }
 .topheader{
@@ -55,7 +55,7 @@ body{
 .twocolumns {
     border-radius: 25px;
     background-color:orange;
-    color:white;
+    color:black;
     border: 5px solid #D3D3D3;
 }
 .center {
@@ -77,10 +77,10 @@ body{
     color:black;
 }
 .button{
-    width:150px; 
+    width:150px;
     margin:0 auto;
     color:black;
-    background-color:orange; 
+    background-color:orange;
 }
 .dashboard{
     color:orange;
@@ -100,7 +100,7 @@ body{
             <div class="col-md-4 twocolumns">
                 <div>
                     <br>
-                    <img class="calendar" src="/img/setting-tool.png" height:"27" width="27" />  
+                    <img class="calendar" src="/img/setting-tool.png" height:"27" width="27" />
                     <h4 class="header">My Account</h4>
                 <div>
                     <img src="{{$user->image}}">
@@ -126,7 +126,7 @@ body{
                     <br>
                     <h4 class="header"> Hours Completed: </h4> <div> {{ $user->completed_hours }}</div>
                     <br>
-                    <img class="calendar" src="/img/orange-calendar.png" height:"27" width="27" />  
+                    <img class="calendar" src="/img/orange-calendar.png" height:"27" width="27" />
                     <h4 class="header"> Events </h4>
                     <br>
                     <a class="btn text-center button" name="seeAll" href= "/allevents"> See All Events </a>
@@ -156,7 +156,7 @@ body{
             <div class="col-md-4 twocolumns">
                 <div class="attendance">
                     <br>
-                    <img class="calendar" src="/img/locationgps.png" height:"27" width="27" />  
+                    <img class="calendar" src="/img/locationgps.png" height:"27" width="27" />
                     <h4 class="header"> Your Events </h4>
                     @foreach($events as $event)
                     <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
