@@ -28,7 +28,7 @@
     img.photo{
       width: 100%;
       opacity: 40%;
-      margin-left: 15px;
+      margin-left: 0px;
     }
     div.description{
       position:absolute;
@@ -44,6 +44,7 @@
       margin:0px;
       font-size: 40px;
     }
+
 </style>
 
 <div class='wrapper'>
