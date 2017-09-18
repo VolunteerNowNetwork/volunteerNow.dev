@@ -53,7 +53,6 @@ h1 {
 }
 .topheader{
     margin-top:13px;
-    margin-left:-30px;
     height:80px;
     width:100%;
     background-color:white;
@@ -90,7 +89,7 @@ h1 {
             <div class="col-md-4 twocolumns">
                 <div class>
                     <br>
-                    <img class="calendar" src="/img/small-calendar.png" height:"27" width="27" />
+                    <img class="calendar" src="/img/small-calendar.png" height:"27" width="27">
                     <h4 class="header">My Events</h4>
                     <a class= "list-group-item btn btn-primary" href= "/posts/create"><span class="glyphicon glyphicon-pencil"></span>  Add A New Event</a>
                     <br>

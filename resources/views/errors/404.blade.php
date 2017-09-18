@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>We'll Be Right Back</title>
+        <title>This page does not exist</title>
 @section('content')
         <style>
             html, body {
                 height: 100%;
-                font-family: 'Work Sans', sans-serif;
+    			font-family: 'Work Sans', sans-serif;
             }
 
             body {
@@ -39,9 +39,10 @@
         <div class="container">
             <div class="content">
                 <div class="title">
-                    <br>
-                    <img class="topicon" src="/img/android-icon-96x96.png"/>
-                    <h1>We will be right back </h1>
+                	<br>
+                	<img class="topicon" src="/img/android-icon-96x96.png"/>
+                	<h1>This page does not exist. </h1>
+                	<h1 class="text-center">To see our volunteer opportunities click on the OPPORTUNITIES tab above!</h1>
                 </div>
             </div>
         </div>
