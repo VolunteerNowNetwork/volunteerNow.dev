@@ -1,6 +1,27 @@
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet"> 
 @extends('layouts.master')
 
 @section('content')
+<style>
+
+body{
+    background-color: #D3D3D3;
+    font-family: 'Work Sans', sans-serif;
+}
+.btn{
+    background-color: #10D0AB;
+    color: white;
+}
+.container{
+	background-color:white;
+	margin-top:40px;
+	border: 3px solid #10D0AB;
+	border-radius: 25px;
+	height:560px;
+	width:600px;
+}
+
+</style>
 	<div class="container">
 	    <form method="POST" action="{{ action('AttendanceController@store') }}">
         {!! csrf_field() !!}
@@ -45,5 +66,7 @@
 		</div>
 		</form>
 	</div>
+	<br>
+	<br>
 @endsection
 
