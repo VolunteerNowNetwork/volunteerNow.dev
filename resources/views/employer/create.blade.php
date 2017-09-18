@@ -25,6 +25,75 @@
 
 
 @section('content')
+<style>
+
+body{
+    background-color: #D3D3D3;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.col-md-6  {
+    margin-left: 50px;
+
+}
+.btn {
+    margin-bottom: 20px;
+    display:block; 
+    margin:0 auto;
+    color:black;
+    background-color:white; 
+}
+.topheader{
+    margin-top:13px;
+    height:80px;
+    width:100%;
+    background-color:white;
+    border-radius: 25px;
+    padding:0px;
+    border: 2px solid black;
+}
+.topicon{
+    float:left;
+    display:block; 
+    margin:0 auto;
+}
+.dashboard{
+    color:#ff0000;
+}
+.twocolumns {
+    border-radius: 25px;
+    background-color:#ff0000;
+    color:white;
+    border: 5px solid #D3D3D3;
+}
+.center {
+    border-radius: 25px;
+    background-color:white;
+    border: 2px solid #ff0000;
+    color:#ff0000;
+}
+.header{
+    color:white;
+}
+.list-group{
+    color:black;
+    background-color: white;
+    border-radius: 25px;
+}
+.list-group-item{
+    color:black;
+    background-color: white;
+}
+.validate{
+    color:white;
+}
+
+</style>
+
     <div class="container">
         <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
