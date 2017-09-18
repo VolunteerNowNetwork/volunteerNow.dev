@@ -57,12 +57,14 @@ body{
     background-color:orange;
     color:black;
     border: 5px solid #D3D3D3;
+    padding: 5px;
 }
 .center {
     border-radius: 25px;
     background-color:white;
     border: 2px solid orange;
     color:orange;
+    text-align: center;
 }
 .list-group{
     color:black;
@@ -75,7 +77,10 @@ body{
 }
 .header{
     color:black;
+    text-align: center;
+
 }
+
 .button{
     width:150px;
     margin:0 auto;
@@ -84,6 +89,9 @@ body{
 }
 .dashboard{
     color:orange;
+}
+.btn text-center button {
+    margin-bottom: 10px;
 }
 </style>
 
@@ -94,14 +102,14 @@ body{
         </div>
         <br>
         <br>
-        <a href="{{ action ('EmployeeController@show') }}">
+        <a href="{{ action ('EmployeeController@show') }}"></a>
             <input type="hidden" name="user_group" value="employee">
         <div class="row">
             <div class="col-md-4 twocolumns">
                 <div>
                     <br>
                     <img class="calendar" src="/img/setting-tool.png" height:"27" width="27" />
-                    <h4 class="header">My Account</h4>
+                    <h4 class="header"> My Account </h4>
                 <div>
                     <img src="{{$user->image}}">
                 </div>
@@ -117,7 +125,6 @@ body{
                     <br>
                         <a class= "list-group-item btn btn-success"  value=" edit employee" href= "{{ action('EmployeeController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                         <br>
-                        <br>
                 </div>
             </div>
             <div class="col-md-4 center">
@@ -126,42 +133,33 @@ body{
                     <br>
                     <h4 class="header"> Hours Completed: </h4> <div> {{ $user->completed_hours }}</div>
                     <br>
+                    <hr>
                     <img class="calendar" src="/img/orange-calendar.png" height:"27" width="27" />
-                    <h4 class="header"> Events </h4>
+                    <h4 class="header" > Events </h4>
                     <br>
                     <a class="btn text-center button" name="seeAll" href= "/allevents"> See All Events </a>
                     <br>
                     <br>
                     <a class= "btn text-center button" href= "/masterCalendar">Search By Date</a>
                     <br>
-                    <h4 class="header"> Submit Feedback On a Nonprofit </h4>
+                    <br>
+                    <!-- <h5 class="header"> Submit Feedback On a Nonprofit </h5> -->
                     <a href="/feedback/feedback" class="btn text-cetner button" name="feedback" > Submit Feedback </a>
                     <br>
                     <br>
                 </div>
             </div>
-            <br>
-<!--             <div class="col-md-6 col-md-3">
-                    <div class="participation-section">
-                        <h4> Hours Available: </h4> <div> {{ $user->available_hours }} </div>
-                        <br>
-                        <h4> Hours Completed: </h4> <div> {{ $user->completed_hours }}</div>
-                        <br>
-                        <a href="feedback/feedback" class="btn btn-success" name="feedback" > Submit Feedback </a>
-                        <br>
-                        <a href="feedback/feedback"  class="btn btn-secondary" name="go-feedback" > View Feedback </a>
-                    </div>
-            </div>
-            <br> -->
             <div class="col-md-4 twocolumns">
                 <div class="attendance">
                     <br>
                     <img class="calendar" src="/img/locationgps.png" height:"27" width="27" />
-                    <h4 class="header"> Your Events </h4>
+                    <h4 class="header" > Your Events </h4>
+                    <br>
                     @foreach($events as $event)
                     <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
                     <h6>Location: {{$event->location}}</h6>
                     <h6>Start Time: {{$event->start}}</h6>
+                    <br>
                     <a class= "list-group-item btn text-center" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a>
                     @endforeach
                     <br>
