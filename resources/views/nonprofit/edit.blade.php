@@ -5,6 +5,8 @@
 @stop
 
 @section('content')
+
+<!DOCTYPE html>
     <div class="container">
         <form method="POST" action="{{ action('NonprofitController@update', $user->id) }}">
             {!! csrf_field() !!}
@@ -14,16 +16,16 @@
 
             <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
-                Name of Nonprofit: <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="" data-required>
+                Name of Nonprofit: <input type="text" class="form-control" id="organization_name" name="organization_name" value="{{ $user->organization_name }}" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Admin Name: <input type="text" class="form-control" id="admin" name="admin" placeholder="" data-required>
+                Admin Name: <input type="text" class="form-control" id="admin" name="admin" value="{{ $user->admin }}" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Username: <input type="text" class="form-control" id="username" name="username" placeholder="" data-required>
+                Username: <input type="text" class="form-control" id="username" name="username" value="{{ $user->username }}" placeholder="" data-required>
             </div>
             <div class="form-group">
-                Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
+                Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ $user->bio }}</textarea>
             </div>
             {{ method_field('PUT') }}
             <button>Update</button>

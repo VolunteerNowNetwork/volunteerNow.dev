@@ -56,6 +56,7 @@
             </div>
             <div class="form-group">
                 Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64"></textarea>
+            <br>
                 <p>Upload a Photo/Logo: 
                     <input type="button" value="Upload" onclick="showPicker()" />
                         <img id="filestack" name="filestack" src="">
