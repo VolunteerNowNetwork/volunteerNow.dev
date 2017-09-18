@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet"> 
 @extends('layouts.master')
 
 @section('title')
@@ -5,6 +6,17 @@
 @stop
 
 @section('content')
+<style>
+body{
+    background-color: #D3D3D3;
+    font-family: 'Work Sans', sans-serif;
+}
+.btn{
+    background-color: #10D0AB;
+    color: white;
+}
+</style>
+
     <div class="container">
         <form method="POST" action="{{ action('PostsController@update', $post->id) }}">
             {!! csrf_field() !!}
@@ -32,10 +44,10 @@
                 Number of Volunteers Needed: <input type="text" class="form-control" id="number_of_volunteers" name="number_of_volunteers" placeholder="" value="{{ $post->number_of_volunteers }}">
             </div>
             <div class="form-group">
-                Age Restrictions: <input type="text" class="form-control" id="age_restriction" name="age_restriction" placeholder="" value="{{ $post->age_restriction }}">>
+                Age Restrictions: <input type="text" class="form-control" id="age_restriction" name="age_restriction" placeholder="" value="{{ $post->age_restriction }}">
             </div>
             <div class="form-group">
-                Point of Contact: <input type="text" class="form-control" id="point_of_contact" name="point_of_contact" placeholder="" value="{{ $post->point_of_contact }}">>
+                Point of Contact: <input type="text" class="form-control" id="point_of_contact" name="point_of_contact" placeholder="" value="{{ $post->point_of_contact }}">
             </div>
             <div class="form-group">
                 Supplies to Bring: <textarea name="supplies_needed" rows="3" cols="64">{{ $post->supplies_needed }}</textarea>
@@ -44,7 +56,9 @@
                 Appropriate Attire <textarea name="appropriate_attire" rows="3" cols="64">{{ $post->appropriate_attire }}</textarea>
             </div>
             <div class="form-group">
-                Category <textarea name="categories" rows="3" cols="64">{{ $post->categories }}</textarea>
+                Category 
+                <br>
+                <textarea name="categories" rows="3" cols="64">{{ $post->categories }}</textarea>
             </div>
         <!-- File Photo Input -->
 <!--             <div class="form-group">
