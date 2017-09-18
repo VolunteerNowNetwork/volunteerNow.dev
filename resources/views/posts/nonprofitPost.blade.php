@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet"> 
 @extends('layouts.master')
 
 @section('title')
@@ -6,6 +7,16 @@
 
 
 @section('content')
+<style>
+body{
+    background-color: #D3D3D3;
+    font-family: 'Work Sans', sans-serif;
+}
+.btn{
+    background-color: #10D0AB;
+    color:white;
+}
+</style>
     <div class="container">
         <form method="POST" action="{{ action('PostsController@store') }}">
             {!! csrf_field() !!}
@@ -64,13 +75,15 @@
                 Appropriate Attire <textarea name="appropriate_attire" rows="3" cols="64">{{ old('appropriate_attire') }}</textarea>
             </div>
             <div class="form-group">
-                Category <textarea name="categories" rows="3" cols="64">{{ old('categories') }}</textarea>
+                Category 
+                <br>
+                <textarea name="categories" rows="3" cols="64">{{ old('categories') }}</textarea>
             </div>
         <!-- File Photo Input -->
 <!--             <div class="form-group">
                 Category: <input type="text" class="form-control" id="category" name="category" placeholder="">
             </div> -->
-            <button type="submit" class="btn btn-primary">Add the Event</button>
+            <button type="submit" class="btn">Add the Event</button>
         </form>
     </div>
 @stop
