@@ -8,4 +8,8 @@ use App\Models\BaseModel;
 class Feedback extends Model
 {
     protected $table = 'feedback';
+
+     protected $dates = [
+        'event_date',
+    ];
 }

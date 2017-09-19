@@ -21,8 +21,8 @@ body{
 				<li class= "list-group-item">Event Id: {{$post->id}}</li>
 				<li class= "list-group-item">Nonprofit Name: {{$post->organization_name}}</li>
 				<li class= "list-group-item">Location: {{$post->location}}</li>
-				<li class= "list-group-item">Start Time: {{$post->start}}</li>
-				<li class= "list-group-item">End Time: {{$post->end}}</li>
+				<li class= "list-group-item">Start Time: {{$post->start->setTimezone('America/Chicago')->format('l jS \\of F Y h:i A') }}</li>
+				<li class= "list-group-item">End Time: {{$post->end->setTimezone('America/Chicago')->format('l jS \\of F Y h:i A') }}</li>
 				<li class= "list-group-item">Number of Volunteers Needed: {{$post->number_of_volunteers}}</li>
 				<li class= "list-group-item">Point of Contact: {{$post->point_of_contact}}</li>
 				<li class= "list-group-item">Supplies Needed: {{$post->supplies_needed}}</li>

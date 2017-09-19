@@ -163,7 +163,7 @@ body{
                     @foreach($events as $event)
                     <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
                     <h6>Location: {{$event->location}}</h6>
-                    <h6>Start Time: {{$event->start}}</h6>
+                    <h6>Start Time: {{$event->start->setTimezone('America/Chicago')->format('l jS \\of F Y h:i A') }}</h6>
                     <br>
                     <a class= "list-group-item btn text-center" href= "{{ action('PostsController@show', $event->event_id) }}">See Details</a>
                     @endforeach
