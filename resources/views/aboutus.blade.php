@@ -15,7 +15,7 @@ h2 {
     font-family: 'Lato', sans-serif;
     margin-bottom: 20px;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
 }
 .col-md-6  {

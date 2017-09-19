@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 @extends('layouts.master')
 
 @section('title')
@@ -7,22 +7,33 @@
 
 
 @section('content')
+
 <style>
+
 body{
     background-color: #D3D3D3;
     font-family: 'Work Sans', sans-serif;
 }
-.btn{
-    background-color: #10D0AB;
-    color:white;
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
 }
+.container{
+	background-color:white;
+	margin-top:20px;
+	border: 3px solid #10D0AB;
+	border-radius: 25px;
+	height:1050;
+	width:50%;
+}
+
 </style>
     <div class="container">
         <form method="POST" action="{{ action('PostsController@store') }}">
             {!! csrf_field() !!}
             <div class="row">
             <input type="hidden" name="user_group" value="nonprofit">
-            <h1 class="section-title text-center">Please Enter Your Event Below</h1>
+            <h1 class="section-title text-center"> Create an Event </h1>
 
             <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
@@ -56,23 +67,21 @@ body{
                 Point of Contact Number: <input type="text" class="form-control" id="point_of_contact_number" name="point_of_contact_number" placeholder="">
             </div>
             <div class="form-group">
-                Supplies to Bring: <textarea name="supplies_needed" rows="3" cols="64">{{ old('supplies_needed') }}</textarea>
+                Supplies to Bring: <textarea name="supplies_needed" rows="2" cols="40">{{ old('supplies_needed') }}</textarea>
             </div>
             <div class="form-group">
-                Appropriate Attire <textarea name="appropriate_attire" rows="3" cols="64">{{ old('appropriate_attire') }}</textarea>
+                Appropriate Attire <textarea name="appropriate_attire" rows="2" cols="40">{{ old('appropriate_attire') }}</textarea>
             </div>
             <div class="form-group">
-                Category 
-                <br>
-                <textarea name="categories" rows="3" cols="64">{{ old('categories') }}</textarea>
+                Category
+                <input type="text" name="categories" {{ old('categories') }}</input>
             </div>
-        <!-- File Photo Input -->
-<!--             <div class="form-group">
-                Category: <input type="text" class="form-control" id="category" name="category" placeholder="">
-            </div> -->
-            <button type="submit" class="btn">Add the Event</button>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-success" value="create_event"> Create Event </button>
+                </div>
+            </div>
         </form>
     </div>
 @stop
-
-
