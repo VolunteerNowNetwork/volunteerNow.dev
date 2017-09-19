@@ -32,12 +32,11 @@ body{
 		<h1>All Events</h1>
 		@foreach($posts as $post)
 			<ul class = "list-group">
-				<li class= "list-group-item">Event Id: {{$post->id}}</li>
-				<li class= "list-group-item" style="font-weight: bold; background-color:#ff0000">Title: {{$post->title}}</li>
+				<li class= "list-group-item" style="font-weight: bold; background-color:#ff0000; color:white">Title: {{$post->title}}</li>
 				<li class= "list-group-item">Organization Name: {{$post->organization_name}}</li>
 				<li class= "list-group-item">Location: {{$post->location}}</li>
-				<li class= "list-group-item">Start: {{$post->start}}</li>
-				<li class= "list-group-item">End: {{$post->end}}</li>
+				<li class= "list-group-item">Start: {{$post->start->setTimezone('America/Chicago')->format('l jS \\of F Y h:i A') }}</li>
+				<li class= "list-group-item">End: {{$post->end->setTimezone('America/Chicago')->format('l jS \\of F Y h:i A') }}</li>
 				<li class= "list-group-item">Age Restrictions: {{$post->age_restriction}}</li>
 				<a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@show', $post->id) }}">See Details</a>
 			</ul>
