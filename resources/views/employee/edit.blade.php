@@ -34,15 +34,15 @@ h1 {
 }
 .container{
 	background-color:white;
-	margin-top:40px;
+	margin-top:20px;
 	border: 3px solid #10D0AB;
 	border-radius: 25px;
-	height:100%;
-	width:550px;
+	height:90%;
+	width:70%;
 }
 </style>
 <div class="container">
-            <h1 class="section-title">Update Your Profile Here</h1>
+            <h1 class="section-title"> Update Profile </h1>
                 <form method="POST" action="{{ action('EmployeeController@update', $user->id) }}">
                     {!! csrf_field() !!}
                     <div class="row">
@@ -81,23 +81,28 @@ h1 {
                     <br>
                     <div class="row">
                         <div class="col-sm-6">
-                            <div>Upload a Photo:</div>
-                            <br>
-                                <input type="button" class="btn btn-primary" value="Upload" onclick="showPicker()" ></input>
+                                <input type="button" class="btn btn-primary" value="Upload Photo" onclick="showPicker()" ></input>
                                 <input type="hidden" id="image" name="image" value="{{ $user->image }}"></input>
                                 <img id='filestack' src="" name="image" ></img>
                             {{ method_field('PUT') }}
                             <br>
-                            <br>
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
                             <button type="submit" class="btn btn-success" value="edit user"> Update </button>
                         </div>
-                    </div>
              </form>
-             <br>
             <form method="POST" action="{{ action('EmployeeController@destroy', $user->id) }}">
-                  {!! csrf_field() !!}
-                  <button class="btn btn-danger" value="delete user">DELETE </button>
-                  {{ method_field('DELETE') }}
-          </form>
+                              {!! csrf_field() !!}
+                        <div class="col-sm-6">
+                              <button class="btn btn-danger" value="delete user">DELETE </button>
+                              {{ method_field('DELETE') }}
+                        </div>
+            </form>
+                </div>
+             <br>
 </div>
 @stop
