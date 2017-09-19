@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->datetime('start');
             $table->datetime('end');
             $table->string('location');
-            $table->string('color', 7);
+            $table->string('color', 7)->nullable();
             $table->float('number_of_hours');
             $table->integer('number_of_volunteers');
             $table->string('age_restriction');

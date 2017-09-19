@@ -84,6 +84,7 @@ p.description_content{
 }
 .mainphoto{
   width: 100%;
+  height: auto;
 }
 .about-us{
   padding:0px;
@@ -95,6 +96,7 @@ p.description_content{
     margin:0 auto;
     color:black;
     background-color:#10D0AB; 
+    height: auto;
 }
 .description_anchor a:hover{
   background-color:white;
@@ -109,6 +111,7 @@ p.description_content{
   padding:0px;
   border:0px;
   width:100%;
+  height: auto;
 }
 .col-sm-3{
     float:left;
