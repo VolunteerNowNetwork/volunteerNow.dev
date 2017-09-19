@@ -21,9 +21,6 @@
  </script>
 @stop
 
-
-
-
 @section('content')
 <style>
 
@@ -42,10 +39,10 @@ h1 {
 }
 .btn {
     margin-bottom: 20px;
-    display:block; 
+    display:block;
     margin:0 auto;
     color:black;
-    background-color:white; 
+    background-color:white;
 }
 .topheader{
     margin-top:13px;
@@ -58,7 +55,7 @@ h1 {
 }
 .topicon{
     float:left;
-    display:block; 
+    display:block;
     margin:0 auto;
 }
 .dashboard{
@@ -100,7 +97,6 @@ h1 {
             <div class="row">
             <input type="hidden" name="user_group" value="employer">
             <h1 class="section-title text-center">Register Your Company Here</h1>
-
             <div class="col-md-6 col-md-offset-3">
             <div class="form-group">
                 Name of Company: <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="" data-required>
@@ -131,7 +127,7 @@ h1 {
             </div>
             <div class="form-group">
                 Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64">{{ old('bio') }}</textarea>
-                    <p>Upload a Photo/Logo:</p> 
+                    <p>Upload a Photo/Logo:</p>
                         <input type="button" value="Upload" onclick="showPicker()"/>
                              <img id="filestack" name="filestack" src="">
                                 <input type="hidden" name="image" id="image">
