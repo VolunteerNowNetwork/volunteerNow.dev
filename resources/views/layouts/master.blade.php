@@ -43,6 +43,19 @@
     
 
     <style>
+    @media only screen and (max-width: 500px) {
+    .gridmenu {
+        width:100%;
+    }
+
+    .gridmain {
+        width:100%;
+    }
+
+    .gridright {
+        width:100%;
+    }
+}
     </style>
 </head>
 <body>

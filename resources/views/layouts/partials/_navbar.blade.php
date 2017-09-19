@@ -21,7 +21,6 @@ a .hover {
 
 </style>
 
-
     <div id="navbar" class="collapse navbar-collapse" style="background-color: #ff0000; color: #660000;">
 
          <ul class="nav navbar-nav">
