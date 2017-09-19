@@ -45,7 +45,6 @@ class EmployeeController extends Controller
     {
         $user = new User();
         $user->name = $request->name;
-        //$user->user_group = $request->user_group;
         $user->password = $request->password;
         $user->employer_id = $request->employer_id;
         $user->organization_name= $request->organization_name;
@@ -94,7 +93,6 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $this->validate($request, Employee::$rules);
         $user = \App\User::find($id);
         $user->name = $request->name;
         $user->user_group = $request->user_group;
