@@ -30,7 +30,6 @@ body{
 				<input type="hidden" id="title" name="title" value="{{$post->title}}">
 				<h1> Signup for This Event:</h1>
 				<h4> {{$post->title}}</h4>
-				<h4>Event Id: {{$post->id}}</h4>
 				<div class="form-group">
 				<input type="hidden" id="event_id" name="event_id" value="{{$post->id}}">
 	                How Many People are Attending? 

@@ -38,19 +38,6 @@ body{
                 Event End: <input type="text" class="form-control" id="end" name="end" placeholder=" YYYY-MM-DD HH:MM:SS" data-required>
             </div>
             <div class="form-group">
-                Choose your Color and Paste Here: <input type="text" class="form-control" id="color" name="color" placeholder="" data-required>
-                <br>
-                Red: #FF0000
-                <br>
-                Yellow: #FFFF00
-                <br>
-                Green: #00FF00
-                <br>
-                Aqua: #00FFFF
-                <br>
-                Blue: #0000FF
-            </div>
-            <div class="form-group">
                 Location: <input type="text" class="form-control" id="location" name="location" placeholder="" data-required>
             </div>
             <div class="form-group">

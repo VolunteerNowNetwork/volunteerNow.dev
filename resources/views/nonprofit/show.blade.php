@@ -143,7 +143,6 @@ h1 {
                         <li class= "list-group-item">Admin Name: {{$user->admin}}</li>
                         <li class= "list-group-item">Username: {{$user->username}}</li>
                         <li class= "list-group-item">Bio: {{$user->bio}}</li>
-                        <img src="{{$user->image}}">
                         <a class= "list-group-item" href= "{{ action('NonprofitController@edit', $user->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit My Account</a>
                     </ul>
                     <br>

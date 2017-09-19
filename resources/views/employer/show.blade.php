@@ -140,7 +140,7 @@ h1 {
                         <h5 style="font-weight: bold;">Name: {{$employee->name}}</h5>
                         <h5 style="color:black">Nonprofit Name: {{$employee->organization_name}}</h5>
                         <h5 style="color:black">Title {{$employee->title}}</h5>
-                        <h5 style="color:black">Date: {{$employee->event_date}}</h5>
+                        <h5 style="color:black">Date: {{$employee->event_date->setTimezone('America/Chicago')->format('l jS \\of F Y') }}</h5>
                         <h5 style="color:black">Comments: {{$employee->comments}}</h5>
                         <br>
                         @endforeach
@@ -157,6 +157,7 @@ h1 {
                         <h5 style="color:white">Did they attend? {{$attendee->did_they_attend}}</h5>
                         <h5 style="color:white">Hours completed: {{$attendee->hours_completed}}</h5>
                         <h5 style="color:white">Comments: {{$attendee->comments}}</h5>
+                        <hr>
                         @endforeach
                     </div>
             </div>

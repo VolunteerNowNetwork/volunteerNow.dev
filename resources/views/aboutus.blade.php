@@ -14,6 +14,7 @@ body {
 h2 {
     font-family: 'Lato', sans-serif;
     margin-bottom: 20px;
+    padding: 10px;
     margin-top: 20px;
     text-align: center;
 }
@@ -21,7 +22,8 @@ h2 {
     margin-left: 50px;
     padding-right: 40px;
     font-size: 16px;
-     background-color: 	#FFEFD5;
+    background-color: 	#FAF0E6;
+    align-items: center;
 }
 
 .image{
@@ -32,11 +34,22 @@ h2 {
 .btn {
     margin-bottom: 20px;
 }
-.text-box{
+.text-box1{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    background-color: 	#F5F5F5;
+}
+.text-box2{
         font-size: 18px;
+        padding: 10px;
+        background-color: 	#F5F5F5;
 }
 .contact-bio{
-    font-size: 16px;
+    font-size: 18px;
+    font-style: italic;
+    padding: 10px;
+    background-color: 	#F5F5F5;
 }
 .contact-section{
     margin-bottom: 20px;
@@ -46,15 +59,20 @@ h4 {
 }
 </style>
         <div class="container">
-            <h2 class="text-center">The power of community connection...YOU make the difference and WE make it easy.</h2>
-            <div class="text-box">
-                <p> Our vision is to create a space where non-profit organizations can connect with local business who grant their employees time off for community service.  Employees at these companies can easily access volunteer events and sign-up.</p>
-                <p> Why is this important? According to the Bureau of Labor Statistics, approximately $102 billion dollars’ worth of volunteer time granted by US companies for their employees goes unused.  Volunteer Now aims to help change that. </p>
+            <h2 class="text-center">The power of community connection ...   YOU make the difference and WE make it easy.</h2>
+            <div class="text-box1">
+                <p> Our vision is to create a space where non-profit organizations can connect with local businesses who grant their employees time off for community service.  Employees at these companies can easily access volunteer events and sign-up..</p>
             </div>
             <br>
-            <p> Click on the "Opportunities" option in the menu to see available volunteer events, and please don't forget to register!</p>
+            <div class="text-box2">
+                <p> Why is this important? <p>
+                <p>According to the Bureau of Labor Statistics, approximately 102 billion dollars worth of volunteer time granted by US companies for their employees goes unused.  Volunteer Now aims to help change that. </p>
+                <br>
+                <p> Click on the "Opportunities" option in the menu to see available volunteer events, and please don't forget to register!</p>
+            </div>
+            <br>
             <div class="contact-bio">
-                <p> We are full stack developers using HTML, CSS, javascript, PHP, MySQL, and Laravel to develop clean and easy to use applications.
+                <p> We are full stack developers using HTML, CSS, JavaScript, PHP, MySQL, and Laravel to develop clean and easy to use applications.
             </div>
             <br>
         <div class="contact-section">
