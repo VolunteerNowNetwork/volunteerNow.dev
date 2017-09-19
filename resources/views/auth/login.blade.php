@@ -57,7 +57,7 @@
 
 <div class='wrapper'>
 
-  <img class="photo" src="/img/volunteer1.jpg" />
+  <img class="photo" src="/img/volunteer2.jpg" />
     <div class='description'>
     <h1>Login with your Email and Password</h1>
     <form method="POST" action="{{ action('Auth\AuthController@postLogin') }}">
