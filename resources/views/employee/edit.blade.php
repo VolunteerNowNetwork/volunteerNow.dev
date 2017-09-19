@@ -31,14 +31,15 @@ body{
 }
 h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 .container{
 	background-color:white;
 	margin-top:20px;
-	border: 3px solid #10D0AB;
+	border: 3px solid orange;
 	border-radius: 25px;
 	height:90%;
-	width:70%;
+	width:50%;
 }
 </style>
 <div class="container">

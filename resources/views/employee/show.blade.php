@@ -83,7 +83,9 @@ body{
     text-align: center;
 
 }
-
+img{
+    align-items: center;
+}
 .button{
     width:150px;
     margin:0 auto;
@@ -103,7 +105,7 @@ body{
     <div class="container">
         <div class="container topheader">
            <img class="topicon" src="/img/android-icon-72x72.png"/>
-           <h1 class="text-center dashboard">Volunteer Dashboard</h1>
+           <h1 class="text-center dashboard"> Volunteer Dashboard </h1>
         </div>
         <br>
         <br>
@@ -148,7 +150,6 @@ body{
                     <a class= "btn text-center button" href= "/masterCalendar">Search By Date</a>
                     <br>
                     <br>
-                    <!-- <h5 class="header"> Submit Feedback On a Nonprofit </h5> -->
                     <a href="/feedback/feedback" class="btn text-cetner button" name="feedback" > Submit Feedback </a>
                     <br>
                     <br>
@@ -172,6 +173,4 @@ body{
             </div>
         </div>
     </div>
-
-
 @stop
