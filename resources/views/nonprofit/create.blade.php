@@ -22,6 +22,7 @@
 
 
 @section('content')
+<DOCTYPE html>
     <div class="container">
         <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
@@ -57,19 +58,15 @@
             <div class="form-group">
                 Bio About Your Nonprofit: <textarea name="bio" rows="3" cols="64"></textarea>
             <br>
+            </div>
                 <p>Upload a Photo/Logo: 
                     <input type="button" value="Upload" onclick="showPicker()" />
                         <img id="filestack" name="filestack" src="">
                             <input type="hidden" name="image" id="image">
-            </div>
             <div class="form-group">
                 How will you benefit from this service? <textarea name="benefit" rows="3" cols="64"></textarea>
             </div>
-        <!-- File Photo Input -->
-<!--             <div class="form-group">
-                <label for="image">Upload Image</label>
-                <input type="file" name="image" id="image">
-            </div> -->
+
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
