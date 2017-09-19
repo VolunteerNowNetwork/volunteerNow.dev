@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet"> 
 @extends('layouts.master')
 
 @section('title')
@@ -7,13 +8,13 @@
 <style>
     body {
       padding: 0px;
-      font-family: 'Lato',  sans-serif;
+      font-family: 'Work Sans', sans-serif;
       font-size: 16px;
     }
 
     h1 {
         font-size: 30px;
-        color: black;
+        color: white;
         margin-top: 30px;
         margin-bottom: 30px;
         text-align: center;
@@ -44,12 +45,19 @@
       margin:0px;
       font-size: 40px;
     }
+    .login{
+      background-color:#ff0000;
+    }
+    .register{
+      background-color:#10D0AB;
+      color:white;
+    }
 
 </style>
 
 <div class='wrapper'>
 
-  <img class="photo" src="/img/hsc.jpg" />
+  <img class="photo" src="/img/volunteer1.jpg" />
     <div class='description'>
     <h1>Login with your Email and Password</h1>
     <form method="POST" action="{{ action('Auth\AuthController@postLogin') }}">
@@ -73,10 +81,10 @@
                           <br>
                           <div class="row">
                               <div class="col-sm-6">
-                                  <button type="submit" class="btn btn-primary"> Login </button>
+                                  <button type="submit" class="btn login"> Login </button>
                               </div>
                               <div class="col-sm-6 text-right">
-                                  <a href="/register" class="btn btn-success"> Register </a>
+                                  <a href="/register" class="btn register"> Register </a>
                               </div>
                           </div>
                       </form>
