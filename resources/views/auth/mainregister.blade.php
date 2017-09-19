@@ -79,10 +79,10 @@ div.description{
   color:black;
 }
 
-#btn btn-success {
+#btn{
     margin-bottom: 20px;
-    display:block; 
-    margin:0 auto;
+    /*display:block;*/ 
+    /*margin:0 auto;*/
     color:black;
     background-color:#10D0AB
 }
@@ -102,6 +102,7 @@ div.description{
                <a class ="text-center" href="/employer/create">Employer</a>     
                <br>      
                <a class ="text-center" href="/employee/create">Employee</a>      
+               <br>
                <br>
                <a id="btn" class="btn btn-success" href="auth/login" >Go To Login</a>
                <br>
