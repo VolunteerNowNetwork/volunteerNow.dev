@@ -99,7 +99,7 @@ h1 {
                         @foreach($events as $event)
                         <h5 style="font-weight: bold;">Title: {{$event->title}}</h5>
                         <h5>Location: {{ $event->location }}</h5>
-                        <h5>Start Time: {{ $event->start->setTimezone('America/Chicago')->format('l jS \\of F Y h:i A') }}</h5>
+                        <h5>Start Time: {{ $event->start }}</h5>
                         <a class= "list-group-item btn btn-primary" href= "{{ action('PostsController@edit', $event->id) }}"><span class="glyphicon glyphicon-pencil"></span>  Edit This Event</a>
                         </ul>
                         @endforeach
@@ -116,12 +116,13 @@ h1 {
                             @foreach($nonprofitEvents as $nonprofitEvent)
                                 <br>
                                 @if(!empty($attendanceArray))
+                            
                                 <h4 class="header"> Signup Count: {{ $attendanceArray[$nonprofitEvent->id]}}</h4>
                                 @else
                                 <h4 class="header"> Signup Count: 0</h4>
                                 @endif
                                 <h5 style="font-weight: bold;">Title: {{$nonprofitEvent->title}}</h5>
-                                <h5>Start Time: {{$nonprofitEvent->start->setTimezone('America/Chicago')->format('l jS \\of F Y h:i A')}}</h5>
+                                <h5>Start Time: {{$nonprofitEvent->start}}</h5>
                                 </ul>
                             @endforeach
                         @else
