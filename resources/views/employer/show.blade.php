@@ -157,6 +157,7 @@ h1 {
                         <h5 style="color:white">Did they attend? {{$attendee->did_they_attend}}</h5>
                         <h5 style="color:white">Hours completed: {{$attendee->hours_completed}}</h5>
                         <h5 style="color:white">Comments: {{$attendee->comments}}</h5>
+                        <hr>
                         @endforeach
                     </div>
             </div>
