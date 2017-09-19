@@ -39,11 +39,6 @@ class AttendanceController extends Controller
 
         $post = \App\Models\Post::find('id');
 
-
-
-        // $user = \App\User::findOrFail($id);
-        // $data['user'] = $user;
-
         return view('attendance.create', $data);
     }
 

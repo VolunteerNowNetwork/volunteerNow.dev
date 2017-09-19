@@ -83,7 +83,7 @@ class EmployerController extends Controller
         $feedback = \App\Models\Feedback::where('employer_id', Auth::user()->employer_id)->get();
         $signedUpemployees = \App\Models\Attendance::where('employer_id', Auth::user()->employer_id)->get();
         $attendees = \App\Models\Attendance::where('employer_id', Auth::user()->employer_id)->whereNotNull('did_they_attend')->get();
-         
+
          $data['user'] = $user;
          $data['feedback'] = $feedback;
          $data['attendees'] = $attendees;
@@ -126,7 +126,6 @@ class EmployerController extends Controller
         $user->username = $request->username;
         $user->contact_number = $request->contact_number;
         $user->website_link = $request->website_link;
-        //$user->employer_id = $request->employer_id;
         $user->tax_id = $request->tax_id;
         $user->bio = $request->bio;
         $user->additional_resources = $request->additional_resources;
