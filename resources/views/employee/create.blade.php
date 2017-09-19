@@ -22,7 +22,28 @@
 @stop
 
 @section('content')
+<style>
 
+body{
+    background-color: #D3D3D3;
+    font-family: 'Work Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container{
+	background-color:white;
+	margin-top:20px;
+	border: 3px solid orange;
+	border-radius: 25px;
+	height:90%;
+	width:50%;
+}
+
+
+
+</style>
 <!DOCTYPE html>
 <html>
     <div class="container">
@@ -30,47 +51,50 @@
         <form method="POST" action="/auth/register">
             {!! csrf_field() !!}
             <div class="row">
-            <input type="hidden" name="user_group" value="employee">
-                <div class="form-group">
-                Name   <input type="text" class="form-control" id="name" name="name" placeholder="Name"
-                    data-required>
+                    <div class="col-md-6 col-md-offset-3">
+                <input type="hidden" name="user_group" value="employee">
+                    <div class="form-group">
+                    Name   <input type="text" class="form-control" id="name" name="name" placeholder="Name"
+                        data-required>
+                    </div>
+                    <div class="form-group">
+                     Employer ID  <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id"
+                        data-required>
+                   </div>
+                   <div class="form-group">
+                    Employer Name  <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="Employer Name"
+                       data-required>
+                  </div>
+                   <div class="form-group">
+                      Email <input type="email" class="form-control" id="email" name="email" placeholder="Email" >
+                   </div>
+                    <div class="form-group">
+                    Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required>
+                    </div>
+                    <div class="form-group">
+                    Confirm Password    <input type="password" class="form-control" id="" name="password_confirmation" placeholder="password_confirmation"  data-required>
+                    </div>
+                    <div class="form-group">
+                    Contact Number    <input type="text" class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number">
+                    </div>
+                    <div class="form-group">
+                        Tell Us About Yourself - Special Skills
+                        <input type="textarea" class="form-control" id="" name="bio" placeholder="Bio About Yourself - Special Skills">
+                            <p>Upload a Photo/Logo:</p>
+                                <input type="button" value="Upload" onclick="showPicker()"/>
+                                    <img id="filestack" name="filestack" src="">
+                                        <input type="hidden" name="image" id="image">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        Available Hours    <input type="text" class="form-control" id="available_hours" name="available_hours" placeholder="Available Hours">
+                    </div>
                 </div>
-                <div class="form-group">
-                 Employer ID  <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id"
-                    data-required>
-               </div>
-               <div class="form-group">
-                Employer Name  <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="Employer Name"
-                   data-required>
-              </div>
-               <div class="form-group">
-                  Email <input type="email" class="form-control" id="email" name="email" placeholder="Email" >
-               </div>
-                <div class="form-group">
-                Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required>
-                </div>
-                <div class="form-group">
-                Confirm Password    <input type="password" class="form-control" id="" name="password_confirmation" placeholder="password_confirmation"  data-required>
-                </div>
-                <div class="form-group">
-                Contact Number    <input type="text" class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number">
-                </div>
-                <div class="form-group">
-                    Tell Us About Yourself - Special Skills
-                    <input type="textarea" class="form-control" id="" name="bio" placeholder="Bio About Yourself - Special Skills">
-                        <p>Upload a Photo/Logo:</p>
-                            <input type="button" value="Upload" onclick="showPicker()"/>
-                                <img id="filestack" name="filestack" src="">
-                                    <input type="hidden" name="image" id="image">
-                </div>
-                <br>
-                <div class="form-group">
-                    Available Hours    <input type="text" class="form-control" id="available_hours" name="available_hours" placeholder="Available Hours">
-                </div>
-                <br>
+                    <br>
+                    <br>
                 <div class="row">
-                    <div class="col-sm-6">
-                        <button type="submit" class="btn btn-primary"> REGISTER </button>
+                    <div class="col-md-6 col-md-offset-3">
+                        <button type="submit" class="btn btn-success"> REGISTER </button>
                     </div>
                 </div>
         </form>
