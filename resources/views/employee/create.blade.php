@@ -21,11 +21,10 @@
  </script>
 @stop
 
-
 @section('content')
+
 <!DOCTYPE html>
 <html>
-
     <div class="container">
         <h1 class="section-title text-center"> Register to Volunteer! </h1>
         <form method="POST" action="/auth/register">
@@ -54,12 +53,12 @@
                 Confirm Password    <input type="password" class="form-control" id="" name="password_confirmation" placeholder="password_confirmation"  data-required>
                 </div>
                 <div class="form-group">
-                Contact Number    <input type="contact_number" class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number">
+                Contact Number    <input type="text" class="form-control" id="contact_number" name="contact_number" placeholder="Contact Number">
                 </div>
                 <div class="form-group">
                     Tell Us About Yourself - Special Skills
                     <input type="textarea" class="form-control" id="" name="bio" placeholder="Bio About Yourself - Special Skills">
-                        <p>Upload a Photo/Logo:</p> 
+                        <p>Upload a Photo/Logo:</p>
                             <input type="button" value="Upload" onclick="showPicker()"/>
                                 <img id="filestack" name="filestack" src="">
                                     <input type="hidden" name="image" id="image">

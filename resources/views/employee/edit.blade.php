@@ -2,11 +2,6 @@
 
 @section('title')
 <title>Update Your Account</title>
-@stop
-
-@section('content')
-
-<!DOCTYPE html>
 <html>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
@@ -23,65 +18,91 @@
         });
     }
 </script>
-<div class="container">
-    <section id="login">
-        <div class="row">
-            <h1 class="section-title">Update Your Profile Here</h1>
-            <div class="col-md-6 col-md-offset-3">
+@stop
 
+@section('content')
+<!DOCTYPE html>
+
+<style>
+
+body{
+    background-color: #D3D3D3;
+    font-family: 'Work Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.container{
+	background-color:white;
+	margin-top:20px;
+	border: 3px solid #10D0AB;
+	border-radius: 25px;
+	height:90%;
+	width:70%;
+}
+</style>
+<div class="container">
+            <h1 class="section-title"> Update Profile </h1>
                 <form method="POST" action="{{ action('EmployeeController@update', $user->id) }}">
                     {!! csrf_field() !!}
-                    <div class="form-group">
-                    <input type="hidden" name="user_group" value="employee">
-                    Name   <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{ $user->name }}"
-                        data-required>
-                    </div>
-                   <div class="form-group">
-                    Employer Id   <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id" value="{{ $user->employer_id }}"
-                       data-required>
-                   </div>
-                   <div class="form-group">
-                    Email <input type="emil" class="form-control" id="email" name="email" value="{{ $user->email }}">
-                   </div>
-                   <div class="form-group">
-                   Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required> {{ old('password') }}
-                    <div class="form-group">
-                    Contact Number  <input type="contactNumber" class="form-control" id="contact_number" name="contact_number" value="{{ $user->contact_number }}">
-                    </div>
-                    <div class="form-group">
-                    Bio About Yourself - Special Skills  <textarea type="text" class="form-control" id="" name="bio" value="{{ $user->bio }}">  </textarea>
-                    </div>
-                    <div class="form-group">
-                    Available Hours  <input type="text" class="form-control" id="available_hours" name="available_hours"  value="{{ $user->available_hours }}">
-                    </div>
-                    <div class="form-group">
-                    Completed Hours  <input type="text" class="form-control" id="completed_hours" name="completed_hours"  value="{{ $user->completed_hours }}">
-                    </div>
-                    <br>
-                    <p>Upload a Photo:</p>
-                    <br>
-                    <div>
-                            <input type="button" value="Upload" onclick="showPicker()" ></input>
-                            <input type="text" id="image" name="image" value="{{ $user->image }}"></input>
-                            <img id='filestack' src="" name="image" width="250" height="300"></img>
-                    </div>
-                    </div>
-                    <br>
-                    {{ method_field('PUT') }}
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="form-group">
+                                <input type="hidden" name="user_group" value="employee">
+                                Name   <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{ $user->name }}"
+                                    data-required>
+                            </div>
+                           <div class="form-group">
+                               Employer Name  <input type="text" class="form-control" id="organization_name" name="organization_name" placeholder="organization_name" value="{{ $user->organization_name }}"
+                               data-required>
+                           </div>
+                           <div class="form-group">
+                               Employer Id  <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="employer id" value="{{ $user->employer_id }}"
+                               data-required>
+                           </div>
+                           <div class="form-group">
+                               Email <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}">
+                           </div>
+                           <div class="form-group">
+                               Password    <input type="password" class="form-control" id="" name="password" placeholder="Password" data-required> {{ old('password') }}
+                           </div>
+                            <div class="form-group">
+                                Contact Number  <input type="text" class="form-control" id="contact_number" name="contact_number" value="{{ $user->contact_number }}">
+                            </div>
+                            <div class="form-group">
+                                Bio About Yourself - Special Skills  <textarea type="text" class="form-control" id="" name="bio" value="{{ $user->bio }}">  </textarea>
+                            </div>
+                            <div class="form-group">
+                                Available Hours  <input type="text" class="form-control" id="available_hours" name="available_hours"  value="{{ $user->available_hours }}">
+                            </div>
+                            <div class="form-group">
+                                Completed Hours  <input type="text" class="form-control" id="completed_hours" name="completed_hours"  value="{{ $user->completed_hours }}">
+                            </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-6">
-                            <button type="submit" class="btn btn-primary" value="edit user"> Update </button>
+                                <input type="button" class="btn btn-primary" value="Upload Photo" onclick="showPicker()" ></input>
+                                <input type="hidden" id="image" name="image" value="{{ $user->image }}"></input>
+                                <img id='filestack' src="" name="image" ></img>
+                            {{ method_field('PUT') }}
+                            <br>
                         </div>
+                        <br>
                     </div>
-                </form>
-                <br>
-                <form method="POST" action="{{ action('EmployeeController@destroy', $user->id) }}">
-                      {!! csrf_field() !!}
-                  <button class="btn btn-danger" value="delete user">DELETE </button>
-                  {{ method_field('DELETE') }}
-              </form>
-            </div>
-        </div>
-    </section>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-success" value="edit user"> Update </button>
+                        </div>
+             </form>
+            <form method="POST" action="{{ action('EmployeeController@destroy', $user->id) }}">
+                              {!! csrf_field() !!}
+                        <div class="col-sm-6">
+                              <button class="btn btn-danger" value="delete user">DELETE </button>
+                              {{ method_field('DELETE') }}
+                        </div>
+            </form>
+                </div>
+             <br>
 </div>
+@stop
