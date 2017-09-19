@@ -140,7 +140,7 @@ h1 {
                         <h5 style="font-weight: bold;">Name: {{$employee->name}}</h5>
                         <h5 style="color:black">Nonprofit Name: {{$employee->organization_name}}</h5>
                         <h5 style="color:black">Title {{$employee->title}}</h5>
-                        <h5 style="color:black">Date: {{$employee->event_date}}</h5>
+                        <h5 style="color:black">Date: {{$employee->event_date->setTimezone('America/Chicago')->format('l jS \\of F Y') }}</h5>
                         <h5 style="color:black">Comments: {{$employee->comments}}</h5>
                         <br>
                         @endforeach
