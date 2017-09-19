@@ -127,7 +127,6 @@ class NonprofitController extends Controller
         $user->admin = $request->admin;
         $user->username = $request->username;
         $user->bio = $request->bio;
-        $user->image = $request->image;
 
         $user->save();
 

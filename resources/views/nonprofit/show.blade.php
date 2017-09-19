@@ -83,9 +83,10 @@ h1 {
            <img class="topicon" src="/img/android-icon-72x72.png"/>
     	   <h1 class="text-center">Nonprofit Dashboard</h1>
         </div>
+        <a href="{{ action('NonprofitController@show') }}">
+        <input type="hidden" name="user_group" value="nonprofit">
         <br>
-        <a href="">
-        <div class="row">
+         <div class="row">
             <div class="col-md-4 twocolumns">
                 <div class>
                     <br>

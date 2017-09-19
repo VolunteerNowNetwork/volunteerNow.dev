@@ -26,7 +26,7 @@ class AttendanceTableSeeder extends Seeder
             $attendance->location = $faker->bs;
             $attendance->organization_name = $faker->bs;
             $attendance->employer_id = $faker->numberBetween($min = 1, $max = 4);
-            $attendance->start = $faker->bs;
+            $attendance->start = "2017-09-05 05:51:37";
             $attendance->hrs_to_complete = $faker->numberBetween($min = 1, $max = 20);
             $attendance->num_of_people = $faker->numberBetween($min = 1, $max = 4);
             $attendance->did_they_attend = $faker->bs;
