@@ -43,6 +43,9 @@ body{
     display:block;
     margin:0 auto;
 }
+.calendar{
+    text-align: center;
+}
 .topheader{
     margin-top:13px;
     height:80px;
@@ -89,6 +92,8 @@ body{
 }
 .dashboard{
     color:orange;
+    text-align:center;
+
 }
 .btn text-center button {
     margin-bottom: 10px;
