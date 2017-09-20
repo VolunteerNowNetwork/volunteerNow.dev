@@ -101,6 +101,9 @@ h1 {
             <div  class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <button type="submit" class="btn btn-success">Register</button>
+                    <br>
+                    <br>
+                    <br>
                 </div>
             </div>
         </form>
