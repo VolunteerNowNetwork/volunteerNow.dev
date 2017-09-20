@@ -92,6 +92,8 @@ h1 {
                 <button type="submit" class="btn btn-success">Register</button>
             </div>
             <br>
+            <br>
+            <br>
         </div>
         </form>
     </div>
