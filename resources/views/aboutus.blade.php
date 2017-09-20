@@ -8,11 +8,11 @@
 <style>
 body {
   padding: 0px;
-  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
 }
 
 h2 {
-    font-family: 'Lato', sans-serif;
     margin-bottom: 20px;
     padding: 10px;
     margin-top: 15px;
@@ -21,7 +21,6 @@ h2 {
 .col-md-6  {
     margin-left: 50px;
     padding-right: 40px;
-    font-size: 16px;
     background-color: 	#FAF0E6;
     align-items: center;
 }
@@ -35,18 +34,14 @@ h2 {
     margin-bottom: 20px;
 }
 .text-box1{
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
     padding: 10px;
     background-color: 	#F5F5F5;
 }
 .text-box2{
-        font-size: 18px;
         padding: 10px;
         background-color: 	#F5F5F5;
 }
 .contact-bio{
-    font-size: 18px;
     font-style: italic;
     padding: 10px;
     background-color: 	#F5F5F5;
@@ -59,7 +54,9 @@ h4 {
 }
 </style>
         <div class="container">
+            <br>
             <h2 class="text-center">The power of community connection ...   YOU make the difference and WE make it easy.</h2>
+            <br>
             <div class="text-box1">
                 <p> Our vision is to create a space where non-profit organizations can connect with local businesses who grant their employees time off for community service.  Employees at these companies can easily access volunteer events and sign-up..</p>
             </div>
