@@ -73,11 +73,12 @@ class NonprofitController extends Controller
         $attendees = \App\Models\Attendance::where('organization_name', $organization_name)->whereNull('did_they_attend')->get();
 
         $attendanceArray = [];
-        foreach($organizationEventAttendees as $event) {
-            $eventId = $event['event_id'];
-            $attendanceArray["$eventId"] = $event['attendance'];
-        }
         $nonprofitEvents = \App\Models\Post::where('organization_name', $organization_name)->get();
+        foreach ($nonprofitEvents as $event) {
+            $attendanceArray[$event->id] = $event->attendance()->count();
+        }
+        // dd($attendanceArray);
+        // dd($nonprofitEvents);
 
         if (!$user) {
             abort(404);
